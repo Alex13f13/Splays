@@ -15,7 +15,16 @@ const planetSchema = new Schema(
             type: String,
             default: "A Long Time Ago in a Galaxy Far, Far Away…",
         },
-        challenge: { type: Schema.Types.ObjectId, ref: "Challenge" },
+        challenge: {
+            image: {
+                type: String,
+                default: "/images/planetImg.png",//enlazar con su imagen
+            },
+            emblem: {
+                type: String,
+                default: "/images/emblem.png",//enlazar con su imagen
+            },
+        },
     },
     {
         timestamps: true,

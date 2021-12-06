@@ -15,11 +15,6 @@ const userSchema = new Schema(
       type: String,
       default: "", //IMAGEN DE PERFIL
     },
-    description: {
-      type: String,
-      default: "Ready",
-      //LIMITAR DESCRICION
-    },
     email: {
       type: String,
       required: true,
@@ -37,15 +32,7 @@ const userSchema = new Schema(
       type: String,
       default: "Earth",
     },
-    emblems: //Array de emblemas del usuario
-      [
-        {
-          emblem: {
-            type: String,
-            default: "/images/emblem.png",//enlazar con su imagen
-          }
-        }
-      ]
+    planet: [{ type: Schema.Types.ObjectId, ref: "Planet" }]
 
   },
   {
