@@ -14,6 +14,7 @@
 | `/auth/:id/profile`     | GET       | user-profile      |
 | `/auth/isloggedin`      | GET       | Check user login  |
 | `/auth/:id/edit`        | PUT       | edit-profile      |
+| `/auth/:id/emblems`     | GET       | User emblems      | 
 | `/auth/:id/delete`      | DELETE    | delete-profile    |
 | `/allPlanets`           | GET       | List all planets  |
 | `/planet/:id`           | GET       | Planet details    |
