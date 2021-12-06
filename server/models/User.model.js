@@ -1,16 +1,54 @@
 const { Schema, model } = require("mongoose");
 
-// TODO: Please make sure you edit the user model to whatever makes sense in this case
 const userSchema = new Schema(
   {
-    username: {
+    name: {
       type: String,
-      // unique: true -> Ideally, should be unique, but its up to you
+      required: true,
     },
-    password: String,
+    role: {
+      type: String,
+      enum: ["PLAYER", "ADMIN"],
+      default: "PLAYER",
+    },
+    image: {
+      type: String,
+      default: "", //IMAGEN DE PERFIL
+    },
+    description: {
+      type: String,
+      default: "Ready",
+      //LIMITAR DESCRICION
+    },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    password: {
+      type: String,
+      required: true,
+    },
+    ship: {
+      type: String,
+      default: "", //IMAGEN DE NAVE
+    },
+    originPlanet: {
+      type: String,
+      default: "Earth",
+    },
+    emblems: //Array de emblemas del usuario
+      [
+        {
+          emblem: {
+            type: String,
+            default: "/images/emblem.png",//enlazar con su imagen
+          }
+        }
+      ]
+
   },
   {
-    // this second object adds extra properties: `createdAt` and `updatedAt`
     timestamps: true,
   }
 );
