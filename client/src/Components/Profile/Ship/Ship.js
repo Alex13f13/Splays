@@ -1,18 +1,9 @@
-import React from "react";
+import React from 'react'
 
-class Ship extends React.Component {
-  constructor() {
-    super()
+export default function Ship() {
+  return (
+    <div>
 
-    this.state = {
-
-    }
-  }
-
-  render() {
-      return
-  }
-
+    </div>
+  )
 }
-
-export default Ship
