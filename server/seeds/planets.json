@@ -1,0 +1,22 @@
+[{
+    "name": "Chromion", 
+    "image":"/server/images/planetas/chromion_planet.png",
+    "description": "The last planet of the Neonix Galaxy.Its bright and colorful haze is the lighthouse of the O9 sector.",
+    "challenge": {
+        "name": "pressFiveTimes",
+        "image": "/", 
+        "emblem": "/"  
+    }
+
+  },
+  {
+    "name": "Glassmorph", 
+    "image":"/server/images/planetas/glassmorph_planet.png",
+    "description": "The frozen planet of Glassmorph has an exterior layer of glass that reflexes the light showing awesome colors.",
+    "challenge": {
+        "name": "pressFiveSec",
+        "image": "/", 
+        "emblem": "/"  
+    }
+
+  }]
