@@ -136,4 +136,29 @@ router.get("/logout", isLoggedIn, (req, res) => {
   });
 });
 
+router.get("/:id/user", (req, res) => {
+  const { id } = req.params
+
+  User.findById(id)
+    .then(theUser => res.json(theUser))
+    .catch(err => res.json({ err, errMessage: "Problema buscando el Ususario" }))
+})
+
+router.put("/:id/edit", (req, res) => {
+  const { id } = req.params
+  const { name, image, ship, originPlanet } = req.body
+
+  User.findByIdAndUpdate(id, { name, image, ship, originPlanet }, { new: true })
+    .then(updatedUser => res.json(updatedUser))
+    .catch(err => res.json({ err, errMessage: "Problema editando el Ususario" }))
+})
+
+router.delete("/:id/delete", (req, res) => {
+  const { id } = req.params
+
+  User.findByIdAndDelete(id)
+    .then(deletedUser => res.json({ deletedUser }))
+    .catch(err => res.json({ err, errMessage: "Problema borrando el Ususario" }))
+})
+
 module.exports = router;

@@ -16,6 +16,11 @@ const planetSchema = new Schema(
             default: "A Long Time Ago in a Galaxy Far, Far Away…",
         },
         challenge: {
+            name: {
+                type: String,
+                unique: true,
+                required: true,
+            },
             image: {
                 type: String,
                 default: "/images/planetImg.png",//enlazar con su imagen

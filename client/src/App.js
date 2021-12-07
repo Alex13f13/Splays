@@ -39,7 +39,6 @@ function App() {
           <>
             <Route exact path="/" render={() => <Home />} />
             <Route exact path="/profile/:id" render={() => <Profile />} />
-            <Route exact path="/profile/:id" render={() => <Profile />} />
             <Route exact path="/profile/:id/emblems" render={() => <Emblems />} />
             <Route exact path="/profile/:id/ship" render={() => <Ship />} />
             <Route exact path="/planet-map" render={() => <PlanetMap />} />
