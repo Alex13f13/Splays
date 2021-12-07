@@ -46,7 +46,7 @@ function App() {
             <Route exact path="/planet-map/:id/challenge/win" render={() => <ChallengeWin />} />
           </>
           :
-          <Route path="/" exact render={() => <Landing />} />
+          <Route path="/" exact render={() => <Landing storeUser={storeUser} />} />
         }
       </Switch>
 

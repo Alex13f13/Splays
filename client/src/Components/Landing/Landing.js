@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { useParams, useHistory } from "react-dom"
+import { useHistory } from "react-dom"
 import AuthService from '../../services/auth.service'
 
-export default function Landing() {
+export default function Landing(props) {
 
     const authService = new AuthService()
-    const params = useParams()
     const history = useHistory()
 
     const [formData, setFormData] = useState({ loginUsername: "", loginpwd: "", signupUsername: "", signupPwd: "", signupConfirmPwd: "" })
@@ -17,7 +16,7 @@ export default function Landing() {
 
         authService.login(loginUsername, loginpwd)
             .then(response => {
-                params.storeUser(response.data)
+                this.props.storeUser(response.data)
 
                 history.push("/")
 
@@ -35,7 +34,7 @@ export default function Landing() {
         if (signupPwd === signupConfirmPwd) {
             this.authService.signup(signupUsername, signupPwd)
                 .then(response => {
-                    params.storeUser(response.data)
+                    this.props.storeUser(response.data)
 
                 })
                 .catch(err => console.log(err.response.data.message))
