@@ -13,7 +13,7 @@ const userSchema = new Schema(
     },
     image: {
       type: String,
-      default: "", //IMAGEN DE PERFIL
+      default: "../images/profile/DEFAULT_PROFILE_IMAGE_SPLAYS.png",
     },
     email: {
       type: String,
@@ -26,7 +26,7 @@ const userSchema = new Schema(
     },
     ship: {
       type: String,
-      default: "", //IMAGEN DE NAVE
+      default: "../images/profile/Nave_Galaxy_Taxi_sin_fondo-01.png",
     },
     originPlanet: {
       type: String,
