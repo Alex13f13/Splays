@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import AuthService from './services/auth.service'
 
 import Landing from "./Components/Landing/Landing"
-import Home from "./Components/Landing/Landing"
+import Home from "./Components/Home/Home"
 import Profile from "./Components/Profile/Profile"
 import Emblems from "./Components/Profile/Emblems/Emblems"
 import Ship from "./Components/Profile/Ship/Ship"
@@ -29,8 +29,6 @@ function App() {
   const storeUser = (user) => {
     setloggedUser(user)
   }
-
-
 
   return (
     <div>

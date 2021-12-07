@@ -14,10 +14,6 @@ const User = require("../models/User.model");
 const isLoggedOut = require("../middleware/isLoggedOut");
 const isLoggedIn = require("../middleware/isLoggedIn");
 
-router.get("/loggedin", (req, res) => {
-  res.json(req.user);
-
-});
 
 router.post("/signup", isLoggedOut, (req, res) => {
   const { username, password, email } = req.body;
@@ -34,19 +30,6 @@ router.post("/signup", isLoggedOut, (req, res) => {
     });
   }
 
-  //   ! This use case is using a regular expression to control for special characters and min length
-  /*
-  const regex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
-
-  if (!regex.test(password)) {
-    return res.status(400).json( {
-      errorMessage:
-        "Password needs to have at least 8 chars and must contain at least one number, one lowercase and one uppercase letter.",
-    });
-  }
-  */
-
-  // Search the database for a user with the username submitted in the form
   User.findOne({ username }).then((found) => {
     // If the user is found, send the message username is taken
     if (found) {
@@ -67,7 +50,7 @@ router.post("/signup", isLoggedOut, (req, res) => {
       })
       .then((user) => {
         // Bind the user to the session object
-        req.session.user = user;
+        req.session.currentUser = user;
         res.status(201).json(user);
       })
       .catch((error) => {
@@ -94,40 +77,31 @@ router.post("/login", isLoggedOut, (req, res, next) => {
       .json({ errorMessage: "Please provide your username." });
   }
 
-  // Here we use the same logic as above
-  // - either length based parameters or we check the strength of a password
   if (password.length < 8) {
     return res.status(400).json({
       errorMessage: "Your password needs to be at least 8 characters long.",
     });
   }
 
-  // Search the database for a user with the username submitted in the form
   User.findOne({ username })
     .then((user) => {
-      // If the user isn't found, send the message that user provided wrong credentials
+
       if (!user) {
         return res.status(400).json({ errorMessage: "Wrong credentials." });
       }
 
-      // If user is found based on the username, check if the in putted password matches the one saved in the database
-      bcrypt.compare(password, user.password).then((isSamePassword) => {
-        if (!isSamePassword) {
-          return res.status(400).json({ errorMessage: "Wrong credentials." });
-        }
-        req.session.user = user;
-        // req.session.user = user._id; // ! better and safer but in this case we saving the entire user object
-        return res.json(user);
-      });
-    })
+      const isSamePassword = bcrypt.compareSync(password, user.password)
 
-    .catch((err) => {
-      // in this case we are sending the error handling to the error handling middleware that is defined in the error handling file
-      // you can just as easily run the res.status that is commented out below
-      next(err);
-      // return res.status(500).render("login", { errorMessage: err.message });
-    });
-});
+      if (!isSamePassword) {
+        return res.status(400).json({ errorMessage: "Wrong credentials." });
+      }
+
+      req.session.currentUser = user;
+      console.log(req.session.currentUser)
+      return res.json(user);
+    })
+    .catch((err) => next(err))
+})
 
 router.get("/logout", isLoggedIn, (req, res) => {
   req.session.destroy((err) => {
@@ -170,6 +144,12 @@ router.delete("/:id/delete", (req, res) => {
   User.findByIdAndDelete(id)
     .then(deletedUser => res.json({ deletedUser }))
     .catch(err => res.json({ err, errMessage: "Problema borrando el Ususario" }))
+})
+
+
+router.get("/isloggedin", (req, res) => {
+  console.log(req.session.currentUser, "el user en loggedIn")
+  req.session.currentUser ? res.json(req.session.currentUser) : res.status(401).json({ code: 401, message: 'Unauthorized' })
 })
 
 module.exports = router;
