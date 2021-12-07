@@ -145,11 +145,20 @@ router.get("/:id/user", (req, res) => {
     .catch(err => res.json({ err, errMessage: "Problema buscando el Ususario" }))
 })
 
-router.put("/:id/edit", (req, res) => {
+router.put("/:id/edit-profile", (req, res) => {
   const { id } = req.params
-  const { name, image, ship, originPlanet } = req.body
+  const { username, image, originPlanet } = req.body
 
-  User.findByIdAndUpdate(id, { name, image, ship, originPlanet }, { new: true })
+  User.findByIdAndUpdate(id, { username, image, originPlanet }, { new: true })
+    .then(updatedUser => res.json(updatedUser))
+    .catch(err => res.json({ err, errMessage: "Problema editando el Ususario" }))
+})
+
+router.put("/:id/edit-ship", (req, res) => {
+  const { id } = req.params
+  const { ship } = req.body
+
+  User.findByIdAndUpdate(id, { ship }, { new: true })
     .then(updatedUser => res.json(updatedUser))
     .catch(err => res.json({ err, errMessage: "Problema editando el Ususario" }))
 })

@@ -27,7 +27,8 @@
 | `/auth/logout`                     | GET       | Logout            |
 | `/auth/:id/user`                   | GET       | User              |
 | `/auth/isloggedin`                 | GET       | Check user login  |
-| `/auth/:id/edit`                   | PUT       | edit-profile      |
+| `/auth/:id/edit-profile`           | PUT       | Edit profile      |
+| `/auth/:id/edit-ship`              | PUT       | Edit ship         |
 | `/auth/:id/delete`                 | DELETE    | delete-profile    |
 | `/planet/allplanets`               | GET       | List all planets  |
 | `/planet/:id/details`              | GET       | Planet details    |
