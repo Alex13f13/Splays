@@ -3,13 +3,13 @@ import axios from 'axios'
 class AuthService {
   constructor() {
     this.app = axios.create({
-      baseURL: 'http://localhost:5000/api/auth',
+      baseURL: 'http://localhost:5000/auth',
       withCredentials: true
     })
   }
 
-  signup = (username, pwd) => this.app.post("/signup", { username, pwd })
-  login = (username, pwd) => this.app.post("/login", { username, pwd })
+  signup = (username, password) => this.app.post("/signup", { username, password })
+  login = (username, password) => this.app.post("/login", { username, password })
   logout = () => this.app.get("/logout")
   isloggedin = () => this.app.get("/isloggedin")
 }
