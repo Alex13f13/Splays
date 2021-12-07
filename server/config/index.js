@@ -50,21 +50,23 @@ module.exports = (app) => {
   app.use(
     session({
       secret: process.env.SESSION_SECRET || "super hyper secret key",
-      resave: false,
+      resave: true,
       saveUninitialized: false,
       store: MongoStore.create({
         mongoUrl: MONGO_URI,
       }),
       cookie: {
+        httpOnly: true,
         maxAge: 1000 * 60 * 60 * 24 * 365,
-        sameSite: "none",
-        secure: process.env.NODE_ENV === "production",
+        //sameSite: "None",
+        secure: false,
+        
       },
     })
   );
 
   app.use((req, res, next) => {
-    req.user = req.session.user || null;
+    req.user = req.session.currentUser || null;
     next();
   });
 };

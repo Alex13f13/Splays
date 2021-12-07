@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import AuthService from './services/auth.service'
 
 import Landing from "./Components/Landing/Landing"
-import Home from "./Components/Landing/Landing"
+import Home from "./Components/Home/Home"
 import Profile from "./Components/Profile/Profile"
 import Emblems from "./Components/Profile/Emblems/Emblems"
 import Ship from "./Components/Profile/Ship/Ship"
@@ -30,8 +30,6 @@ function App() {
     setloggedUser(user)
   }
 
-
-
   return (
     <div>
       <Switch>
@@ -46,7 +44,7 @@ function App() {
             <Route exact path="/planet-map/:id/challenge/win" render={() => <ChallengeWin />} />
           </>
           :
-          <Route path="/" exact render={() => <Landing />} />
+          <Route path="/" exact render={() => <Landing storeUser={storeUser} />} />
         }
       </Switch>
 

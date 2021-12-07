@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
-import { useParams, useHistory } from "react-dom"
+import React, { Component, useState } from 'react';
+import { useHistory } from "react-router-dom"
 import AuthService from '../../services/auth.service'
 
-export default function Landing() {
 
+export default function Landing(props) {
+
+    console.log(props)
     const authService = new AuthService()
-    const params = useParams()
-    const history = useHistory()
+    let history = useHistory()
 
     const [formData, setFormData] = useState({ loginUsername: "", loginpwd: "", signupUsername: "", signupPwd: "", signupConfirmPwd: "" })
 
@@ -17,12 +18,11 @@ export default function Landing() {
 
         authService.login(loginUsername, loginpwd)
             .then(response => {
-                params.storeUser(response.data)
-
-                history.push("/")
-
+                props.storeUser(response.data)
+                history.replace("/")
+                
             })
-            .catch(err => console.log(err.response.data.message))
+            .catch(err => console.log(err))
     }
 
     const handleSubmitSignup = (e) => {
@@ -33,9 +33,9 @@ export default function Landing() {
         console.log(signupUsername, signupPwd, signupConfirmPwd)
 
         if (signupPwd === signupConfirmPwd) {
-            this.authService.signup(signupUsername, signupPwd)
+            authService.signup(signupUsername, signupPwd)
                 .then(response => {
-                    params.storeUser(response.data)
+                    props.storeUser(response.data)
 
                 })
                 .catch(err => console.log(err.response.data.message))
@@ -68,14 +68,14 @@ export default function Landing() {
                 <form onSubmit={handleSubmitLogin}>
                     <div>
                         <h3>Username</h3>
-                        <input onChange={handleInputChange} value={formData.setLoginUsername} name="loginUsername" type="text" placeholder="Elige un nombre de usuario" />
+                        <input onChange={handleInputChange} value={formData.loginUsername} name="loginUsername" type="text" placeholder="Elige un nombre de usuario" />
                     </div>
 
                     <div>
                         <h3>Password</h3>
                         <input onChange={handleInputChange} value={formData.loginpwd} name="loginpwd" type="password" placeholder="Password" />
                     </div>
-                    <input type="submit" />
+                    <input type="submit" value='confirm' />
                 </form>
 
 
