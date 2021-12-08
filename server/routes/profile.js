@@ -1,0 +1,42 @@
+const router = require("express").Router();
+
+const User = require("../models/User.model");
+
+const isLoggedOut = require("../middleware/isLoggedOut");
+const isLoggedIn = require("../middleware/isLoggedIn");
+
+router.get("/:id/user", isLoggedIn, (req, res) => {
+    const { id } = req.params
+
+    User.findById(id)
+        .then(theUser => res.json(theUser))
+        .catch(err => res.json({ err, errMessage: "Problema buscando el Ususario" }))
+})
+
+router.put("/:id/edit-profile", isLoggedIn, (req, res) => {
+    const { id } = req.params
+    const { username, image, originPlanet } = req.body
+
+    User.findByIdAndUpdate(id, { username, image, originPlanet }, { new: true })
+        .then(updatedUser => res.json(updatedUser))
+        .catch(err => res.json({ err, errMessage: "Problema editando el Ususario" }))
+})
+
+router.put("/:id/edit-ship", isLoggedIn, (req, res) => {
+    const { id } = req.params
+    const { ship } = req.body
+
+    User.findByIdAndUpdate(id, { ship }, { new: true })
+        .then(updatedUser => res.json(updatedUser))
+        .catch(err => res.json({ err, errMessage: "Problema editando el Ususario" }))
+})
+
+router.delete("/:id/delete", isLoggedIn, (req, res) => {
+    const { id } = req.params
+
+    User.findByIdAndDelete(id)
+        .then(deletedUser => res.json({ deletedUser }))
+        .catch(err => res.json({ err, errMessage: "Problema borrando el Ususario" }))
+})
+
+module.exports = router;

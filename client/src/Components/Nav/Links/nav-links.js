@@ -1,22 +1,25 @@
 import React from 'react'
-import { useParams } from 'react-router'
+import { useHistory } from 'react-router'
 import { Link } from 'react-router-dom'
 import AuthService from '../../../services/auth.service'
 
+const authService = new AuthService()
 
 const NavLinks = (props) => {
-    const authService = new AuthService()
-    const params = useParams()
+    let history = useHistory()
 
     const loggedUser = props.loggedUser
 
 
     const logout = () => {
         authService.logout()
-          .then(response => props.storeUser(null))
-          .catch(err => console.log(err))
+            .then(response => {
+                props.storeUser(null)
+                history.replace("/")
+            })
+            .catch(err => console.log(err))
     }
-  
+
     return (
         <>
             <div>
@@ -25,12 +28,12 @@ const NavLinks = (props) => {
                 <div>
                     <Link to={`/planet-map`}>Planet map</Link>
                     <Link to={`/profile/${loggedUser._id}`}>Profile</Link>
-                    <Link onClick={logout} to={`/planet-map`}>Log out</Link>
+                    <span onClick={logout}>Log out</span>
                 </div>
             </div>
         </>
     )
 }
-  
-  
-  export default NavLinks
+
+
+export default NavLinks

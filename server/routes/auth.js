@@ -1,16 +1,12 @@
 const router = require("express").Router();
 
-// ℹ️ Handles password encryption
 const bcrypt = require("bcrypt");
 const mongoose = require("mongoose");
 
-// How many rounds should bcrypt run the salt (default [10 - 12 rounds])
 const saltRounds = 10;
 
-// Require the User model in order to interact with the database
 const User = require("../models/User.model");
 
-// Require necessary (isLoggedOut and isLiggedIn) middleware in order to control access to specific routes
 const isLoggedOut = require("../middleware/isLoggedOut");
 const isLoggedIn = require("../middleware/isLoggedIn");
 
@@ -111,41 +107,6 @@ router.get("/logout", isLoggedIn, (req, res) => {
     res.json({ message: "Done" });
   });
 });
-
-router.get("/:id/user", (req, res) => {
-  const { id } = req.params
-
-  User.findById(id)
-    .then(theUser => res.json(theUser))
-    .catch(err => res.json({ err, errMessage: "Problema buscando el Ususario" }))
-})
-
-router.put("/:id/edit-profile", (req, res) => {
-  const { id } = req.params
-  const { username, image, originPlanet } = req.body
-
-  User.findByIdAndUpdate(id, { username, image, originPlanet }, { new: true })
-    .then(updatedUser => res.json(updatedUser))
-    .catch(err => res.json({ err, errMessage: "Problema editando el Ususario" }))
-})
-
-router.put("/:id/edit-ship", (req, res) => {
-  const { id } = req.params
-  const { ship } = req.body
-
-  User.findByIdAndUpdate(id, { ship }, { new: true })
-    .then(updatedUser => res.json(updatedUser))
-    .catch(err => res.json({ err, errMessage: "Problema editando el Ususario" }))
-})
-
-router.delete("/:id/delete", (req, res) => {
-  const { id } = req.params
-
-  User.findByIdAndDelete(id)
-    .then(deletedUser => res.json({ deletedUser }))
-    .catch(err => res.json({ err, errMessage: "Problema borrando el Ususario" }))
-})
-
 
 router.get("/isloggedin", (req, res) => {
   console.log(req.session.currentUser, "el user en loggedIn")
