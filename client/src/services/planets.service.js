@@ -1,16 +1,16 @@
 import axios from 'axios'
 
-class CoasterService {
+class PlanetService {
   constructor() {
     this.app = axios.create({
-      baseURL: 'http://localhost:5000/planet',
+      baseURL: 'http://localhost:5000/api/planet',
       withCredentials: true
     })
   }
 
-  // getAllCoasters = () => this.app.get("/allCoasters")
-  // getOneCoaster = (id) => this.app.get(`/coaster/${id}`)
-  // createCoaster = (coasterData) => this.app.post("/newCoaster", coasterData)
+  getAllPlanets = () => this.app.get("/allplanets")
+  getOnePlanet = (id) => this.app.get(`/${id}/details`)
+  getPlanetEmblem = (planetId, userId) => this.app.get(`/${planetId}/${userId}`)
 }
 
-export default CoasterService
+export default PlanetService

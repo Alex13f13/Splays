@@ -35,11 +35,11 @@ function App() {
       <Switch>
         {loggedUser ?
           <>
-            <Route exact path="/" render={() => <Home />} />
+            <Route exact path="/" render={() => <Home storeUser={storeUser} loggedUser={loggedUser}/>} />
             <Route exact path="/profile/:id" render={() => <Profile />} />
             <Route exact path="/profile/:id/emblems" render={() => <Emblems />} />
             <Route exact path="/profile/:id/ship" render={() => <Ship />} />
-            <Route exact path="/planet-map" render={() => <PlanetMap />} />
+            <Route exact path="/planet-map" render={() => <PlanetMap storeUser={storeUser} loggedUser={loggedUser} />} />
             <Route exact path="/planet-map/:id/challenge" render={() => <Challenge />} />
             <Route exact path="/planet-map/:id/challenge/win" render={() => <ChallengeWin />} />
           </>
