@@ -1,13 +1,14 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import Nav from '../Nav/nav'
 
-export default function Home() {
+export default function Home(props) {
     return (
         <div>
 
-            <h1> Home</h1>
-
+            <Nav storeUser={props.storeUser} loggedUser={props.loggedUser} pageTitle={"HOME"} />
             <Link to="/planet-map">Viajar!</Link>
+
         </div>
     )
 }
