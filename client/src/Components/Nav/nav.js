@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import NavLinks from './Links/nav-links'
+import NavLinks from './Links/Nav-links'
 import Earth from '../../images/profile/earth_planet.png'
 
 
@@ -18,7 +18,7 @@ const Nav = (props) => {
             </div>
 
             <div>
-                <img onClick={toggleIsPressed} src= {Earth} alt=""/>
+                <img onClick={toggleIsPressed} src={Earth} alt=""/>
             </div>
 
             {isPressed && <NavLinks storeUser = {props.storeUser} loggedUser={props.loggedUser}></NavLinks> }

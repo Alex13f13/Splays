@@ -25,7 +25,7 @@ const NavLinks = (props) => {
                 <div>
                     <Link to={`/planet-map`}>Planet map</Link>
                     <Link to={`/profile/${loggedUser._id}`}>Profile</Link>
-                    <Link onClick={logout} to={`/planet-map`}>Log out</Link>
+                    <span onClick={logout} to={`/planet-map`}>Log out</span>
                 </div>
             </div>
         </>
