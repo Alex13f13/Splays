@@ -1,15 +1,14 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from "react-router-dom"
 import AuthService from '../../services/auth.service'
 
 
 export default function Landing(props) {
 
-    console.log(props)
     const authService = new AuthService()
     let history = useHistory()
 
-    const [formData, setFormData] = useState({ loginUsername: "", loginpwd: "", signupUsername: "", signupPwd: "", signupConfirmPwd: "" })
+    const [formData, setFormData] = useState({ loginUsername: "", loginpwd: "", signupUsername: "", signupPwd: "", signupConfirmPwd: "", signupEmail: "" })
 
     const handleSubmitLogin = (e) => {
         e.preventDefault();
@@ -28,17 +27,24 @@ export default function Landing(props) {
     const handleSubmitSignup = (e) => {
         e.preventDefault();
 
-        let { signupUsername, signupPwd, signupConfirmPwd } = formData;
-
-        console.log(signupUsername, signupPwd, signupConfirmPwd)
+        let { signupUsername, signupPwd, signupConfirmPwd, signupEmail } = formData;
 
         if (signupPwd === signupConfirmPwd) {
-            authService.signup(signupUsername, signupPwd)
+            authService.signup(signupUsername, signupPwd, signupEmail)
                 .then(response => {
+                    console.log(response)
                     props.storeUser(response.data)
 
+                    authService.login(signupUsername, signupPwd)
+                        .then(response => {
+                            props.storeUser(response.data)
+                            history.replace("/")
+
+                        })
+                        .catch(err => console.log(err))
+
                 })
-                .catch(err => console.log(err.response.data.message))
+                .catch(err => console.log(err.response.data.errorMessage))
         }
         else {
             //error
@@ -98,13 +104,18 @@ export default function Landing(props) {
                     </div>
 
                     <div>
+                        <h3>Email</h3>
+                        <input onChange={handleInputChange} value={formData.signupEmail} name="signupEmail" type="email" placeholder="Email" />
+                    </div>
+
+                    <div>
                         <h3>Password</h3>
                         <input onChange={handleInputChange} value={formData.signupPwd} name="signupPwd" type="password" placeholder="Password" />
                     </div>
 
                     <div>
-                        <h3>Password</h3>
-                        <input onChange={handleInputChange} value={formData.signupConfirmPwd} name="signupConfirmPwd" type="password" placeholder="Password" />
+                        <h3>Confirm Password</h3>
+                        <input onChange={handleInputChange} value={formData.signupConfirmPwd} name="signupConfirmPwd" type="password" placeholder="Confirm Password" />
                     </div>
 
                     <input type="submit" />

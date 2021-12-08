@@ -18,6 +18,8 @@ const isLoggedIn = require("../middleware/isLoggedIn");
 router.post("/signup", isLoggedOut, (req, res) => {
   const { username, password, email } = req.body;
 
+  console.log(username, password, email)
+
   if (!username) {
     return res
       .status(400)
@@ -31,17 +33,16 @@ router.post("/signup", isLoggedOut, (req, res) => {
   }
 
   User.findOne({ username }).then((found) => {
-    // If the user is found, send the message username is taken
+
     if (found) {
       return res.status(400).json({ errorMessage: "Username already taken." });
     }
 
-    // if user is not found, create a new user - start with hashing the password
     return bcrypt
       .genSalt(saltRounds)
       .then((salt) => bcrypt.hash(password, salt))
       .then((hashedPassword) => {
-        // Create a user and save it in the database
+
         return User.create({
           username,
           password: hashedPassword,
@@ -49,7 +50,6 @@ router.post("/signup", isLoggedOut, (req, res) => {
         });
       })
       .then((user) => {
-        // Bind the user to the session object
         req.session.currentUser = user;
         res.status(201).json(user);
       })
