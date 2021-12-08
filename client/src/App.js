@@ -36,7 +36,7 @@ function App() {
         {loggedUser ?
           <>
             <Route exact path="/" render={() => <Home storeUser={storeUser} loggedUser={loggedUser}/>} />
-            <Route exact path="/profile/:id" render={() => <Profile />} />
+            <Route exact path="/profile/:id" render={() => <Profile storeUser={storeUser} loggedUser={loggedUser}/>} />
             <Route exact path="/profile/:id/emblems" render={() => <Emblems />} />
             <Route exact path="/profile/:id/ship" render={() => <Ship />} />
             <Route exact path="/planet-map" render={() => <PlanetMap storeUser={storeUser} loggedUser={loggedUser} />} />

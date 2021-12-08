@@ -15,7 +15,7 @@ const NavLinks = (props) => {
         authService.logout()
           .then(response => props.storeUser(null))
           .catch(err => console.log(err))
-      }
+    }
   
     return (
         <>

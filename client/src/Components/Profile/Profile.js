@@ -1,19 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
 import AuthService from '../../services/auth.service'
+import Nav from '../Nav/nav'
 
-export default function Profile() {
+export default function Profile(props) {
 
     const { id } = useParams()
 
-    console.log(id)
 
     const [user, setUser] = useState(undefined)
     const authService = new AuthService()
 
 
 
-    const takeUserProfile = () => {
+    useEffect (() => {
 
         authService.getUser(id)
             .then(response => {
@@ -22,14 +22,19 @@ export default function Profile() {
 
             })
             .catch(err => console.log(err))
-    }
+    }, [])
 
-    takeUserProfile()
+    
 
     return (
+        user ?
         <div>
-            <h1>Profile</h1>
+            <Nav storeUser = {props.storeUser} loggedUser={props.loggedUser} pageTitle = {"PROFILE"}/>
+            <img src={user.image} alt={user.image}/>
             <h2>{user.username}</h2>
+            <p>Planet {user.originPlanet}</p>
         </div>
+        :
+        <p>Aquí irá un spinner </p>
     )
 }
