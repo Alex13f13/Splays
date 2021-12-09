@@ -27,7 +27,7 @@ export default function Emblems(props) {
     return (
         userPopulate ?
             <div>
-                <Nav storeUser={props.storeUser} loggedUser={props.loggedUser} pageTitle={"Emblems"} />
+                <Nav storeUser={props.storeUser} loggedUser={props.loggedUser} pageTitle={"MY EMBLEMS"} />
                 {userPopulate.planet.map(elm => {
                     return (
 

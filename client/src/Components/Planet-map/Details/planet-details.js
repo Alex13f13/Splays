@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import PlanetService from '../../../services/planets.service'
 import { Link } from 'react-router-dom'
+import './Planet-details.css'
 
 const planetService = new PlanetService()
 
@@ -26,12 +27,23 @@ export default function PlanetDetails (props) {
     return (
         <>
         {planet &&
-        <div>
-            <span onClick = {props.hideDetails}>close</span>
-            <p>{planet.name}</p>
-            <p>{planet.description}</p>
-            <Link to={`/planet-map/${planet.challenge.name}/challenge`}>Go to this planet</Link>
-            <img src={planet.image} alt={planet.image}/>
+        <div className='planet-details-main-container'>
+
+            <div className='planet-details-elm-container '>
+                <div className='planet-details-close-bar' onClick = {props.hideDetails}></div>
+                <p className='planet-details-title'>{planet.name}</p>
+
+                <div className='planet-description-container'>
+                    <p className='planet-details-description'>{planet.description}</p>
+                </div>
+
+            </div>
+                
+            <Link className='planet-detail-go-planet-btn' to={`/planet-map/${planet.challenge.name}/challenge`}>Go to this planet</Link>
+
+            <div className='planet-details-img-container'>
+                <img className='planet-details-img' src={planet.image} alt={planet.image}/>
+            </div>
         </div>}
         </>
         

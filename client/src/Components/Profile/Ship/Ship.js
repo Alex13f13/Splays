@@ -26,7 +26,7 @@ export default function Ship(props) {
   return (
     user ?
       <div>
-        <Nav storeUser={props.storeUser} loggedUser={props.loggedUser} pageTitle={"SHIP"} />
+        <Nav storeUser={props.storeUser} loggedUser={props.loggedUser} pageTitle={"MY SHIP"} />
         <h2>{user.ship}</h2>
       </div>
       :
