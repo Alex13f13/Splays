@@ -4,6 +4,8 @@ const mongoose = require("mongoose");
 const Planet = require("../models/Planet.model");
 const User = require("../models/User.model");
 
+const isLoggedOut = require("../middleware/isLoggedOut");
+const isLoggedIn = require("../middleware/isLoggedIn");
 
 router.post("/create", (req, res) => { //Esto es para nosotros
     const { name, image, description, challengeName, challengeImage, challengeEmblem } = req.body;
@@ -22,14 +24,14 @@ router.post("/create", (req, res) => { //Esto es para nosotros
 
 });
 
-router.get("/allplanets", (req, res) => {
+router.get("/allplanets", isLoggedIn, (req, res) => {
 
     Planet.find()
         .then(planets => res.json(planets))
         .catch(err => res.json({ err, errMessage: "Problema buscando Planetas" }))
 });
 
-router.get("/:id/details", (req, res) => {
+router.get("/:id/details", isLoggedIn, (req, res) => {
     const { id } = req.params
 
     Planet.findById(id)
@@ -38,11 +40,23 @@ router.get("/:id/details", (req, res) => {
 })
 
 router.put("/:planetId/:userId", (req, res) => {
+
     const { planetId, userId } = req.params
 
-    User.findByIdAndUpdate(userId, { $push: { planet: planetId } }, { new: true })
-        .then(updateUserPlanet => res.json(updateUserPlanet))
-        .catch(err => res.json({ err, errMessage: "Problema editando Planeta" }))
+    User.findById(userId)
+        .then(user => {
+
+            const hasPlanet = user.planet.some(planet => planet.equals(planetId))
+
+            if (!hasPlanet) {
+                User.findByIdAndUpdate(userId, { $push: { planet: planetId } }, { new: true })
+                    .then(updateUserPlanet => res.json(updateUserPlanet))
+                    .catch(err => res.json({ err, errMessage: "Problema dando el emblema al usuario" }))
+            } else {
+                console.log("Ya tiene esta medalla")
+            }
+        })
+        .catch(err => res.json({ err, errMessage: "Problema buscando un Usuario" }))
 })
 
 

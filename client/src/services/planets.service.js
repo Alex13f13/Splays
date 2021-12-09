@@ -10,7 +10,7 @@ class PlanetService {
 
   getAllPlanets = () => this.app.get("/allplanets")
   getOnePlanet = (id) => this.app.get(`/${id}/details`)
-  getPlanetEmblem = (planetId, userId) => this.app.get(`/${planetId}/${userId}`)
+  putPlanetEmblem = (planetId, userId) => this.app.put(`/${planetId}/${userId}`)
 }
 
 export default PlanetService

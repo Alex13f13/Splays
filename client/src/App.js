@@ -40,8 +40,8 @@ function App() {
             <Route exact path="/profile/:id/emblems" render={() => <Emblems storeUser={storeUser} loggedUser={loggedUser} />} />
             <Route exact path="/profile/:id/ship" render={() => <Ship storeUser={storeUser} loggedUser={loggedUser} />} />
             <Route exact path="/planet-map" render={() => <PlanetMap storeUser={storeUser} loggedUser={loggedUser} />} />
-            <Route exact path="/planet-map/:challengename/challenge" render={() => <Challenge />} />
-            <Route exact path="/planet-map/:challengename/challenge/win" render={() => <ChallengeWin />} />
+            <Route exact path="/planet-map/:id/:challengename/challenge" render={() => <Challenge />} />
+            <Route exact path="/planet-map/:id/challenge/win" render={() => <ChallengeWin storeUser={storeUser} loggedUser={loggedUser} />} />
 
           </>
           :

@@ -2,7 +2,6 @@ const router = require("express").Router();
 
 const User = require("../models/User.model");
 
-const isLoggedOut = require("../middleware/isLoggedOut");
 const isLoggedIn = require("../middleware/isLoggedIn");
 
 router.get("/:id/user", isLoggedIn, (req, res) => {
@@ -41,6 +40,13 @@ router.get("/:id/emblems", (req, res) => {
 
 router.delete("/:id/delete", isLoggedIn, (req, res) => {
     const { id } = req.params
+
+    req.session.destroy((err) => {
+        if (err) {
+            return res.status(500).json({ errorMessage: err.message });
+        }
+        res.json({ message: "Done" });
+    })
 
     User.findByIdAndDelete(id)
         .then(deletedUser => res.json({ deletedUser }))

@@ -1,17 +1,16 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import PlanetService from '../../../services/planets.service'
 import { Link } from 'react-router-dom'
 
 const planetService = new PlanetService()
 
-export default function PlanetDetails (props) {
+export default function PlanetDetails(props) {
 
 
     const [planet, setPlanet] = useState(undefined)
 
 
-
-    useEffect (() => {
+    useEffect(() => {
 
         planetService.getOnePlanet(props.planetChosen)
             .then(response => {
@@ -21,19 +20,19 @@ export default function PlanetDetails (props) {
             .catch(err => console.log(err))
     }, [props.planetChosen])
 
-    
+
 
     return (
         <>
-        {planet &&
-        <div>
-            <span onClick = {props.hideDetails}>close</span>
-            <p>{planet.name}</p>
-            <p>{planet.description}</p>
-            <Link to={`/planet-map/${planet.challenge.name}/challenge`}>Go to this planet</Link>
-            <img src={planet.image} alt={planet.image}/>
-        </div>}
+            {planet &&
+                <div>
+                    <span onClick={props.hideDetails}>close</span>
+                    <p>{planet.name}</p>
+                    <p>{planet.description}</p>
+                    <Link to={`/planet-map/${planet._id}/${planet.challenge.name}/challenge`}>Go to this planet</Link>
+                    <img src={planet.image} alt={planet.image} />
+                </div>}
         </>
-        
+
     )
 }

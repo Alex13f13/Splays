@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Nav from '../Nav/Nav'
-import Planet from './Planet/planet'
-import PlanetDetails from './Details/planet-details'
+import Planet from './Planet/Planet'
+import PlanetDetails from './Details/Planet-details'
 import PlanetService from '../../services/planets.service'
 
 
@@ -22,32 +22,32 @@ export default function PlanetMap(props) {
             })
 
             .catch(err => console.log(err))
-    
+
     }, [])
 
 
-      const togglePlanetDetails = (id) => {
+    const togglePlanetDetails = (id) => {
         setPlanetPressedId(id)
         setPlanetPressed(!planetPressed)
-      }
+    }
 
 
     return (
         <div>
-            <Nav storeUser = {props.storeUser} loggedUser={props.loggedUser} pageTitle = {"PLANET MAP"}/>
+            <Nav storeUser={props.storeUser} loggedUser={props.loggedUser} pageTitle={"PLANET MAP"} />
 
             {planets.map(elm => {
-            return (
-                
-                <div onClick={() => togglePlanetDetails(elm._id)} key={elm.name}>
-                    <Planet className={`planet-${elm.name}`} planetName = {elm.name} planetImage = {elm.image}></Planet>
-                </div>
+                return (
+
+                    <div onClick={() => togglePlanetDetails(elm._id)} key={elm.name}>
+                        <Planet className={`planet-${elm.name}`} planetName={elm.name} planetImage={elm.image}></Planet>
+                    </div>
                 )
             })
             }
 
-            {planetPressed && <PlanetDetails planetChosen = {planetPressedId} hideDetails = {togglePlanetDetails}/>}
-            
+            {planetPressed && <PlanetDetails planetChosen={planetPressedId} hideDetails={togglePlanetDetails} />}
+
 
 
         </div>
