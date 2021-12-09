@@ -28,7 +28,15 @@ router.put("/:id/edit-ship", isLoggedIn, (req, res) => {
 
     User.findByIdAndUpdate(id, { ship }, { new: true })
         .then(updatedUser => res.json(updatedUser))
-        .catch(err => res.json({ err, errMessage: "Problema editando el Ususario" }))
+        .catch(err => res.json({ err, errMessage: "Problema editando la nave" }))
+})
+
+router.get("/:id/emblems", (req, res) => {
+    const { id } = req.params
+
+    User.findById(id).populate("planet")
+        .then(theEmblems => res.json(theEmblems))
+        .catch(err => res.json({ err, errMessage: "Problema buscando los emblemas" }))
 })
 
 router.delete("/:id/delete", isLoggedIn, (req, res) => {
