@@ -1,128 +1,62 @@
 import React, { useState } from 'react';
-import { useHistory } from "react-router-dom"
-import AuthService from '../../services/auth.service'
+import SignUp from './Sign-up/Sign-up';
+import LogIn from './Log-in/Log-in';
+import "./Landing.css"
+import LandingInfo from './Landing-info/Landing-info';
 
 
 export default function Landing(props) {
 
-    const authService = new AuthService()
-    let history = useHistory()
-
     const [formData, setFormData] = useState({ loginUsername: "", loginpwd: "", signupUsername: "", signupPwd: "", signupConfirmPwd: "", signupEmail: "" })
 
-    const handleSubmitLogin = (e) => {
-        e.preventDefault();
+    const [signupPressed, setSignupPressed] = useState(false)
+    const [loginPressed, setLoginPressed] = useState(false)
+    const [mainBtns, setMainBtns] = useState(true)
+    const [infoSection, setInfoSection] = useState(true)
 
-        let { loginUsername, loginpwd } = formData
 
-        authService.login(loginUsername, loginpwd)
-            .then(response => {
-                props.storeUser(response.data)
-                history.replace("/")
-
-            })
-            .catch(err => console.log(err))
+    const togglePlanetDetails = (id) => {
+        setSignupPressed(!signupPressed)
+        setLoginPressed(!loginPressed)
     }
 
-    const handleSubmitSignup = (e) => {
-        e.preventDefault();
 
-        let { signupUsername, signupPwd, signupConfirmPwd, signupEmail } = formData;
-
-        if (signupPwd === signupConfirmPwd) {
-            authService.signup(signupUsername, signupPwd, signupEmail)
-                .then(response => {
-                    console.log(response)
-                    props.storeUser(response.data)
-
-                    authService.login(signupUsername, signupPwd)
-                        .then(response => {
-                            props.storeUser(response.data)
-                            history.replace("/")
-
-                        })
-                        .catch(err => console.log(err))
-
-                })
-                .catch(err => console.log(err.response.data.errorMessage))
-        }
-        else {
-            //error
-            console.log("Error de Sign up")
-        }
+    const showSignup = () => {
+        setSignupPressed(true)
+        setMainBtns(false)
+        setInfoSection(false)
     }
 
-    const handleInputChange = (e) => {
-        let { name, value } = e.currentTarget
 
-        setFormData({ ...formData, [name]: value })
+    const showLogin = () => {
+        setLoginPressed(true)
+        setMainBtns(false)
+        setInfoSection(false)
     }
 
-    return (
+    return(
         <>
-
-            <h1>Splays</h1>
-
-            {/* Login */}
-            <div>
-
-                <hr />
-
-                <h2>Login</h2>
-
-
-                <form onSubmit={handleSubmitLogin}>
-                    <div>
-                        <h3>Username</h3>
-                        <input onChange={handleInputChange} value={formData.loginUsername} name="loginUsername" type="text" placeholder="Elige un nombre de usuario" />
+            <div className="landing-background">
+                {mainBtns &&
+                <>
+                    <div className="landing-logo-container">
+                        <img src={""} alt={""} />
                     </div>
-
-                    <div>
-                        <h3>Password</h3>
-                        <input onChange={handleInputChange} value={formData.loginpwd} name="loginpwd" type="password" placeholder="Password" />
+                    <div className="landing-login-btn">
+                        <p onClick={showLogin}>Log in</p>
                     </div>
-                    <input type="submit" value='confirm' />
-                </form>
+                    <p onClick={showSignup} className="landing-underbtn">Don't have an account? <span className="landing-underbtn-span">Sign up now!</span></p>
+                    <img className="scroll-down-icon" src="https://res.cloudinary.com/dwxuz6cft/image/upload/v1638999526/splays_app/splays_icons/scroll_down_dlgro1.png" alt="scroll down icon" />
+                </>
+                }
 
 
-
+                {signupPressed && <SignUp togglePlanetDetails={togglePlanetDetails} storeUser={props.storeUser} setFormData={setFormData} formData={formData}></SignUp>}
+                {loginPressed && <LogIn  togglePlanetDetails={togglePlanetDetails} storeUser={props.storeUser} setFormData={setFormData} formData={formData}></LogIn>}
             </div>
-
-
-            {/* Sign in */}
-            <div>
-
-                <hr />
-
-                <h2>Registro</h2>
-
-
-                <form onSubmit={handleSubmitSignup}>
-                    <div>
-                        <h3>Username</h3>
-                        <input onChange={handleInputChange} value={formData.signupUsername} name="signupUsername" type="text" placeholder="Elige un nombre de usuario" />
-                    </div>
-
-                    <div>
-                        <h3>Email</h3>
-                        <input onChange={handleInputChange} value={formData.signupEmail} name="signupEmail" type="email" placeholder="Email" />
-                    </div>
-
-                    <div>
-                        <h3>Password</h3>
-                        <input onChange={handleInputChange} value={formData.signupPwd} name="signupPwd" type="password" placeholder="Password" />
-                    </div>
-
-                    <div>
-                        <h3>Confirm Password</h3>
-                        <input onChange={handleInputChange} value={formData.signupConfirmPwd} name="signupConfirmPwd" type="password" placeholder="Confirm Password" />
-                    </div>
-
-                    <input type="submit" />
-                </form>
-
-
-            </div>
+            {infoSection && <LandingInfo />}
         </>
     )
+
+
 }

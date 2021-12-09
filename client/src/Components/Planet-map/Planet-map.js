@@ -23,7 +23,7 @@ export default function PlanetMap(props) {
 
             .catch(err => console.log(err))
     
-      }, [])
+    }, [])
 
 
       const togglePlanetDetails = (id) => {

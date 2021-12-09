@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
 import ProfileService from '../../services/profile.service'
-import Nav from '../Nav/nav'
+import Nav from '../Nav/Nav'
 
 const profileService = new ProfileService()
 

@@ -1,0 +1,37 @@
+.password-check-icon {
+    height: 22px;
+    position: relative;
+    bottom: 42px;
+    right: -120px;
+}
+
+
+.confirm-password-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.signup-form-btn {
+    background: rgb(85,3,203);
+    background: linear-gradient(45deg, rgba(85,3,203,1) 0%, rgba(78,6,229,1) 50%, rgba(14,210,211,1) 94%);
+    width: 13em;
+    height: 60px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    letter-spacing: 0.3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+    border: 0px;
+    position: relative;
+    bottom: 0.7em;
+    margin-top: 40px;
+    box-shadow: 0px 0px 37px 0px rgba( 72, 10, 254, 0.6 );
+}

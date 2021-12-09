@@ -1,0 +1,142 @@
+.form-glass-container {
+    background: rgba( 216, 216, 216, 0.10 );
+    box-shadow: 0 8px 32px 1 rgba( 14, 14, 16, 0.5 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 40px;
+    width: 90vw;
+    margin-top: 3.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.main-login-title-container {
+    display: flex;
+    margin-top: 60px;
+    margin-top: 4em;
+
+}
+
+
+.login-chosen-title {
+    font-size: 1.6em;
+    color: #fff;
+    font-weight: 500;
+    padding: 0em 0.8em;
+}
+
+.login-chosen-underline {
+    width: 6.5em;
+    height: 0.3em;
+    border-radius: 30px;
+    background-color:#4B00FF ;
+    margin-top: 1em;
+}
+
+.login-chosen-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.login-notchosen-title {
+    font-size: 1.6em;
+    color: #2F3344;
+    font-weight: 300;
+    padding: 0em 0.8em;
+}
+
+.login-notchosen-underline {
+    width: 6.5em;
+    height: 0.25em;
+    border-radius: 30px;
+    background-color:#1D202B ;
+    margin-top: 1em;
+}
+
+
+.login-form-btn {
+    background: rgb(85,3,203);
+    background: linear-gradient(45deg, rgba(85,3,203,1) 0%, rgba(78,6,229,1) 50%, rgba(14,210,211,1) 94%);
+    width: 13em;
+    height: 60px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    letter-spacing: 0.3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+    border: 0px;
+    position: relative;
+    bottom: 0.7em;
+    margin-top: 64px;
+    box-shadow: 0px 0px 37px 0px rgba( 72, 10, 254, 0.6 );
+}
+
+
+.form-field-container {
+    padding-top: 32px;
+}
+
+
+.form-field {
+    background: rgba(6, 6, 8, 0.72);
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 15px;
+    height: 60px;
+    border: 0px;
+    width: 313px;
+    color: #AFB7CE;
+    text-indent: 17px;
+    font-size: 18px;
+}
+
+.form-field::placeholder {
+    color: rgb(148, 148, 180);
+    mix-blend-mode: soft-light;
+}
+
+.form-field:active {
+    outline: solid #4B00FF 2px;
+    border: 0px;
+}
+
+.form-field:focus {
+    outline: solid #4B00FF 2px;
+    border: 0px;
+}
+
+
+.form-field-name {
+    font-size: 16px;
+    color: #AFB7CE;
+    font-weight: 300;
+    margin-bottom: 10px;
+    margin-left: 12px;
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border: 0px;
+    -webkit-text-fill-color: #AFB7CE;
+    transition: background-color 5000s ease-in-out 0s;
+    text-indent: 17px;
+    font-size: 18px;
+}

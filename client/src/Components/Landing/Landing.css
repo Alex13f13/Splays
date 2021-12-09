@@ -1,0 +1,67 @@
+.landing-background {
+    background-image: url("https://res.cloudinary.com/dwxuz6cft/image/upload/v1638996465/splays_app/background_images/splays_landing_background_gerpho.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    background-color: #030303;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.landing-login-btn {
+    background: rgb(85,3,203);
+    background: linear-gradient(45deg, rgba(85,3,203,1) 0%, rgba(78,6,229,1) 50%, rgba(14,210,211,1) 94%);
+    width: 11em;
+    height: 60px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+    border: 0px;
+    box-shadow: 0px 0px 37px 0px rgba( 72, 10, 254, 0.6 );
+}
+
+.landing-login-btn p {
+    font-weight: 500;
+    font-size: 0.85em;
+    margin-bottom: 4px;
+}
+
+.landing-login-btn:active {
+    background: linear-gradient(45deg, rgb(65, 0, 156) 0%, rgb(50, 3, 151) 50%, rrgb(8, 133, 133)94%); 
+}
+
+
+.landing-logo-container {
+    height: 80vh;
+}
+
+
+.landing-underbtn {
+    color: #9013FE;
+    font-size: 1em;
+    margin-top: 1.8em;
+}
+
+.landing-underbtn-span {
+    color: #ACAAAD;
+}
+
+
+.scroll-down-icon {
+    width: 2.5em;
+    margin-top: 1.8em;
+}
+
+
+.prueba {
+    height: 600px;
+    background-color: blueviolet;
+}
+

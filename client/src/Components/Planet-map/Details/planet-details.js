@@ -19,7 +19,7 @@ export default function PlanetDetails (props) {
 
             })
             .catch(err => console.log(err))
-    }, [props.id])
+    }, [props.planetChosen])
 
     
 
