@@ -3,14 +3,15 @@ import Nav from '../Nav/Nav'
 import Planet from './Planet/Planet'
 import PlanetDetails from './Details/Planet-details'
 import PlanetService from '../../services/planets.service'
+import './Planet-map.css'
 
+const planetService = new PlanetService()
 
 export default function PlanetMap(props) {
 
     const [planets, setPlanets] = useState([])
     const [planetPressed, setPlanetPressed] = useState(false)
     const [planetPressedId, setPlanetPressedId] = useState(undefined)
-    const planetService = new PlanetService()
 
     useEffect(() => {
 
@@ -36,15 +37,17 @@ export default function PlanetMap(props) {
         <div>
             <Nav storeUser={props.storeUser} loggedUser={props.loggedUser} pageTitle={"PLANET MAP"} />
 
-            {planets.map(elm => {
-                return (
+            <div className='planets-organizer'>
+                {planets.map(elm => {
+                    return (
 
-                    <div onClick={() => togglePlanetDetails(elm._id)} key={elm.name}>
-                        <Planet className={`planet-${elm.name}`} planetName={elm.name} planetImage={elm.image}></Planet>
-                    </div>
-                )
-            })
-            }
+                        <div onClick={() => togglePlanetDetails(elm._id)} key={elm.name} className={`planet-${elm.name}`}>
+                            <Planet planetName={elm.name} planetImage={elm.image}></Planet>
+                        </div>
+                    )
+                })
+                }
+            </div>
 
             {planetPressed && <PlanetDetails planetChosen={planetPressedId} hideDetails={togglePlanetDetails} />}
 
