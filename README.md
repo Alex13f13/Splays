@@ -29,6 +29,7 @@
 | `/auth/isloggedin`                 | GET       | Check user login  |
 | `/profile/:id/edit-profile`        | PUT       | Edit profile      |
 | `/profile/:id/edit-ship`           | PUT       | Edit ship         |
+| `/profile/:id/emblems`             | GET       | Get emblems       |
 | `/profile/:id/delete`              | DELETE    | delete-profile    |
 | `/planet/allplanets`               | GET       | List all planets  |
 | `/planet/:id/details`              | GET       | Planet details    |
