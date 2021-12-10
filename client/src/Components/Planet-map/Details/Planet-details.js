@@ -9,6 +9,7 @@ export default function PlanetDetails(props) {
 
 
     const [planet, setPlanet] = useState(undefined)
+    const [animateOut, setAnimateOut] = useState(false)
 
 
     useEffect(() => {
@@ -21,15 +22,20 @@ export default function PlanetDetails(props) {
             .catch(err => console.log(err))
     }, [props.planetChosen])
 
-
+    const animateOutFunc = () => {
+        setAnimateOut(!animateOut)
+        setTimeout(function(){props.hideDetails()}, 700);
+        
+        
+    }
 
     return (
         <>
             {planet &&
-                <div className='planet-details-main-container'>
+                <div className={animateOut ?'planet-details-main-container planet-details-animate-out' : 'planet-details-main-container' }>
 
                     <div className='planet-details-elm-container '>
-                        <div className='planet-details-close-bar' onClick={props.hideDetails}></div>
+                        <div className='planet-details-close-bar' onClick={animateOutFunc}></div>
                         <p className='planet-details-title'>{planet.name}</p>
 
                         <div className='planet-description-container'>

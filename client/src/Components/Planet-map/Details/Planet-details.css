@@ -12,7 +12,23 @@
     position: absolute;
     bottom: 0px;
     position: fixed;
+    animation: planet-details-in 0.7s;
     
+}
+
+
+@keyframes planet-details-in {
+    from {bottom: -600px;}
+    to {bottom: 0px;}
+}
+
+.planet-details-animate-out {
+    animation: planet-details-out 0.7s;
+}
+
+@keyframes planet-details-out {
+    from {bottom: 0px;}
+    to {bottom: -650px;}
 }
 
 
@@ -91,3 +107,5 @@
     font-size: 24px;
     font-weight: 500;
 }
+
+
