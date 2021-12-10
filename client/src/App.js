@@ -11,11 +11,12 @@ import PlanetMap from "./Components/Planet-map/Planet-map"
 import Challenge from "./Components//Challenge/Challenge"
 import ChallengeWin from "./Components//Challenge/Challenge-win/Challenge-win"
 
+const authService = new AuthService()
+
 function App() {
 
   const [loggedUser, setloggedUser] = useState(undefined)
 
-  const authService = new AuthService()
 
   useEffect(() => {
 

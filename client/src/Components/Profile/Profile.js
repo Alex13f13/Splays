@@ -13,12 +13,11 @@ export default function Profile(props) {
 
     const { id } = useParams()
     const [hasEdit, setHasEdit] = useState(false)
-    const [formData, setFormData] = useState({ username: "", image: "", originPlanet: "" })
+    const [formData, setFormData] = useState({ username: "", image: "", originPlanet: "", loading: false })
 
     let history = useHistory()
 
-    useEffect(() => {
-
+    const getUser = () => {
         profileService.getUser(id)
             .then(response => {
                 const userData = response.data
@@ -30,10 +29,17 @@ export default function Profile(props) {
 
             })
             .catch(err => console.log(err))
+    }
+
+    useEffect(() => {
+
+        getUser()
+
     }, [])
 
     const edit = () => {
         setHasEdit(!hasEdit)
+        getUser()
     }
 
     const handleSubmitEdit = (e) => {
@@ -48,6 +54,8 @@ export default function Profile(props) {
         profileService.editProfile(id, username, image, originPlanet)
             .then(response => console.log(response))
             .catch(err => console.log(err.response.data.errorMessage))
+
+        getUser()
     }
 
     const handleInputChange = (e) => {
@@ -58,7 +66,7 @@ export default function Profile(props) {
 
     const handleUploadChange = (e) => {
 
-        // this.setState({ loading: true })
+        setFormData({ ...formData, loading: true })
 
         const uploadData = new FormData()
         uploadData.append('imageData', e.target.files[0])
@@ -67,18 +75,10 @@ export default function Profile(props) {
             .uploadImage(uploadData)
             .then(response => {
 
-                setFormData({ ...formData, image: response.data.cloudinary_url })
+                setFormData({ ...formData, image: response.data.cloudinary_url, loading: false })
 
                 console.log("Data Image: ", formData.image)
 
-
-                // this.setState({
-                //     coaster: {
-                //         ...this.state.coaster,
-                //         imageUrl: response.data.cloudinary_url
-                //     },
-                //     loading: false
-                // })
             })
             .catch(err => console.log(err))
 
@@ -113,8 +113,10 @@ export default function Profile(props) {
                             <input onChange={handleInputChange} value={formData.username} name="username" type="text" placeholder={formData.username} />
                             <input onChange={handleInputChange} value={formData.originPlanet} name="originPlanet" type="text" placeholder={formData.originPlanet} />
 
-                            <input className="signup-form-btn" type="submit" value="Guardar Cambios" />
+                            {formData.loading ? <p className='profile-exit-btn'>Uploading image</p> : <input className="signup-form-btn" type="submit" value="Save changes" />}
+
                             <p onClick={deleteProfile} className='profile-exit-btn'>Delete</p>
+                            <p onClick={edit} className='profile-exit-btn'>Cancel</p>
                         </div>
                     </form>
                     :

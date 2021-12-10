@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
 import ProfileService from '../../../services/profile.service'
 import Nav from '../../Nav/Nav'
+import { Link } from 'react-router-dom'
 
 const profileService = new ProfileService()
 
@@ -20,7 +21,7 @@ export default function Ship(props) {
 
       })
       .catch(err => console.log(err))
-  }, [])
+  }, [id])
 
   const newShip = (ship) => {
     profileService.editShip(id, ship)
@@ -33,6 +34,12 @@ export default function Ship(props) {
     user ?
       <div>
         <Nav storeUser={props.storeUser} loggedUser={props.loggedUser} pageTitle={"MY SHIP"} />
+        <Link className='no-decoration' to={`/profile/${id}`}>
+          <div className='profile-bottom-links-container'>
+            <img className='profile-purple-arrow' src="https://res.cloudinary.com/dwxuz6cft/image/upload/v1639044961/splays_app/splays_icons/purple_arrow_xm6ccv.png" alt="purple arrow" />
+            <p className='profile-bottom-links'>Return to profile</p>
+          </div>
+        </Link>
         <h2>{user.ship}</h2>
         <img src={user.ship} alt={user.name} />
         <div>
