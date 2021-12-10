@@ -269,9 +269,11 @@
 
 }
 
+
 .planet-container {
     display: flex;
     position: relative;
     bottom: 300px;
     height: 0px;
 }
+  
