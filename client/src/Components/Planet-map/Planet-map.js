@@ -4,6 +4,7 @@ import Planet from './Planet/Planet'
 import PlanetDetails from './Details/Planet-details'
 import PlanetService from '../../services/planets.service'
 import './Planet-map.css'
+import { Link } from 'react-router-dom'
 
 const planetService = new PlanetService()
 
@@ -12,6 +13,8 @@ export default function PlanetMap(props) {
     const [planets, setPlanets] = useState([])
     const [planetPressed, setPlanetPressed] = useState(false)
     const [planetPressedId, setPlanetPressedId] = useState(undefined)
+
+    const [animateOut, setAnimateOut] = useState(true)
 
     useEffect(() => {
 
@@ -30,23 +33,28 @@ export default function PlanetMap(props) {
     const togglePlanetDetails = (id) => {
         setPlanetPressedId(id)
         setPlanetPressed(!planetPressed)
+        setAnimateOut(!animateOut)
     }
 
-
     return (
-        <div>
+        <div className='no-scroll'>
             <Nav storeUser={props.storeUser} loggedUser={props.loggedUser} pageTitle={"PLANET MAP"} />
 
-            <div className='planets-organizer'>
-                {planets.map(elm => {
-                    return (
+            <div className='scrollable-div'>
 
-                        <div onClick={() => togglePlanetDetails(elm._id)} key={elm.name} className={`planet-${elm.name}`}>
-                            <Planet planetName={elm.name} planetImage={elm.image}></Planet>
-                        </div>
-                    )
-                })
-                }
+                <img className='map-background' src='https://res.cloudinary.com/dwxuz6cft/image/upload/v1638996923/splays_app/background_images/splays_landing_background_wide_u3xsxj.jpg' />
+
+                <div className='planet-container'>
+                    {planets.map(elm => {
+                        return (
+
+                            <div onClick={() => togglePlanetDetails(elm._id)} key={elm.name} className={`planet-${elm.name}`}>
+                                <Planet planetName={elm.name} planetImage={elm.image}></Planet>
+                            </div>
+                        )
+                    })
+                    }
+                </div>
             </div>
 
             {planetPressed && <PlanetDetails planetChosen={planetPressedId} hideDetails={togglePlanetDetails} />}

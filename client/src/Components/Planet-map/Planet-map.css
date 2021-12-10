@@ -1,55 +1,277 @@
+.planet-Chromion {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+    position: relative;
+    top: -300px;
+}
+
 .planet-Chromion img {
     height: 62px;
 }
 
+.planet-Chromion p {
+    color: #9B9B9B;
+    font-weight: 100;
+}
+
+
+.planet-Glassmorph {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+    position: relative;
+    top: -250px;
+}
 
 .planet-Glassmorph img {
     height: 62px;
 }
 
+.planet-Glassmorph p {
+    color: #9B9B9B;
+    font-weight: 100;
+}
+
+
+.planet-Lavadelic {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+    position: relative;
+    top: -200px;
+}
 
 .planet-Lavadelic img {
     height: 62px;
 }
 
+.planet-Lavadelic p {
+    color: #9B9B9B;
+    font-weight: 100;
+}
+
+
+.planet-Purlix {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+}
 
 .planet-Purlix img {
     height: 62px;
 }
 
+.planet-Purlix p {
+    color: #9B9B9B;
+    font-weight: 100;
+}
+
+
+.planet-Tropilum {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+}
 
 .planet-Tropilum img {
     height: 62px;
 }
 
+.planet-Tropilum p {
+    color: #9B9B9B;
+    font-weight: 100;
+}
+
+
+.planet-Candylux {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+}
 
 .planet-Candylux img {
     height: 62px;
 }
 
+.planet-Candylux p {
+    color: #9B9B9B;
+    font-weight: 100;
+}
+
+
+.planet-Helanor {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+}
 
 .planet-Helanor img {
     height: 62px;
 }
 
+.planet-Helanor p {
+    color: #9B9B9B;
+    font-weight: 100;
+}
+
+
+.planet-K-78 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+}
 
 .planet-K-78 img {
     height: 62px;
 }
 
+.planet-K-78 p {
+    color: #9B9B9B;
+    font-weight: 100;
+}
+
+
+.planet-Lulab {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+}
 
 .planet-Lulab img {
     height: 62px;
 }
 
+.planet-Lulab p {
+    color: #9B9B9B;
+    font-weight: 100;
+}
+
+
+.planet-Earth {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+}
 
 .planet-Earth img {
     height: 62px;
 }
 
+.planet-Earth p {
+    color: #9B9B9B;
+    font-weight: 100;
+}
+
+
+.planet-Crystalir {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+}
 
 .planet-Crystalir img {
     height: 62px;
 }
 
+.planet-Crystalir p {
+    color: #9B9B9B;
+    font-weight: 100;
+}
 
+
+.planet-Helix {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+}
+
+.planet-Helix img {
+    height: 62px;
+}
+
+.planet-Helix p {
+    color: #9B9B9B;
+    font-weight: 100;
+}
+
+
+.planet-Oark {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+}
+
+.planet-Oark img {
+    height: 62px;
+    position: relative;
+}
+
+.planet-Oark p {
+    color: #9B9B9B;
+    font-weight: 100;
+}
+
+
+.scrollable-div {
+    width: 100%;
+    height: 100%;
+    overflow-x: scroll; 
+    overflow-y: hidden;
+
+}
+
+
+.map-background {
+    height: 87vh;
+    position: relative;
+    transform: translate(0%, 0%)
+}
+
+
+.light {
+    position: relative;
+    top: -65px;
+    filter: blur(40px);
+    mix-blend-mode: screen;
+    opacity: 80%;
+}
+
+
+.no-scroll {
+    overflow: hidden;
+
+}
+
+.planet-container {
+    display: flex;
+    position: relative;
+    bottom: 300px;
+    height: 0px;
+}

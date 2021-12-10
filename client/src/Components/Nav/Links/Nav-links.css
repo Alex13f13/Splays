@@ -6,6 +6,23 @@
     height: 100vh;
     position: absolute;
     z-index: 9999;
+    animation: nav-background 0.7s, nav-blur 0.7s;
+}
+
+@keyframes nav-background {
+    from {background: rgba(10, 10, 10, 0);}
+    to {background: rgba(10, 10, 10, 0.8);}
+}
+
+@keyframes nav-blur {
+    from {
+        backdrop-filter: blur( 0px );
+        -webkit-backdrop-filter: blur( 0px );
+    }
+    to{
+        backdrop-filter: blur( 10px );
+        -webkit-backdrop-filter: blur( 10px );
+    }
 }
 
 
@@ -29,6 +46,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: nav-links 0.7s;
+}
+
+@keyframes nav-links {
+    from {filter: opacity(0);}
+    to {filter: opacity(100%);}
 }
 
 
