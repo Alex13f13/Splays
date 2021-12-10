@@ -103,12 +103,17 @@ export default function Profile(props) {
 
                 {hasEdit ?
                     <form onSubmit={handleSubmitEdit}>
-                        <div className='profile-main-container'>
+                        <div className='profile-main-container-edit'>
 
                             <div className='gradient-outline'>
-                                <img className='profile-image' src={formData.image} alt={formData.image} />
+                                <div className='profile-image-container-edit'>
+                                    <img className='camera-icon' src='https://res.cloudinary.com/dwxuz6cft/image/upload/v1639139968/splays_app/splays_icons/splays_camera_icon_mz0b10.png' alt='camera icon' />
+                                    <img className='profile-image-edit' src={formData.image} alt={formData.image} />
+                                </div>
                             </div>
-                            <input onChange={handleUploadChange} name="image" type="file" />
+                            <div className='hj'>
+                                <input onChange={handleUploadChange} name="image" type="file" className='custom-file-btn' />
+                            </div>
 
                             <input onChange={handleInputChange} value={formData.username} name="username" type="text" placeholder={formData.username} />
                             <input onChange={handleInputChange} value={formData.originPlanet} name="originPlanet" type="text" placeholder={formData.originPlanet} />
