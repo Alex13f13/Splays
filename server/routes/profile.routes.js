@@ -1,8 +1,18 @@
 const router = require("express").Router();
-
 const User = require("../models/User.model");
-
 const isLoggedIn = require("../middleware/isLoggedIn");
+const uploader = require('../config/cloudinary.config')
+
+router.put("/:id/create-ship", (req, res) => { //Es para nosotros
+    const { id } = req.params
+    const { shipName, shipImgen, shipDescription } = req.body
+
+    const ship = { name: shipName, image: shipImgen, description: shipDescription }
+
+    User.findByIdAndUpdate(id, { $push: { ships: ship } }, { new: true })
+        .then(updatedUser => res.json(updatedUser))
+        .catch(err => res.json({ err, errMessage: "Problema creando la nave" }))
+})
 
 router.get("/:id/user", isLoggedIn, (req, res) => {
     const { id } = req.params
@@ -51,6 +61,16 @@ router.delete("/:id/delete", isLoggedIn, (req, res) => {
     User.findByIdAndDelete(id)
         .then(deletedUser => res.json({ deletedUser }))
         .catch(err => res.json({ err, errMessage: "Problema borrando el Ususario" }))
+})
+
+router.post('/image', uploader.single("imageData"), (req, res) => {
+
+    if (!req.file) {
+        res.status(500).json({ code: 500, message: 'Error loading the file' })
+        return
+    }
+
+    res.json({ cloudinary_url: req.file.path })
 })
 
 module.exports = router;

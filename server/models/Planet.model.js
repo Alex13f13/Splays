@@ -9,7 +9,6 @@ const planetSchema = new Schema(
         },
         image: {
             type: String,
-            default: "/images/planetImg.png",//enlazar con su imagen
         },
         description: {
             type: String,
@@ -23,11 +22,9 @@ const planetSchema = new Schema(
             },
             image: {
                 type: String,
-                default: "/images/planetImg.png",//enlazar con su imagen
             },
             emblem: {
                 type: String,
-                default: "/images/emblem.png",//enlazar con su imagen
             },
         },
     },

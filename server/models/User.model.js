@@ -26,14 +26,26 @@ const userSchema = new Schema(
     },
     ship: {
       type: String,
-      default: "/server/images/profile/Nave_Galaxy_Taxi_sin_fondo-01.png",
+      default: "https://res.cloudinary.com/dwxuz6cft/image/upload/v1639066269/splays_app/splays_ships/Nave_Galaxy_Taxi_sin_fondo-01_vz5cyp.png",
     },
     originPlanet: {
       type: String,
       default: "Earth",
     },
-    planet: [{ type: Schema.Types.ObjectId, ref: "Planet" }]
-
+    planet: [{ type: Schema.Types.ObjectId, ref: "Planet" }],
+    ships: [{
+      name: {
+        type: String,
+      },
+      image: {
+        type: String,
+        default: "https://res.cloudinary.com/dwxuz6cft/image/upload/v1639066269/splays_app/splays_ships/Nave_Galaxy_Taxi_sin_fondo-01_vz5cyp.png",
+      },
+      description: {
+        type: String,
+        default: "Cool ship"
+      }
+    }]
   },
   {
     timestamps: true,

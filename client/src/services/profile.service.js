@@ -10,6 +10,7 @@ class ProfileService {
 
     getUser = (id) => this.app.get(`/${id}/user`)
     editProfile = (id, username, image, originPlanet) => this.app.put(`/${id}/edit-profile`, { username, image, originPlanet })
+    uploadImage = (imageData) => this.app.post("/image", imageData)
     editShip = (id, ship) => this.app.put(`/${id}/edit-ship`, { ship })
     getEmblems = (id) => this.app.get(`/${id}/emblems`)
     deleteProfile = (id) => this.app.delete(`/${id}/delete`)
