@@ -4,16 +4,18 @@ import ProfileService from '../../services/profile.service'
 import Nav from '../Nav/Nav'
 import { Link } from 'react-router-dom'
 import './Profile.css'
+import { useHistory } from 'react-router'
+
 
 const profileService = new ProfileService()
 
 export default function Profile(props) {
 
     const { id } = useParams()
-
     const [hasEdit, setHasEdit] = useState(false)
-
     const [formData, setFormData] = useState({ username: "", image: "", originPlanet: "" })
+
+    let history = useHistory()
 
     useEffect(() => {
 
@@ -65,7 +67,7 @@ export default function Profile(props) {
             .uploadImage(uploadData)
             .then(response => {
 
-                setFormData({ image: response.data.cloudinary_url })
+                setFormData({ ...formData, image: response.data.cloudinary_url })
 
                 console.log("Data Image: ", formData.image)
 
@@ -80,6 +82,17 @@ export default function Profile(props) {
             })
             .catch(err => console.log(err))
 
+    }
+
+    const deleteProfile = () => {
+
+        profileService.deleteProfile(id)
+            .then(response => {
+                console.log(response)
+                props.storeUser(null)
+                history.replace("/")
+            })
+            .catch(err => console.log(err.response.data.errorMessage))
     }
 
 
@@ -101,7 +114,7 @@ export default function Profile(props) {
                             <input onChange={handleInputChange} value={formData.originPlanet} name="originPlanet" type="text" placeholder={formData.originPlanet} />
 
                             <input className="signup-form-btn" type="submit" value="Guardar Cambios" />
-
+                            <p onClick={deleteProfile} className='profile-exit-btn'>Delete</p>
                         </div>
                     </form>
                     :
