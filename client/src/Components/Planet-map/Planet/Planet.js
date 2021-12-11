@@ -6,7 +6,7 @@ export default function Planet(props) {
             <p>{props.planetName}</p>
             <div>
                 <img src={props.planetImage} alt={props.planetImage}/>          
-                <img className='light' src={props.planetImage} alt={props.planetImage}/>
+                <img className={`light-${props.planetName}`} src={props.planetImage} alt={props.planetImage}/>
             </div>          
         </div>
     )

@@ -13,6 +13,7 @@
     bottom: 0px;
     position: fixed;
     animation: planet-details-in 0.7s;
+    z-index: 1000;
     
 }
 
@@ -36,6 +37,7 @@
     height: 557px;
     position: relative;
     bottom: -240px;
+    z-index: 1000;
 }
 
 .planet-details-img-container {
@@ -51,6 +53,7 @@
     font-weight: 300;
     line-height: 34px;
     text-align: center;
+    z-index: 1000;
 }
 
 
@@ -64,6 +67,7 @@
     font-size: 32px;
     font-weight: 500;
     margin-bottom: 60px;
+    z-index: 1000;
 }
 
 
@@ -75,6 +79,7 @@
     margin-bottom: 50px;
     mix-blend-mode: overlay;
     filter: opacity(0.1);
+    z-index: 1000;
 }
 
 
@@ -91,7 +96,7 @@
 
 
 .planet-detail-go-planet-btn {
-    z-index: 10;
+    z-index: 1010;
     position: absolute;
     bottom: 30px;
     padding: 15px 0px;
@@ -106,6 +111,7 @@
     color: #fff;
     font-size: 24px;
     font-weight: 500;
+    
 }
 
 
