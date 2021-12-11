@@ -1,6 +1,9 @@
 import React from "react";
 import { useParams } from 'react-router'
 import { Link } from "react-router-dom";
+import PressFiveSec from "./Challenges/PressFiveSec/PressFiveSec";
+import PressFiveTimes from './Challenges/PressFiveTimes/PressFiveTimes'
+import './Challenge.css'
 
 export default function Challenge() {
 
@@ -11,11 +14,14 @@ export default function Challenge() {
         case 'pressFiveTimes':
             console.log('pressFiveTimes');
             return (
-                <div>
-                    <Link to={'/planet-map'}>Exit</Link>
-                    <h1>PressFiveTimes</h1>
-
-                    <Link to={`/planet-map/${params.id}/challenge/win`}>WIN</Link>
+                <div className="challenge-background">
+                    <div className="exit-btn-container">
+                        <Link className="challenge-exit-btn" to={'/planet-map'}>Exit</Link>
+                    </div>
+                    
+                    <div className="btn-center-screen-container">
+                        <PressFiveTimes winRoute={`/planet-map/${params.id}/challenge/win`}></PressFiveTimes>
+                    </div>
                 </div>
             )
 
@@ -23,11 +29,14 @@ export default function Challenge() {
         case 'pressFiveSec':
             console.log('pressFiveSec');
             return (
-                <div>
-                    <Link to={'/planet-map'}>Exit</Link>
-                    <h1>PressFiveSec</h1>
-
-                    <Link to={`/planet-map/${params.id}/challenge/win`}>WIN</Link>
+                <div className="challenge-background">
+                    <div className="exit-btn-container">
+                        <Link className="challenge-exit-btn" to={'/planet-map'}>Exit</Link>
+                    </div>
+                    
+                    <div className="btn-center-screen-container">
+                        <PressFiveSec winRoute={`/planet-map/${params.id}/challenge/win`}></PressFiveSec>
+                    </div>
                 </div>
             )
 

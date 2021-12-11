@@ -41,6 +41,7 @@
     justify-content: center;
     outline: 5px solid #030303;
     outline-offset: -8px;
+    overflow: hidden;
 }
 
 
@@ -50,6 +51,8 @@
     align-items: center;
     flex-direction: column;
     padding-top: 77px;
+    padding-bottom: 33px;
+    height: 100%;
 }
 
 .profile-main-container-edit {
@@ -67,6 +70,15 @@
     background: rgb(10,10,10);
     background: linear-gradient(310deg, rgba(10,10,10,1) 0%, rgba(15,15,15,1) 50%);
     height: 100vh;
+    width: 100vw;
+}
+
+.profile-background-edit {
+    padding: 0%;
+    margin: 0%;
+    background: rgb(10,10,10);
+    background: linear-gradient(310deg, rgba(10,10,10,1) 0%, rgba(15,15,15,1) 50%);
+    height: 100%;
     width: 100vw;
 }
 
@@ -169,11 +181,139 @@ input[type=file]::-webkit-file-upload-button {
     left: 30%;
 }
 
-.hj {
+.form-input-file-container {
     filter: invert();
     height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+
+.form-field-container {
+    padding-top: 32px;
+}
+
+
+.profile-form-field {
+    background: rgba(29, 29, 32, 0.5);
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 15px;
+    height: 60px;
+    border: 0px;
+    width: 313px;
+    color: #4b505e;
+    text-indent: 17px;
+    font-size: 18px;
+}
+
+.profile-form-field::placeholder {
+    color: rgb(148, 148, 180);
+    mix-blend-mode: soft-light;
+}
+
+.profile-form-field:active {
+    outline: solid #4B00FF 2px;
+    border: 0px;
+}
+
+.profile-form-field:focus {
+    outline: solid #4B00FF 2px;
+    border-radius: 15px;
+    border: 0px;
+}
+
+
+.profile-form-field-name {
+    font-size: 14px;
+    color: #AFB7CE;
+    font-weight: 300;
+    margin-bottom: 7px;
+    margin-top: 24px;
+    margin-left: 12px;
+}
+
+
+.profile-edit-btns-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
+    border-bottom: #2D2C36 1px solid;
+}
+
+
+.save-changes-btn {
+    background: rgb(85,3,203);
+    background: linear-gradient(45deg, rgb(130, 3, 203) 0%, rgba(78,6,229,1) 50%, rgba(14,210,211,1) 94%);
+    width: 314px;
+    height: 50px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    font-style: normal;
+    font-variant: normal;
+    letter-spacing: 0.3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    border: 0px;
+    margin-top: 64px;
+    box-shadow: 0px 0px 37px 0px rgba( 72, 10, 254, 0.6 );
+}
+
+.save-changes-deactivated-btn {
+    background: rgb(85,3,203);
+    background: linear-gradient(45deg, rgb(59, 7, 88) 0%, rgb(34, 8, 90) 50%, rgb(12, 88, 88) 94%);
+    width: 314px;
+    height: 50px;
+    color: rgb(152, 155, 165);
+    font-weight: 400;
+    font-size: 20px;
+    font-style: normal;
+    font-variant: normal;
+    letter-spacing: 0.3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    border: 0px;
+    margin-top: 64px;
+}
+
+
+.profile-cancel-btn {
+    width: 314px;
+    height: 50px;
+    border: #2D2C36 1px solid;
+    border-radius: 15px;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 400px;
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+}
+
+
+.delete-profile-btn {
+    color: #C81D32;
+    font-size: 18px;
+    font-weight: 300;
+    text-decoration: none;
+    margin-top: 40px;
+    border-bottom: solid #C81D32 1px;
+    margin-bottom: 64px;
+}
+
+
+.all-screen {
+    height: 100vh;
+    background: rgb(10,10,10);
+    background: linear-gradient(310deg, rgba(10,10,10,1) 0%, rgba(15,15,15,1) 50%);
 }

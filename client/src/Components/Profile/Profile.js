@@ -98,7 +98,7 @@ export default function Profile(props) {
 
     return (
         formData ?
-            <div className='profile-background'>
+            <div className='profile-background-edit'>
                 <Nav storeUser={props.storeUser} loggedUser={props.loggedUser} pageTitle={"PROFILE"} />
 
                 {hasEdit ?
@@ -111,17 +111,24 @@ export default function Profile(props) {
                                     <img className='profile-image-edit' src={formData.image} alt={formData.image} />
                                 </div>
                             </div>
-                            <div className='hj'>
+                            <div className='form-input-file-container'>
                                 <input onChange={handleUploadChange} name="image" type="file" className='custom-file-btn' />
                             </div>
 
-                            <input onChange={handleInputChange} value={formData.username} name="username" type="text" placeholder={formData.username} />
-                            <input onChange={handleInputChange} value={formData.originPlanet} name="originPlanet" type="text" placeholder={formData.originPlanet} />
+                            <div>
+                                <p className='profile-form-field-name'>Username</p>
+                                <input className='profile-form-field' onChange={handleInputChange} value={formData.username} name="username" type="text" placeholder={formData.username} />
+                                
+                                <p className='profile-form-field-name'>Username</p>
+                                <input className='profile-form-field' onChange={handleInputChange} value={formData.originPlanet} name="originPlanet" type="text" placeholder={formData.originPlanet} />
+                            </div>
 
-                            {formData.loading ? <p className='profile-exit-btn'>Uploading image</p> : <input className="signup-form-btn" type="submit" value="Save changes" />}
+                            <div className='profile-edit-btns-container'>
+                                {formData.loading ? <p className='save-changes-deactivated-btn'>Uploading image</p> : <input className="save-changes-btn" type="submit" value="Save changes" />}
+                                <p onClick={edit} className='profile-cancel-btn'>Cancel</p>
+                            </div>
 
-                            <p onClick={deleteProfile} className='profile-exit-btn'>Delete</p>
-                            <p onClick={edit} className='profile-exit-btn'>Cancel</p>
+                            <p onClick={deleteProfile} className='delete-profile-btn'>Delete account</p>
                         </div>
                     </form>
                     :

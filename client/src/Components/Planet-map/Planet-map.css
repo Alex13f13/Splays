@@ -1,15 +1,23 @@
+:root {
+    --background-height: 87vh;
+    --total-height: 100%;
+}
+
+
+
 .planet-Chromion {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin: 0px;
     position: relative;
-    top: -300px;
+    top: -50vh;
+    left: calc(var(--total-height) / 50);
+    
 }
 
 .planet-Chromion img {
-    height: 62px;
+    height: 8vh;
 }
 
 .planet-Chromion p {
@@ -25,7 +33,7 @@
     align-items: center;
     margin: 0px;
     position: relative;
-    top: -250px;
+    top: -50vh;
 }
 
 .planet-Glassmorph img {
@@ -45,7 +53,7 @@
     align-items: center;
     margin: 0px;
     position: relative;
-    top: -200px;
+    top: -50vh;
 }
 
 .planet-Lavadelic img {
@@ -64,6 +72,8 @@
     flex-direction: column;
     align-items: center;
     margin: 0px;
+    position: relative;
+    top: -50vh;
 }
 
 .planet-Purlix img {
@@ -82,6 +92,8 @@
     flex-direction: column;
     align-items: center;
     margin: 0px;
+    position: relative;
+    top: -100vh;
 }
 
 .planet-Tropilum img {
@@ -100,6 +112,8 @@
     flex-direction: column;
     align-items: center;
     margin: 0px;
+    position: relative;
+    top: -100vh;
 }
 
 .planet-Candylux img {
@@ -136,6 +150,8 @@
     flex-direction: column;
     align-items: center;
     margin: 0px;
+    position: relative;
+    top: -100vh;
 }
 
 .planet-K-78 img {
@@ -154,6 +170,8 @@
     flex-direction: column;
     align-items: center;
     margin: 0px;
+    position: relative;
+    top: -100vh;
 }
 
 .planet-Lulab img {
@@ -172,6 +190,8 @@
     flex-direction: column;
     align-items: center;
     margin: 0px;
+    position: relative;
+    top: -150vh;
 }
 
 .planet-Earth img {
@@ -190,6 +210,8 @@
     flex-direction: column;
     align-items: center;
     margin: 0px;
+    position: relative;
+    top: -180vh;
 }
 
 .planet-Crystalir img {
@@ -208,6 +230,8 @@
     flex-direction: column;
     align-items: center;
     margin: 0px;
+    position: relative;
+    top: -180vh;
 }
 
 .planet-Helix img {
@@ -226,6 +250,8 @@
     flex-direction: column;
     align-items: center;
     margin: 0px;
+    position: relative;
+    top: -180vh;
 }
 
 .planet-Oark img {
@@ -239,20 +265,44 @@
 }
 
 
+.planet-Helanor {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+    position: relative;
+    top: -180vh;
+}
+
+.planet-Helanor img {
+    height: 62px;
+    position: relative;
+}
+
+.planet-Helanor p {
+    color: #9B9B9B;
+    font-weight: 100;
+}
+
+
+
+
+
+
+
+
+
 .scrollable-div {
     width: 100%;
     height: 100%;
     overflow-x: scroll; 
     overflow-y: hidden;
-
-}
-
-
-.map-background {
     height: 87vh;
-    position: relative;
-    transform: translate(0%, 0%)
+
 }
+
+
 
 
 .light {
@@ -266,7 +316,7 @@
 
 .no-scroll {
     overflow: hidden;
-
+    
 }
 
 
@@ -276,4 +326,22 @@
     bottom: 300px;
     height: 0px;
 }
-  
+
+
+
+
+
+
+.map-background {
+    height: var(--background-height);
+    position: relative;
+    transform: translate(0%, 0%);
+    height: 100%
+}
+
+@media (max-height: 500px) {
+    .map-background {
+        width: 100vw;
+        height: fit-content;
+    }
+}

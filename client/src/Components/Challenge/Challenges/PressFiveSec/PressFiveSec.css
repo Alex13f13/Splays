@@ -1,0 +1,21 @@
+.press-five-sec-btn {
+    width: 60px;
+    height: 60px;
+    background: rgb(107,0,255);
+    background: linear-gradient(30deg, rgba(107,0,255,1) 0%, rgba(147,40,255,1) 50%, rgba(0,165,255,1) 100%);
+    border-radius: 15px;
+    border: 0px;
+    margin-bottom: 20vh;
+    outline: rgb(17, 17, 17) solid 26px;
+    outline-offset: -30px;
+    box-shadow: rgba(54, 0, 247, 0.521) 0px 0px 60px 0px;
+    transition: 0.8s;
+
+}
+
+.press-five-sec-btn:active {
+    border-radius: 15px;
+    outline: rgb(17, 17, 17) solid 0px;
+    outline-offset: -30px;
+    transition: 0.8s;
+}

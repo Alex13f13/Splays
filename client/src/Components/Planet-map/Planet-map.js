@@ -44,7 +44,7 @@ export default function PlanetMap(props) {
 
                 <img className='map-background' src='https://res.cloudinary.com/dwxuz6cft/image/upload/v1638996923/splays_app/background_images/splays_landing_background_wide_u3xsxj.jpg' />
 
-                <div className='planet-container'>
+                
                     {planets.map(elm => {
                         return (
 
@@ -54,7 +54,7 @@ export default function PlanetMap(props) {
                         )
                     })
                     }
-                </div>
+                
             </div>
 
             {planetPressed && <PlanetDetails planetChosen={planetPressedId} hideDetails={togglePlanetDetails} />}
