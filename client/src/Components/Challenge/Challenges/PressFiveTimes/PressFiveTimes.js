@@ -1,10 +1,10 @@
-import React, {useEffect, useState} from "react";
-import { Link, useHistory } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import './PressFiveTimes.css'
 
 
 export default function PressFiveTimes(props) {
-    
+
     let history = useHistory()
 
     const [counter, setCounter] = useState(0)
@@ -14,13 +14,13 @@ export default function PressFiveTimes(props) {
     }
 
     useEffect(() => {
-        
+
         counter === 5 && history.replace(props.winRoute)
 
-    }, [counter])
-    
-    return(
-        <> 
+    }, [counter, history, props])
+
+    return (
+        <>
             <button className="press-five-times-btn" onClick={handlePress} />
         </>
     )

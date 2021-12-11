@@ -3,6 +3,8 @@ import { useParams } from 'react-router'
 import { Link } from "react-router-dom";
 import PressFiveSec from "./Challenges/PressFiveSec/PressFiveSec";
 import PressFiveTimes from './Challenges/PressFiveTimes/PressFiveTimes'
+import TheNight from './Challenges/TheNight/TheNight'
+import SaimonSays from './Challenges/SimonSays/SimonSays'
 import './Challenge.css'
 
 export default function Challenge() {
@@ -18,7 +20,7 @@ export default function Challenge() {
                     <div className="exit-btn-container">
                         <Link className="challenge-exit-btn" to={'/planet-map'}>Exit</Link>
                     </div>
-                    
+
                     <div className="btn-center-screen-container">
                         <PressFiveTimes winRoute={`/planet-map/${params.id}/challenge/win`}></PressFiveTimes>
                     </div>
@@ -33,32 +35,36 @@ export default function Challenge() {
                     <div className="exit-btn-container">
                         <Link className="challenge-exit-btn" to={'/planet-map'}>Exit</Link>
                     </div>
-                    
+
                     <div className="btn-center-screen-container">
                         <PressFiveSec winRoute={`/planet-map/${params.id}/challenge/win`}></PressFiveSec>
                     </div>
                 </div>
             )
 
-        case '----':
-            console.log('----');
+        case 'theNight':
+            console.log('theNight');
             return (
                 <div>
                     <Link to={'/planet-map'}>Exit</Link>
-                    <h1>----</h1>
+                    <h1>The Night</h1>
 
-                    <Link to={`/planet-map/${params.id}/challenge/win`}>WIN</Link>
+                    <div className="btn-center-screen-container">
+                        <TheNight winRoute={`/planet-map/${params.id}/challenge/win`}></TheNight>
+                    </div>
                 </div>
             )
 
-        case '1':
-            console.log('1');
+        case 'saimonSays':
+            console.log('saimonSays');
             return (
                 <div>
                     <Link to={'/planet-map'}>Exit</Link>
-                    <h1>1</h1>
+                    <h1>Saimon Says</h1>
 
-                    <Link to={`/planet-map/${params.id}/challenge/win`}>WIN</Link>
+                    <div className="btn-center-screen-container">
+                        <SaimonSays winRoute={`/planet-map/${params.id}/challenge/win`}></SaimonSays>
+                    </div>
                 </div>
             )
 
