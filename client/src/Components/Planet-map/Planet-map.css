@@ -10,20 +10,37 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    top: -50vh;
-    left: calc(var(--total-height) / 50);
-    
+    position: absolute;
+    top: 36vh;
+    left: 70vh;
+    z-index: 10;
 }
 
 .planet-Chromion img {
-    height: 8vh;
+    height: 7vh;
 }
 
 .planet-Chromion p {
     color: #9B9B9B;
     font-weight: 100;
+    font-size:1vh;
+    margin-bottom: 1vh;
+    text-transform: uppercase;
+    letter-spacing: 0.65vh;
+    position: relative;
+    left: -1.6vh;
 }
+
+.light-Chromion {
+    position: relative;
+    top: -7vh;
+    filter: blur(40px);
+    mix-blend-mode: screen;
+    opacity: 90%;
+    z-index: 8;
+}
+
+
 
 
 .planet-Glassmorph {
@@ -31,19 +48,38 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin: 0px;
-    position: relative;
-    top: -50vh;
+    position: absolute;
+    top: 42vh;
+    left: 79vh;
+    z-index: 10;
 }
 
 .planet-Glassmorph img {
-    height: 62px;
+    height: 11vh;
 }
 
 .planet-Glassmorph p {
     color: #9B9B9B;
     font-weight: 100;
+    font-size:1vh;
+    margin-bottom: 1vh;
+    text-transform: uppercase;
+    letter-spacing: 0.65vh;
+    position: relative;
+    left: -0.8vh;
 }
+
+.light-Glassmorph {
+    position: relative;
+    top: -11vh;
+    filter: blur(40px);
+    mix-blend-mode: screen;
+    opacity: 60%;
+    mix-blend-mode: overlay;
+    z-index: 8;
+}
+
+
 
 
 .planet-Lavadelic {
@@ -51,19 +87,38 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin: 0px;
-    position: relative;
-    top: -50vh;
+    position: absolute;
+    top: 17vh;
+    left: 40.5vh;
+    z-index: 10;
 }
 
 .planet-Lavadelic img {
-    height: 62px;
+    height: 14vh;
 }
 
 .planet-Lavadelic p {
     color: #9B9B9B;
     font-weight: 100;
+    font-size:1vh;
+    margin-bottom: 1vh;
+    text-transform: uppercase;
+    letter-spacing: 0.65vh;
+    position: relative;
+    left: 1.4vh;
 }
+
+.light-Lavadelic {
+    position: relative;
+    top: -14vh;
+    filter: blur(40px);
+    mix-blend-mode: screen;
+    opacity: 80%;
+    mix-blend-mode: overlay;
+    z-index: 8;
+}
+
+
 
 
 .planet-Purlix {
@@ -71,19 +126,37 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin: 0px;
-    position: relative;
-    top: -50vh;
+    position: absolute;
+    top: 51.5vh;
+    left: 70vh;
+    z-index: 10;
 }
 
 .planet-Purlix img {
-    height: 62px;
+    height: 7vh;
 }
 
 .planet-Purlix p {
     color: #9B9B9B;
     font-weight: 100;
+    font-size:1vh;
+    margin-bottom: 1vh;
+    text-transform: uppercase;
+    letter-spacing: 0.65vh;
+    position: relative;
+    left: -0.3vh;
 }
+
+.light-Purlix {
+    position: relative;
+    top: -7vh;
+    filter: blur(30px);
+    mix-blend-mode: screen;
+    opacity: 70%;
+    z-index: 8;
+}
+
+
 
 
 .planet-Tropilum {
@@ -91,19 +164,37 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin: 0px;
-    position: relative;
-    top: -100vh;
+    position: absolute;
+    top: 66.5vh;
+    left: 85vh;
+    z-index: 10;
 }
 
 .planet-Tropilum img {
-    height: 62px;
+    height: 7vh;
 }
 
 .planet-Tropilum p {
     color: #9B9B9B;
     font-weight: 100;
+    font-size:1vh;
+    margin-bottom: 1vh;
+    text-transform: uppercase;
+    letter-spacing: 0.65vh;
+    position: relative;
+    left: -1.6vh;
 }
+
+.light-Tropilum {
+    position: relative;
+    top: -7vh;
+    filter: blur(30px);
+    mix-blend-mode: screen;
+    opacity: 70%;
+    z-index: 8;
+}
+
+
 
 
 .planet-Candylux {
@@ -111,19 +202,38 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin: 0px;
-    position: relative;
-    top: -100vh;
+    position: absolute;
+    top: 56vh;
+    left: 15vh;
+    z-index: 10;
 }
 
 .planet-Candylux img {
-    height: 62px;
+    height: 5.5vh;
 }
 
 .planet-Candylux p {
     color: #9B9B9B;
     font-weight: 100;
+    font-size:1vh;
+    margin-bottom: 1vh;
+    text-transform: uppercase;
+    letter-spacing: 0.65vh;
+    position: relative;
+    left: -2.3vh;
 }
+
+.light-Candylux {
+    position: relative;
+    top: 0vh;
+    filter: blur(30px);
+    mix-blend-mode: screen;
+    opacity: 70%;
+    z-index: 8;
+    left: -5.5vh;
+}
+
+
 
 
 .planet-Helanor {
@@ -131,17 +241,37 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin: 0px;
+    position: absolute;
+    top: 51vh;
+    left: 122.5vh;
+    z-index: 10;
 }
 
 .planet-Helanor img {
-    height: 62px;
+    height: 7vh;
 }
 
 .planet-Helanor p {
     color: #9B9B9B;
     font-weight: 100;
+    font-size:1vh;
+    margin-bottom: 1vh;
+    text-transform: uppercase;
+    letter-spacing: 0.65vh;
+    position: relative;
+    left: -1.1vh;
 }
+
+.light-Helanor {
+    position: relative;
+    top: -7.5vh;
+    filter: blur(40px);
+    mix-blend-mode: hard-light;
+    opacity: 100%;
+    z-index: 8;
+}
+
+
 
 
 .planet-K-78 {
@@ -149,19 +279,37 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin: 0px;
-    position: relative;
-    top: -100vh;
+    position: absolute;
+    top: 11.5vh;
+    left: 108.5vh;
+    z-index: 10;
 }
 
 .planet-K-78 img {
-    height: 62px;
+    height: 5vh;
 }
 
 .planet-K-78 p {
     color: #9B9B9B;
     font-weight: 100;
+    font-size:1vh;
+    margin-bottom: 1vh;
+    text-transform: uppercase;
+    letter-spacing: 0.65vh;
+    position: relative;
+    left: 0.3vh;
 }
+
+.light-K-78 {
+    position: relative;
+    top: -5.5vh;
+    filter: blur(0px);
+    mix-blend-mode: normal;
+    opacity: 100%;
+    z-index: 8;
+}
+
+
 
 
 .planet-Lulab {
@@ -169,19 +317,38 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin: 0px;
-    position: relative;
-    top: -100vh;
+    position: absolute;
+    top: 17vh;
+    left: 87.5vh;
+    z-index: 10;
 }
 
 .planet-Lulab img {
-    height: 62px;
+    height: 6vh;
+    transform: rotate(-12deg);
 }
 
 .planet-Lulab p {
     color: #9B9B9B;
     font-weight: 100;
+    font-size:1vh;
+    margin-bottom: 1vh;
+    text-transform: uppercase;
+    letter-spacing: 0.65vh;
+    position: relative;
+    left: 5.4vh;
 }
+
+.light-Lulab {
+    position: relative;
+    top: -6.5vh;
+    filter: blur(40px);
+    mix-blend-mode: overlay;
+    opacity: 70%;
+    z-index: 8;
+}
+
+
 
 
 .planet-Earth {
@@ -189,19 +356,38 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin: 0px;
-    position: relative;
-    top: -150vh;
+    position: absolute;
+    top: 33vh;
+    left: 22vh;
+    z-index: 10;
 }
 
 .planet-Earth img {
-    height: 62px;
+    height: 7vh;
 }
 
 .planet-Earth p {
     color: #9B9B9B;
     font-weight: 100;
+    font-size:1vh;
+    margin-bottom: 1vh;
+    text-transform: uppercase;
+    letter-spacing: 0.65vh;
+    position: relative;
+    left: 0.3vh;
 }
+
+.light-Earth {
+    position: relative;
+    top: 0vh;
+    filter: blur(30px);
+    mix-blend-mode: screen;
+    opacity: 90%;
+    z-index: 8;
+    left: -7vh;
+}
+
+
 
 
 .planet-Crystalir {
@@ -209,19 +395,38 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin: 0px;
-    position: relative;
-    top: -180vh;
+    position: absolute;
+    top: 43vh;
+    left: 6vh;
+    z-index: 10;
 }
 
 .planet-Crystalir img {
-    height: 62px;
+    height: 9vh;
 }
 
 .planet-Crystalir p {
     color: #9B9B9B;
     font-weight: 100;
+    font-size:1vh;
+    margin-bottom: 1vh;
+    text-transform: uppercase;
+    letter-spacing: 0.65vh;
+    position: relative;
+    left: -1.05vh;
 }
+
+.light-Crystalir {
+    position: relative;
+    top: 0vh;
+    filter: blur(40px);
+    mix-blend-mode: screen;
+    opacity: 60%;
+    z-index: 8;
+    left: -9vh;
+}
+
+
 
 
 .planet-Helix {
@@ -232,6 +437,7 @@
     margin: 0px;
     position: relative;
     top: -180vh;
+    z-index: 10;
 }
 
 .planet-Helix img {
@@ -249,38 +455,102 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin: 0px;
-    position: relative;
-    top: -180vh;
+    position: absolute;
+    top: 25vh;
+    left: 115vh;
+    z-index: 10;
 }
 
 .planet-Oark img {
-    height: 62px;
-    position: relative;
+    height: 6vh;
 }
 
 .planet-Oark p {
     color: #9B9B9B;
     font-weight: 100;
+    font-size:1vh;
+    margin-bottom: 1vh;
+    text-transform: uppercase;
+    letter-spacing: 0.65vh;
+    position: relative;
+    left: 0.6vh;
+}
+
+.light-Oark {
+    position: relative;
+    top: -6.5vh;
+    filter: blur(30px);
+    mix-blend-mode: screen;
+    opacity: 100%;
+    z-index: 8;
+    box-shadow: white 0px 0px 30px 0px;
 }
 
 
-.planet-Helanor {
+
+
+
+.planet-Dragidion {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     margin: 0px;
     position: relative;
-    top: -180vh;
+    top: -190vh;
+    z-index: 10;
 }
 
-.planet-Helanor img {
+.planet-Dragidion img {
     height: 62px;
     position: relative;
 }
 
-.planet-Helanor p {
+.planet-Dragidion p {
+    color: #9B9B9B;
+    font-weight: 100;
+}
+
+
+.planet-Xilofer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+    position: relative;
+    top: -200vh;
+    z-index: 10;
+}
+
+.planet-Xilofer img {
+    height: 62px;
+    position: relative;
+}
+
+.planet-Xilofer p {
+    color: #9B9B9B;
+    font-weight: 100;
+}
+
+
+.planet-Vaxor {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+    position: relative;
+    top: -210vh;
+    z-index: 10;
+}
+
+.planet-Vaxor img {
+    height: 62px;
+    position: relative;
+}
+
+.planet-Vaxor p {
     color: #9B9B9B;
     font-weight: 100;
 }
@@ -299,6 +569,7 @@
     overflow-x: scroll; 
     overflow-y: hidden;
     height: 87vh;
+    position: relative;
 
 }
 
@@ -328,15 +599,33 @@
 }
 
 
+.ui {
+    height: 100%;
+    width: fit-content;
+    padding: 0%;
+}
+
+.dots-bg {
+    background-image:url('https://res.cloudinary.com/dwxuz6cft/image/upload/v1639225008/splays_app/background_images/dots_grid_planet_map_pattern_Mesa_de_trabajo_1_hfedcb.png') ;
+    background-size: contain;
+    background-repeat: repeat-x;
+    height: var(--background-height);
+    width:100%;
+    position: relative;
+    top: -2100px;
+    z-index: 0;
+    opacity: 0.2;
+    mix-blend-mode: hard-light;
+    
+}
 
 
 
 
 .map-background {
-    height: var(--background-height);
-    position: relative;
-    transform: translate(0%, 0%);
-    height: 100%
+    height: 100%;
+    position: absolute;
+    z-index: -9999;
 }
 
 @media (max-height: 500px) {

@@ -41,8 +41,8 @@ export default function PlanetMap(props) {
             <Nav storeUser={props.storeUser} loggedUser={props.loggedUser} pageTitle={"PLANET MAP"} />
 
             <div className='scrollable-div'>
-
-                <img className='map-background' src='https://res.cloudinary.com/dwxuz6cft/image/upload/v1638996923/splays_app/background_images/splays_landing_background_wide_u3xsxj.jpg' />
+                <img className='map-background' src='https://res.cloudinary.com/dwxuz6cft/image/upload/v1639239415/splays_app/background_images/planet_map_bg_grid_hcswoq.jpg' />
+                
 
                 
                     {planets.map(elm => {
@@ -54,7 +54,9 @@ export default function PlanetMap(props) {
                         )
                     })
                     }
+                </div>
                 
+                <div className='ui'>
             </div>
 
             {planetPressed && <PlanetDetails planetChosen={planetPressedId} hideDetails={togglePlanetDetails} />}
