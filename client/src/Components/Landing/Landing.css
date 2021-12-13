@@ -65,3 +65,21 @@
     background-color: blueviolet;
 }
 
+
+
+
+@media (min-width: 700px) {
+    .landing-background {
+        background-image: url("https://res.cloudinary.com/dwxuz6cft/image/upload/v1638996923/splays_app/background_images/splays_landing_background_wide_u3xsxj.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: 60%;
+        background-position-x: 50%;
+        width: 100vw;
+        height: 100vh;
+        background-color: #030303;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

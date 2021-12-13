@@ -4,7 +4,7 @@
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 40px;
-    width: 90vw;
+    width: 345px;
     margin-top: 3.5em;
     display: flex;
     flex-direction: column;
@@ -140,3 +140,60 @@ select:-webkit-autofill:focus {
     text-indent: 17px;
     font-size: 18px;
 }
+
+
+
+
+@media (max-width: 370px) {
+    .form-glass-container {
+        background: rgba( 216, 216, 216, 0.10 );
+        box-shadow: 0 8px 32px 1 rgba( 14, 14, 16, 0.5 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 40px;
+        width: 90vw;
+        margin-top: 3.5em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+    }
+
+
+    .form-field {
+        background: rgba(6, 6, 8, 0.72);
+        backdrop-filter: blur( 10px );
+        -webkit-backdrop-filter: blur( 10px );
+        border-radius: 15px;
+        height: 60px;
+        border: 0px;
+        width: 80vw;
+        color: #AFB7CE;
+        text-indent: 17px;
+        font-size: 18px;
+    }
+
+
+    .login-form-btn {
+        background: rgb(85,3,203);
+        background: linear-gradient(45deg, rgba(85,3,203,1) 0%, rgba(78,6,229,1) 50%, rgba(14,210,211,1) 94%);
+        width: 80vw;
+        height: 60px;
+        color: #fff;
+        font-weight: 600;
+        font-size: 24px;
+        font-style: normal;
+        font-variant: normal;
+        letter-spacing: 0.3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 18px;
+        border: 0px;
+        position: relative;
+        bottom: 0.7em;
+        margin-top: 64px;
+        box-shadow: 0px 0px 37px 0px rgba( 72, 10, 254, 0.6 );
+    }
+}
+
