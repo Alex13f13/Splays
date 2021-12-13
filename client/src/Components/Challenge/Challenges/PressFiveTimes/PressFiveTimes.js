@@ -15,7 +15,7 @@ export default function PressFiveTimes(props) {
 
     useEffect(() => {
 
-        counter === 5 && history.replace(props.winRoute)
+        counter === 9 && history.replace(props.winRoute)
 
     }, [counter, history, props])
 

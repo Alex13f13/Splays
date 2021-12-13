@@ -14,10 +14,18 @@
     top: 36vh;
     left: 70vh;
     z-index: 10;
+    cursor: pointer;
 }
 
 .planet-Chromion img {
     height: 7vh;
+    animation: chromion-create 1.5s;
+    transition: 1s;
+}
+
+.planet-Chromion img:hover {
+    height: 10vh;
+    transition: 0.8s;
 }
 
 .planet-Chromion p {
@@ -32,12 +40,18 @@
 }
 
 .light-Chromion {
-    position: relative;
-    top: -7vh;
+    position: absolute;
     filter: blur(40px);
     mix-blend-mode: screen;
     opacity: 90%;
     z-index: 8;
+}
+
+@keyframes chromion-create {
+    0% {height: 0vh;}
+    40% {height: 0vh;}
+    70% {height: 8vh;}
+    100% {height: 7vh;}
 }
 
 
@@ -52,10 +66,18 @@
     top: 42vh;
     left: 79vh;
     z-index: 10;
+    cursor: pointer;
 }
 
 .planet-Glassmorph img {
     height: 11vh;
+    animation: glassmorph-create 2.5s;
+    transition: 1s;
+}
+
+.planet-Glassmorph img:hover {
+    height: 13vh;
+    transition: 0.4s;
 }
 
 .planet-Glassmorph p {
@@ -70,13 +92,19 @@
 }
 
 .light-Glassmorph {
-    position: relative;
-    top: -11vh;
+    position: absolute;
     filter: blur(40px);
     mix-blend-mode: screen;
     opacity: 60%;
     mix-blend-mode: overlay;
     z-index: 8;
+}
+
+@keyframes glassmorph-create {
+    0% {height: 0vh;}
+    40% {height: 0vh;}
+    70% {height: 12vh;}
+    100% {height: 11vh;}
 }
 
 
@@ -91,10 +119,19 @@
     top: 17vh;
     left: 40.5vh;
     z-index: 10;
+    cursor: pointer;
 }
 
 .planet-Lavadelic img {
     height: 14vh;
+    animation: lavadelic-create 2s;
+    transition: 1s;
+    z-index: 10;
+}
+
+.planet-Lavadelic img:hover {
+    height: 17vh;
+    transition: 0.6s;
 }
 
 .planet-Lavadelic p {
@@ -109,13 +146,17 @@
 }
 
 .light-Lavadelic {
-    position: relative;
-    top: -14vh;
+    position: absolute;
     filter: blur(40px);
-    mix-blend-mode: screen;
     opacity: 80%;
     mix-blend-mode: overlay;
-    z-index: 8;
+    z-index: 0;
+}
+
+@keyframes lavadelic-create {
+    0% {height: 0vh;}
+    30% {height: 16vh;}
+    80% {height: 14vh;}
 }
 
 
@@ -130,10 +171,18 @@
     top: 51.5vh;
     left: 70vh;
     z-index: 10;
+    cursor: pointer;
 }
 
 .planet-Purlix img {
     height: 7vh;
+    animation: purlix-create 2s;
+    transition: 1s;
+}
+
+.planet-Purlix img:hover {
+    height: 10vh;
+    transition: 0.8s;
 }
 
 .planet-Purlix p {
@@ -148,12 +197,18 @@
 }
 
 .light-Purlix {
-    position: relative;
-    top: -7vh;
+    position: absolute;
     filter: blur(30px);
     mix-blend-mode: screen;
     opacity: 70%;
     z-index: 8;
+}
+
+@keyframes purlix-create {
+    0% {height: 0vh;}
+    40% {height: 0vh;}
+    70% {height: 8vh;}
+    100% {height: 7vh;}
 }
 
 
@@ -168,10 +223,18 @@
     top: 66.5vh;
     left: 85vh;
     z-index: 10;
+    cursor: pointer;
 }
 
 .planet-Tropilum img {
     height: 7vh;
+    animation: tropilum-create 1.8s;
+    transition: 1s;
+}
+
+.planet-Tropilum img:hover {
+    height: 10vh;
+    transition: 0.8s;
 }
 
 .planet-Tropilum p {
@@ -186,12 +249,18 @@
 }
 
 .light-Tropilum {
-    position: relative;
-    top: -7vh;
+    position: absolute;
     filter: blur(30px);
     mix-blend-mode: screen;
     opacity: 70%;
     z-index: 8;
+}
+
+@keyframes tropilum-create {
+    0% {height: 0vh;}
+    40% {height: 0vh;}
+    65% {height: 8vh;}
+    100% {height: 7vh;}
 }
 
 
@@ -206,10 +275,18 @@
     top: 56vh;
     left: 15vh;
     z-index: 10;
+    cursor: pointer;
 }
 
 .planet-Candylux img {
     height: 5.5vh;
+    animation: candylux-create 3s;
+    transition: 0.8s;
+}
+
+.planet-Candylux img:hover {
+    height: 7vh;
+    transition: 0.4s;
 }
 
 .planet-Candylux p {
@@ -224,13 +301,18 @@
 }
 
 .light-Candylux {
-    position: relative;
-    top: 0vh;
+    position: absolute;
     filter: blur(30px);
     mix-blend-mode: screen;
     opacity: 70%;
     z-index: 8;
-    left: -5.5vh;
+}
+
+@keyframes candylux-create {
+    0% {height: 0vh;}
+    10% {height: 0vh;}
+    40% {height: 6.5vh;}
+    100% {height: 5.5vh;}
 }
 
 
@@ -245,10 +327,18 @@
     top: 51vh;
     left: 122.5vh;
     z-index: 10;
+    cursor: pointer;
 }
 
 .planet-Helanor img {
     height: 7vh;
+    animation: helanor-create 2s;
+    transition: 1s;
+}
+
+.planet-Helanor img:hover {
+    height: 10vh;
+    transition: 0.8s;
 }
 
 .planet-Helanor p {
@@ -263,12 +353,18 @@
 }
 
 .light-Helanor {
-    position: relative;
-    top: -7.5vh;
+    position: absolute;
     filter: blur(40px);
     mix-blend-mode: hard-light;
     opacity: 100%;
     z-index: 8;
+}
+
+@keyframes helanor-create {
+    0% {height: 0vh;}
+    40% {height: 0vh;}
+    60% {height: 8vh;}
+    100% {height: 7vh;}
 }
 
 
@@ -283,10 +379,18 @@
     top: 11.5vh;
     left: 108.5vh;
     z-index: 10;
+    cursor: pointer;
 }
 
 .planet-K-78 img {
     height: 5vh;
+    animation: k-78-create 2.5s;
+    transition: 1s;
+}
+
+.planet-K-78 img:hover {
+    height: 7vh;
+    transition: 0.5s;
 }
 
 .planet-K-78 p {
@@ -301,12 +405,18 @@
 }
 
 .light-K-78 {
-    position: relative;
-    top: -5.5vh;
+    position: absolute;
     filter: blur(0px);
     mix-blend-mode: normal;
     opacity: 100%;
     z-index: 8;
+}
+
+@keyframes k-78-create {
+    0% {height: 0vh;}
+    60% {height: 0vh;}
+    80% {height: 6vh;}
+    100% {height: 5vh;}
 }
 
 
@@ -321,11 +431,19 @@
     top: 17vh;
     left: 87.5vh;
     z-index: 10;
+    cursor: pointer;
 }
 
 .planet-Lulab img {
     height: 6vh;
     transform: rotate(-12deg);
+    animation: lulab-create 2s;
+    transition: 1s;
+}
+
+.planet-Lulab img:hover {
+    height: 8vh;
+    transition: 0.4s;
 }
 
 .planet-Lulab p {
@@ -340,12 +458,18 @@
 }
 
 .light-Lulab {
-    position: relative;
-    top: -6.5vh;
+    position: absolute;
     filter: blur(40px);
     mix-blend-mode: overlay;
     opacity: 70%;
     z-index: 8;
+}
+
+@keyframes lulab-create {
+    0% {height: 0vh;}
+    50% {height: 0vh;}
+    70% {height: 7vh;}
+    100% {height: 6vh;}
 }
 
 
@@ -360,10 +484,18 @@
     top: 33vh;
     left: 22vh;
     z-index: 10;
+    cursor: pointer;
 }
 
 .planet-Earth img {
     height: 7vh;
+    animation: earth-create 2s;
+    transition: 1s;
+}
+
+.planet-Earth img:hover {
+    height: 9vh;
+    transition: 0.4s;
 }
 
 .planet-Earth p {
@@ -378,13 +510,18 @@
 }
 
 .light-Earth {
-    position: relative;
-    top: 0vh;
-    filter: blur(30px);
+    position: absolute;
+    filter: blur(40px);
     mix-blend-mode: screen;
     opacity: 90%;
     z-index: 8;
-    left: -7vh;
+    box-shadow: aqua 0px 0px 20px 1px;
+}
+
+@keyframes earth-create {
+    0% {height: 0vh;}
+    40% {height: 8vh;}
+    100% {height: 7vh;}
 }
 
 
@@ -399,10 +536,18 @@
     top: 43vh;
     left: 6vh;
     z-index: 10;
+    cursor: pointer;
 }
 
 .planet-Crystalir img {
     height: 9vh;
+    animation: crystalir-create 1s ;
+    transition: 1s;
+}
+
+.planet-Crystalir img:hover {
+    height: 11vh;
+    transition: 0.6s;
 }
 
 .planet-Crystalir p {
@@ -417,37 +562,71 @@
 }
 
 .light-Crystalir {
-    position: relative;
-    top: 0vh;
+    position: absolute;
     filter: blur(40px);
     mix-blend-mode: screen;
     opacity: 60%;
     z-index: 8;
-    left: -9vh;
+}
+
+@keyframes crystalir-create {
+    0% {height: 0vh;}
+    40% {height: 11vh;}
+    100% {height: 9vh;}
 }
 
 
 
 
-.planet-Helix {
+.planet-Herlix {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin: 0px;
-    position: relative;
-    top: -180vh;
+    position: absolute;
+    top: 67vh;
+    left: 56vh;
     z-index: 10;
+    cursor: pointer;
 }
 
-.planet-Helix img {
-    height: 62px;
+.planet-Herlix img {
+    height: 5vh;
+    animation: herlix-create 2s;
+    transition: 1s;
 }
 
-.planet-Helix p {
+.planet-Herlix img:hover {
+    height: 7vh;
+    transition: 0.4s;
+}
+
+.planet-Herlix p {
     color: #9B9B9B;
     font-weight: 100;
+    font-size:1vh;
+    margin-bottom: 1vh;
+    text-transform: uppercase;
+    letter-spacing: 0.65vh;
+    position: relative;
+    left: -1vh;
 }
+
+.light-Herlix {
+    position: absolute;
+    filter: blur(40px);
+    mix-blend-mode: screen;
+    opacity: 60%;
+    z-index: 8;
+}
+
+@keyframes herlix-create {
+    0% {height: 0vh;}
+    40% {height: 6vh;}
+    100% {height: 5vh;}
+}
+
+
 
 
 .planet-Oark {
@@ -459,10 +638,18 @@
     top: 25vh;
     left: 115vh;
     z-index: 10;
+    cursor: pointer;
 }
 
 .planet-Oark img {
     height: 6vh;
+    animation: oark-create 3s;
+    transition: 1s;
+}
+
+.planet-Oark img:hover {
+    height: 8vh;
+    transition: 0.6s;
 }
 
 .planet-Oark p {
@@ -477,13 +664,19 @@
 }
 
 .light-Oark {
-    position: relative;
-    top: -6.5vh;
+    position: absolute;
     filter: blur(30px);
-    mix-blend-mode: screen;
+    mix-blend-mode: overlay;
     opacity: 100%;
     z-index: 8;
     box-shadow: white 0px 0px 30px 0px;
+}
+
+@keyframes oark-create {
+    0% {height: 0vh;}
+    40% {height: 0vh;}
+    70% {height: 7vh;}
+    100% {height: 6vh;}
 }
 
 
@@ -495,21 +688,52 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin: 0px;
-    position: relative;
-    top: -190vh;
+    position: absolute;
+    top: 62.5vh;
+    left: 160vh;
     z-index: 10;
+    cursor: pointer;
 }
 
 .planet-Dragidion img {
-    height: 62px;
-    position: relative;
+    height: 6vh;
+    animation: dragidion-create 3.5s;
+    transition: 1s;
+}
+
+.planet-Dragidion img:hover {
+    height: 8vh;
+    transition: 0.5s;
 }
 
 .planet-Dragidion p {
     color: #9B9B9B;
     font-weight: 100;
+    font-size:1vh;
+    margin-bottom: 1vh;
+    text-transform: uppercase;
+    letter-spacing: 0.65vh;
+    position: relative;
+    left: -2.6vh;
 }
+
+.light-Dragidion {
+    position: absolute;
+    filter: blur(40px);
+    mix-blend-mode: hard-light;
+    opacity: 100%;
+    z-index: 8;
+}
+
+@keyframes dragidion-create {
+    0% {height: 0vh;}
+    10% {height: 0vh;}
+    40% {height: 7vh;}
+    100% {height: 6vh;}
+}
+
+
+
 
 
 .planet-Xilofer {
@@ -517,21 +741,50 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin: 0px;
-    position: relative;
-    top: -200vh;
+    position: absolute;
+    top: 32vh;
+    left: 144vh;
     z-index: 10;
+    cursor: pointer;
 }
 
 .planet-Xilofer img {
-    height: 62px;
-    position: relative;
+    height: 8vh;
+    animation: xilofer-create 1.5s;
+    transition: 1s;
+}
+
+.planet-Xilofer img:hover {
+    height: 10vh;
+    transition: 0.8s;
 }
 
 .planet-Xilofer p {
     color: #9B9B9B;
     font-weight: 100;
+    font-size:1vh;
+    margin-bottom: 1vh;
+    text-transform: uppercase;
+    letter-spacing: 0.65vh;
+    position: relative;
+    left: -0.3vh;
 }
+
+.light-Xilofer {
+    position: absolute;
+    filter: blur(50px);
+    mix-blend-mode: hard-light;
+    opacity: 100%;
+    z-index: 8;
+}
+
+@keyframes xilofer-create {
+    0% {height: 0vh;}
+    40% {height: 9vh;}
+    100% {height: 8vh;}
+}
+
+
 
 
 .planet-Vaxor {
@@ -539,20 +792,104 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin: 0px;
-    position: relative;
-    top: -210vh;
+    position: absolute;
+    top: 40vh;
+    left: 152.5vh;
     z-index: 10;
+    cursor: pointer;
 }
 
 .planet-Vaxor img {
-    height: 62px;
-    position: relative;
+    height: 6.5vh;
+    animation: vaxor-create 2s;
+    transition: 1s;
+}
+
+.planet-Vaxor img:hover {
+    height: 8vh;
+    transition: 0.4s;
 }
 
 .planet-Vaxor p {
     color: #9B9B9B;
     font-weight: 100;
+    font-size:1vh;
+    margin-bottom: 1vh;
+    text-transform: uppercase;
+    letter-spacing: 0.65vh;
+    position: relative;
+    left: 0vh;
+}
+
+.light-Vaxor {
+    position: absolute;
+    filter: blur(30px);
+    mix-blend-mode: overlay;
+    opacity: 60%;
+    z-index: 8;
+}
+
+@keyframes vaxor-create {
+    0% {height: 0vh;}
+    20% {height: 0vh;}
+    50% {height: 7.5vh;}
+    100% {height: 6.5vh;}
+}
+
+
+
+
+.planet-K-67 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 11vh;
+    left: 63vh;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.planet-K-67 img {
+    height: 6vh;
+    animation: k-67 40s infinite linear, k-67-create 2.5s;
+    transition: 1s;
+}
+
+.planet-K-67 img:hover {
+    height: 8vh;
+    transition: 0.4s;
+}
+
+.planet-K-67 p {
+    color: #9B9B9B;
+    font-weight: 100;
+    font-size:1vh;
+    margin-bottom: 1vh;
+    text-transform: uppercase;
+    letter-spacing: 0.65vh;
+    position: relative;
+    left: 0.6vh;
+}
+
+.light-K-67 {
+    position: absolute;
+    filter: blur(40px);
+    mix-blend-mode: screen;
+    opacity: 60%;
+    z-index: 8;
+}
+
+@keyframes k-67 {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(3600deg);}
+}
+
+@keyframes k-67-create {
+    0% {height: 0vh;}
+    40% {height: 7vh;}
+    100% {height: 6vh;}
 }
 
 
@@ -634,3 +971,197 @@
         height: fit-content;
     }
 }
+
+
+
+
+@media (min-width: 1000px) {
+    .planet-Chromion {
+        left: 68.5vh;
+    }
+
+
+
+    .planet-Purlix {
+        left: 68.5vh;
+    }
+
+
+
+    .planet-Glassmorph {
+        left: 77.5vh;
+    }
+
+
+
+    .planet-Tropilum {
+        top: 65vh;
+        left: 83.5vh;
+    }
+
+
+
+    .planet-Candylux {
+        top: 55vh;
+    }
+
+
+    .planet-Helanor {
+        left: 120vh;
+        top: 50.5vh ;
+    }
+
+
+    .planet-K-78 {
+        left: 106.5vh;
+        top: 11vh;
+    }
+
+
+
+    .planet-Lulab {
+        left: 86vh;
+        top: 18vh;
+    }
+
+
+
+    .planet-Earth {
+        top: 32vh;
+        left: 21vh;
+    }
+
+
+
+    .planet-Crystalir {
+        left: 5vh;
+        top: 42vh;
+    }
+
+
+    .planet-Herlix {
+        top: 66vh;
+        left: 55.5vh;
+    }
+
+
+    .planet-Oark {
+        top: 25.5vh;
+        left: 113vh;
+    }
+
+
+
+    .planet-Dragidion {
+        left: 157vh;
+        top: 61.5vh;
+    }
+
+
+
+    .planet-Xilofer {
+        left: 141vh;
+        top: 31.5vh;
+    }
+
+
+
+    .planet-Vaxor {
+        left: 149.5vh;
+    }
+
+
+
+    .planet-K-67 {
+        left: 62vh;
+        top: 10.5vh;
+    }
+}
+
+
+#constelation-01 {
+    fill: none;
+    stroke: #1d1e26;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2.5vh;
+    position: absolute;
+    height: 41vh;
+    left: 51vh;
+    top: 12.5vh;
+    stroke-dasharray: 230vh;
+    stroke-dashoffset: 0vh;
+    animation: constelation-01 3s infinite;
+}
+
+@keyframes constelation-01 {
+    0% {stroke-dashoffset: 230vh;}
+    35% {stroke-dashoffset: 0vh;}
+    50% {stroke-dashoffset: 0vh;}
+    100% {stroke-dashoffset: -230vh;}
+}
+
+
+#constelation-02 {
+    fill: none;
+    stroke: #1d1e26;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3vh;
+    position: absolute;
+    width: 23vh;
+    left: 6vh;
+    top: 12vh;
+    stroke-dasharray: 230vh;
+    stroke-dashoffset: 0vh;
+    animation: constelation-02 3s infinite;
+}
+
+@keyframes constelation-02 {
+    0% {stroke-dashoffset: 230vh;}
+    35% {stroke-dashoffset: 0vh;}
+    50% {stroke-dashoffset: 0vh;}
+    100% {stroke-dashoffset: -230vh;}
+}
+
+
+#constelation-03 {
+    fill: none;
+    stroke: #1d1e26;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3vh;
+    position: absolute;
+    height: 22vh;
+    left: 103vh;
+    top: 42.5vh;
+}
+
+#main-line-constelation-03 {
+    stroke-dasharray: 150vh;
+    stroke-dashoffset: 0vh;
+    animation: main-line-constelation-03 3s infinite ;
+}
+
+@keyframes main-line-constelation-03 {
+    0% {stroke-dashoffset: 150vh;}
+    25% {stroke-dashoffset: 0vh;}
+    60% {stroke-dashoffset: 0vh;}
+    80% {stroke-dashoffset: -150vh;}
+    100% {stroke-dashoffset: -150vh;}
+}
+
+#secondary-line-constelation-03 {
+    stroke-dasharray: 160vh;
+    stroke-dashoffset: 0vh;
+    animation: secondary-line-constelation-03 3s infinite ;
+}
+
+@keyframes secondary-line-constelation-03 {
+    0% {stroke-dashoffset: 160vh;}
+    15% {stroke-dashoffset: 160vh;}
+    45% {stroke-dashoffset: 0vh;}
+    70% {stroke-dashoffset: 0vh;}
+    100% {stroke-dashoffset: -160vh;}
+}
+

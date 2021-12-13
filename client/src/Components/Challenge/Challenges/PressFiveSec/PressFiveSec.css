@@ -10,6 +10,7 @@
     outline-offset: -30px;
     box-shadow: rgba(54, 0, 247, 0.521) 0px 0px 60px 0px;
     transition: 0.8s;
+    cursor: pointer;
 
 }
 
