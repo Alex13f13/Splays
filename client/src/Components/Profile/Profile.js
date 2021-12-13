@@ -135,7 +135,9 @@ export default function Profile(props) {
                     <div className='profile-main-container'>
 
                         <div className='gradient-outline'>
-                            <img className='profile-image' src={formData.image} alt={formData.image} />
+                            <div className='profile-image-container-edit'>
+                                <img className='profile-image' src={formData.image} alt={formData.image} />
+                            </div>
                         </div>
 
                         <p className='profile-username'>{formData.username}</p>

@@ -29,6 +29,23 @@ export default function PlanetMap(props) {
 
     }, [])
 
+    const elementsToShow = document.querySelectorAll(".animation-on-scroll")
+
+    const handleScroll = (e) => {
+        elementsToShow.forEach(element => {
+            
+            if(element.offsetLeft > window.innerWidth) {
+                console.log("no estoy en el viewport", element)
+            } else {
+                element.classList.add("charlyesunpesado")
+                console.log("estoy en el viewport", element)
+            }
+        })
+    }
+
+    // const loop = () => {
+    //     elementsToShow.forEach(element => console.log(element.off))
+    // }
 
     const togglePlanetDetails = (id) => {
         setPlanetPressedId(id)
@@ -40,15 +57,13 @@ export default function PlanetMap(props) {
         <div className='no-scroll'>
             <Nav storeUser={props.storeUser} loggedUser={props.loggedUser} pageTitle={"PLANET MAP"} />
 
-            <div className='scrollable-div'>
+            <div className='scrollable-div' onScroll={handleScroll}>
                 <img className='map-background' src='https://res.cloudinary.com/dwxuz6cft/image/upload/v1639352242/splays_app/background_images/planet_map_bg_main_grid_vwanxu.jpg' />
-                
-
                 
                     {planets.map(elm => {
                         return (
 
-                            <div onClick={() => togglePlanetDetails(elm._id)} key={elm.name} className={`planet-${elm.name}`}>
+                            <div onClick={() => togglePlanetDetails(elm._id)} key={elm.name} className={`planet-${elm.name} animation-on-scroll`}>
                                 <Planet planetName={elm.name} planetImage={elm.image}></Planet>
                             </div>
                         )

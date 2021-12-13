@@ -1,0 +1,67 @@
+.emblems-list-elm {
+    transform: scale(0);
+    height: 6vh;
+    display: inline;
+    margin: 0.95vh 1.75vh 0.95vh 1.75vh;
+    margin: 9px 14.5px 9px 14.5px;
+}
+
+@keyframes huhu {
+    0% {transform: scale(0);}
+    40% {transform: scale(1.2);}
+    100% {transform: scale(1);}
+}
+
+
+.emblems-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 80vw;
+    height: 60vh;
+    background-image: url('https://res.cloudinary.com/dwxuz6cft/image/upload/v1639395029/splays_app/splays_icons/emblems_grid_with_neg_space-01_c85ur6.png');
+    background-repeat: repeat;
+    background-size: 8vh;
+    position: relative;
+}
+
+.emblems-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.each-emblem-div {
+    width: 83vw;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    left: -0.6vw;
+}
+
+.emblems-purple-arrow {
+    height: 15px;
+    transform: rotate(180deg);
+}
+
+
+.emblems-link-container {
+    display: flex;
+    align-items: center;
+    padding: 50px 5vw 60px 5vw;
+    padding: 6vh 5vw 7vh 5vw;
+}
+
+
+.emblems-link {
+    color: #9013FE;
+    font-size: 16px;
+    font-weight: 300;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-bottom: 1.5px;
+}

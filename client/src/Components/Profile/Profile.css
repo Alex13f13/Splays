@@ -1,6 +1,7 @@
 .profile-image {
     height: 135px;
     margin-bottom: 0.5px;
+    z-index: 0;
 }
 
 .profile-image-edit {
@@ -19,6 +20,7 @@
     width: 135px;
     border-radius: 50%;
     background-color: #0C0C16;
+    overflow: hidden;
 
 }
 
@@ -42,6 +44,7 @@
     outline: 5px solid #030303;
     outline-offset: -8px;
     overflow: hidden;
+    z-index: 900;
 }
 
 
