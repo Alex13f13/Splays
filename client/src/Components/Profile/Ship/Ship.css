@@ -1,0 +1,22 @@
+.ships-purple-arrow {
+    height: 15px;
+    transform: rotate(180deg);
+}
+
+
+.ships-link-container {
+    display: flex;
+    align-items: center;
+    padding: 50px 5vw 60px 5vw;
+    padding: 6vh 5vw 7vh 5vw;
+}
+
+
+.ships-link {
+    color: #9013FE;
+    font-size: 16px;
+    font-weight: 300;
+    text-decoration: none;
+    margin-left: 10px;
+    margin-bottom: 1.5px;
+}

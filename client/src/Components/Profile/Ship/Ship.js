@@ -3,6 +3,7 @@ import { useParams } from 'react-router'
 import ProfileService from '../../../services/profile.service'
 import Nav from '../../Nav/Nav'
 import { Link } from 'react-router-dom'
+import "./Ship.css"
 
 const profileService = new ProfileService()
 
@@ -35,9 +36,9 @@ export default function Ship(props) {
       <div>
         <Nav storeUser={props.storeUser} loggedUser={props.loggedUser} pageTitle={"MY SHIP"} />
         <Link className='no-decoration' to={`/profile/${id}`}>
-          <div className='profile-bottom-links-container'>
-            <img className='profile-purple-arrow' src="https://res.cloudinary.com/dwxuz6cft/image/upload/v1639044961/splays_app/splays_icons/purple_arrow_xm6ccv.png" alt="purple arrow" />
-            <p className='profile-bottom-links'>Return to profile</p>
+          <div className='ships-link-container'>
+            <img className='ships-purple-arrow' src="https://res.cloudinary.com/dwxuz6cft/image/upload/v1639044961/splays_app/splays_icons/purple_arrow_xm6ccv.png" alt="purple arrow" />
+            <p className='ships-link'>Return to profile</p>
           </div>
         </Link>
         <h2>{user.ship}</h2>

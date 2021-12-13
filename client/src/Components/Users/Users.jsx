@@ -2,18 +2,15 @@ import React, { useState, useEffect } from 'react'
 import Nav from '../Nav/Nav'
 import ProfileService from '../../services/profile.service'
 import './Users.css'
-import User from "../Users/User/User"
-import UserDetails from "../Users/User-Details/User-details"
+import UserCard from "./User/User-card"
+import { Link } from 'react-router-dom'
+
 
 const profileService = new ProfileService()
 
 export default function Users(props) {
 
     const [users, setUsers] = useState([])
-    const [userPressed, setUserPressed] = useState(false)
-    const [userPressedId, setUserPressedId] = useState(undefined)
-
-    const [animateOut, setAnimateOut] = useState(true)
 
     useEffect(() => {
 
@@ -29,32 +26,35 @@ export default function Users(props) {
     }, [])
 
 
-    const toggleUserDetails = (id) => {
-        setUserPressedId(id)
-        setUserPressed(!userPressed)
-        setAnimateOut(!animateOut)
-    }
-
     return (
-        <div className='no-scroll'>
-            <Nav storeUser={props.storeUser} loggedUser={props.loggedUser} pageTitle={"TRAVELERS"} />
+        users ?
+            <div className='no-scroll'>
+                <Nav storeUser={props.storeUser} loggedUser={props.loggedUser} pageTitle={"TRAVELERS"} />
 
-            <div>
+                <Link className='no-decoration' to={`/`}>
+                    <div className='emblems-link-container'>
+                        <img className='emblems-purple-arrow' src="https://res.cloudinary.com/dwxuz6cft/image/upload/v1639044961/splays_app/splays_icons/purple_arrow_xm6ccv.png" alt="purple arrow" />
+                        <p className='emblems-link'>Return to profile</p>
+                    </div>
+                </Link>
 
-                {users.map(elm => {
-                    return (
+                <div className='users-main-container'>
+                    <div className='users-list'>
 
-                        <div onClick={() => toggleUserDetails(elm._id)} key={elm.name} className={`user`}>
-                            <User userName={elm.username} userImage={elm.image} />
-                        </div>
-                    )
-                })
-                }
+                        {users.map(elm => {
+                            return (
 
-            </div>
+                                <div key={elm._id} className='users-scrollable-card'>
+                                    <UserCard userID={elm._id} />
+                                </div>
+                            )
+                        })
+                        }
 
-            {userPressed && <UserDetails planetChosen={userPressedId} hideDetails={toggleUserDetails} />}
-
-        </div >
+                    </div>
+                </div>
+            </div >
+            :
+            <p>Aquí irá un spinner </p>
     )
 }

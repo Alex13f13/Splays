@@ -57,7 +57,7 @@ export default function PlanetMap(props) {
             <Nav storeUser={props.storeUser} loggedUser={props.loggedUser} pageTitle={"PLANET MAP"} />
 
             <div className='scrollable-div' onScroll={handleScroll}>
-                <img className='map-background' src='https://res.cloudinary.com/dwxuz6cft/image/upload/v1639352242/splays_app/background_images/planet_map_bg_main_grid_vwanxu.jpg' />
+                <img className='map-background' src='https://res.cloudinary.com/dwxuz6cft/image/upload/v1639352242/splays_app/background_images/planet_map_bg_main_grid_vwanxu.jpg' alt='background img' />
 
                 {planets.map(elm => {
                     return (

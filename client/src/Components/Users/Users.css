@@ -1,0 +1,29 @@
+.users-main-container {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+}
+
+
+.users-list {
+    overflow-x: hidden;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.users-scrollable-card {
+    height: 84px;
+    width: 95vw;
+    overflow-x: scroll; 
+    overflow-y: hidden;
+    position: relative;
+    background-color: #1D1E26;
+    margin-bottom: 24px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}

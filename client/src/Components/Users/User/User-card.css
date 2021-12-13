@@ -1,0 +1,73 @@
+.user-card-profile-img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-left: 14px;
+    margin-right: 20px;
+}
+
+
+.user-card-profile-img {
+    height: 60px;
+}
+
+
+.user-image-crop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
+.user-card-text-container{
+    margin-right: 18.5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+.user-card-username {
+    font-weight: 500;
+    font-size: 14px;
+    color: #ACAAAD;
+}
+
+.user-card-username-container {
+    width: 110px;
+}
+
+
+.user-card-origin-planet {
+    font-size: 12px;
+    font-weight: 200;
+    color: #4A4A4A;
+}
+
+
+.user-emblems-list-elm {
+    transform: scale(0);
+    height: 6vh;
+    height: 32px;
+    display: inline;
+    margin: 0.95vh 1.75vh 0.95vh 1.75vh;
+    margin: 0px 6px;
+}
+
+
+.arrow-margin-right {
+    margin-right: 16px;
+}
+
+
+.user-emblems-container {
+    display: flex;
+    align-items: center;
+}
