@@ -36,13 +36,15 @@ export default function Emblems(props) {
                     </div>
                 </Link>
 
-                {userPopulate.planet.map(elm => {
-                    return (
-
-                        <img key={elm.name} src={elm.challenge.emblem} alt={elm.name} />
-                    )
-                })
+                {
+                    userPopulate.planet.map((elm) => {
+                        return (
+                            <img key={elm.name} src={elm.challenge.emblem} alt={elm.name} />
+                        )
+                    })
                 }
+
+                <p style={{ color: 'white' }}>DEBERIA SALIR ENCIMA DE ESTO</p>
             </div>
             :
             <p>Aquí irá un spinner </p>

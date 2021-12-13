@@ -14,6 +14,13 @@ router.put("/:id/create-ship", (req, res) => { //Es para nosotros
         .catch(err => res.json({ err, errMessage: "Problema creando la nave" }))
 })
 
+router.get("/allusers", isLoggedIn, (req, res) => {
+
+    User.find()
+        .then(users => res.json(users))
+        .catch(err => res.json({ err, errMessage: "Problema buscando Usuarios" }))
+});
+
 router.get("/:id/user", isLoggedIn, (req, res) => {
     const { id } = req.params
 

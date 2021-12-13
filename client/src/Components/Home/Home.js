@@ -9,6 +9,8 @@ export default function Home(props) {
             <Nav storeUser={props.storeUser} loggedUser={props.loggedUser} pageTitle={"HOME"} />
             <Link to="/planet-map">Viajar!</Link>
 
+            <Link to="/allUsers">Otros Viajeros</Link>
+
         </div>
     )
 }

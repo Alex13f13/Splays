@@ -10,6 +10,7 @@ import Ship from "./Components/Profile/Ship/Ship"
 import PlanetMap from "./Components/Planet-map/Planet-map"
 import Challenge from "./Components//Challenge/Challenge"
 import ChallengeWin from "./Components//Challenge/Challenge-win/Challenge-win"
+import Users from './Components/Users/Users';
 
 const authService = new AuthService()
 
@@ -40,6 +41,7 @@ function App() {
             <Route exact path="/profile/:id" render={() => <Profile storeUser={storeUser} loggedUser={loggedUser} />} />
             <Route exact path="/profile/:id/emblems" render={() => <Emblems storeUser={storeUser} loggedUser={loggedUser} />} />
             <Route exact path="/profile/:id/ship" render={() => <Ship storeUser={storeUser} loggedUser={loggedUser} />} />
+            <Route exact path="/allUsers" render={() => <Users storeUser={storeUser} loggedUser={loggedUser} />} />
             <Route exact path="/planet-map" render={() => <PlanetMap storeUser={storeUser} loggedUser={loggedUser} />} />
             <Route exact path="/planet-map/:id/:challengename/challenge" render={() => <Challenge />} />
             <Route exact path="/planet-map/:id/challenge/win" render={() => <ChallengeWin storeUser={storeUser} loggedUser={loggedUser} />} />
