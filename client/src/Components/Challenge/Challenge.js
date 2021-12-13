@@ -5,6 +5,8 @@ import PressFiveSec from "./Challenges/PressFiveSec/PressFiveSec";
 import PressFiveTimes from './Challenges/PressFiveTimes/PressFiveTimes'
 import TheNight from './Challenges/TheNight/TheNight'
 import SaimonSays from './Challenges/SimonSays/SimonSays'
+import SpeedButton from "./Challenges/SpeedButton/SpeedButton"
+import Asteroids from "./Challenges/Asteroids/Asteroids.jsx"
 import './Challenge.css'
 
 export default function Challenge() {
@@ -46,7 +48,9 @@ export default function Challenge() {
             console.log('theNight');
             return (
                 <div>
-                    <Link to={'/planet-map'}>Exit</Link>
+                    <div className="exit-btn-container">
+                        <Link className="challenge-exit-btn" to={'/planet-map'}>Exit</Link>
+                    </div>
                     <h1>The Night</h1>
 
                     <div className="btn-center-screen-container">
@@ -59,7 +63,9 @@ export default function Challenge() {
             console.log('saimonSays');
             return (
                 <div>
-                    <Link to={'/planet-map'}>Exit</Link>
+                    <div className="exit-btn-container">
+                        <Link className="challenge-exit-btn" to={'/planet-map'}>Exit</Link>
+                    </div>
                     <h1>Saimon Says</h1>
 
                     <div className="btn-center-screen-container">
@@ -68,25 +74,32 @@ export default function Challenge() {
                 </div>
             )
 
-        case '2':
-            console.log('2');
+        case 'speedButton':
+            console.log('speedButton');
             return (
                 <div>
-                    <Link to={'/planet-map'}>Exit</Link>
-                    <h1>2</h1>
+                    <div className="exit-btn-container">
+                        <Link className="challenge-exit-btn" to={'/planet-map'}>Exit</Link>
+                    </div>
+                    <h1>Speed Button</h1>
 
-                    <Link to={`/planet-map/${params.id}/challenge/win`}>WIN</Link>
+                    <div className="btn-center-screen-container">
+                        <SpeedButton winRoute={`/planet-map/${params.id}/challenge/win`}></SpeedButton>
+                    </div>
                 </div>
             )
 
-        case '3':
-            console.log('3');
+        case 'asteroids':
+            console.log('asteroids');
             return (
                 <div>
-                    <Link to={'/planet-map'}>Exit</Link>
-                    <h1>3</h1>
+                    <div className="exit-btn-container">
+                        <Link className="challenge-exit-btn" to={'/planet-map'}>Exit</Link>
+                    </div>
 
-                    <Link to={`/planet-map/${params.id}/challenge/win`}>WIN</Link>
+                    <div className="btn-center-screen-container">
+                        <Asteroids winRoute={`/planet-map/${params.id}/challenge/win`}></Asteroids>
+                    </div>
                 </div>
             )
 
@@ -94,8 +107,9 @@ export default function Challenge() {
             console.log('4');
             return (
                 <div>
-                    <Link to={'/planet-map'}>Exit</Link>
-                    <h1>4</h1>
+                    <div className="exit-btn-container">
+                        <Link className="challenge-exit-btn" to={'/planet-map'}>Exit</Link>
+                    </div>
 
                     <Link to={`/planet-map/${params.id}/challenge/win`}>WIN</Link>
                 </div>
@@ -105,8 +119,9 @@ export default function Challenge() {
             console.log('5');
             return (
                 <div>
-                    <Link to={'/planet-map'}>Exit</Link>
-                    <h1>5</h1>
+                    <div className="exit-btn-container">
+                        <Link className="challenge-exit-btn" to={'/planet-map'}>Exit</Link>
+                    </div>
 
                     <Link to={`/planet-map/${params.id}/challenge/win`}>WIN</Link>
                 </div>
@@ -116,8 +131,9 @@ export default function Challenge() {
             console.log('6');
             return (
                 <div>
-                    <Link to={'/planet-map'}>Exit</Link>
-                    <h1>6</h1>
+                    <div className="exit-btn-container">
+                        <Link className="challenge-exit-btn" to={'/planet-map'}>Exit</Link>
+                    </div>
 
                     <Link to={`/planet-map/${params.id}/challenge/win`}>WIN</Link>
                 </div>
@@ -127,8 +143,9 @@ export default function Challenge() {
             console.log('7');
             return (
                 <div>
-                    <Link to={'/planet-map'}>Exit</Link>
-                    <h1>7</h1>
+                    <div className="exit-btn-container">
+                        <Link className="challenge-exit-btn" to={'/planet-map'}>Exit</Link>
+                    </div>
 
                     <Link to={`/planet-map/${params.id}/challenge/win`}>WIN</Link>
                 </div>
@@ -138,14 +155,27 @@ export default function Challenge() {
             console.log('8');
             return (
                 <div>
-                    <Link to={'/planet-map'}>Exit</Link>
-                    <h1>8</h1>
+                    <div className="exit-btn-container">
+                        <Link className="challenge-exit-btn" to={'/planet-map'}>Exit</Link>
+                    </div>
 
                     <Link to={`/planet-map/${params.id}/challenge/win`}>WIN</Link>
                 </div>
             )
         default:
-            console.log('default')
+            console.log('speedButton');
+            return (
+                <div>
+                    <div className="exit-btn-container">
+                        <Link className="challenge-exit-btn" to={'/planet-map'}>Exit</Link>
+                    </div>
+                    <h1>Speed Button</h1>
+
+                    <div className="btn-center-screen-container">
+                        <SpeedButton winRoute={`/planet-map/${params.id}/challenge/win`}></SpeedButton>
+                    </div>
+                </div>
+            )
 
     }
 }
