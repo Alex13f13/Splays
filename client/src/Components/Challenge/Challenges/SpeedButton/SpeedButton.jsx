@@ -8,19 +8,15 @@ export default function SpeedButton(props) {
     let history = useHistory()
 
     const [points, setPoints] = useState(0)
-
-    // let nedPoints = 16;
-    // let time = 60;
+    const [time, setTime] = useState(60)
 
     let takeRandom = Math.round(Math.random() * 3);
-    
+
 
     const correctButton = () => {
         setPoints(points + 1)
 
         takeRandom = Math.round(Math.random() * 3)
-
-        //document.getElementById("points").innerHTML = "Points: <b>" + points + "/" + nedPoints + "  </b>";
 
         document.getElementById("correctSpeedButton").style.marginTop = getRandom() + "px";
 
@@ -46,32 +42,29 @@ export default function SpeedButton(props) {
         console.log(points)
     }
 
-    // const restarTime = () => {
-    //     time--;
-    //     document.getElementById("time").innerHTML = "Time: " + time;
-    //     if (time === 0) {
-    //         time = 0;
-    //         setPoints(0)
-    //     }
-    //     setTimeout(() => { restarTime() }, 1000);
-    // }
+    const restarTime = () => {
+        setTime(time - 1)
+        if (time === 0) {
+            setTime(60)
+            setPoints(0)
+        }
+    }
 
-    // setTimeout(() => { restarTime() }, 1000);
+    setTimeout(() => { restarTime() }, 2000);
 
-    // useEffect(() => {
-    //     return () => {
-    //         clearInterval(restarTime)
-    //     }
-    // }, [])
+    useEffect(() => {
+        return () => {
+        }
+    }, [time])
 
 
 
     useEffect(() => {
 
-        points >= 16 && history.replace(props.winRoute)
+        points >= 8 && history.replace(props.winRoute)
 
     }, [points, history, props])
-    
+
 
     let buttonCorrect = <div id="correctSpeedButton">
         <button className="speed-button-btn" onClick={correctButton} />
@@ -88,10 +81,6 @@ export default function SpeedButton(props) {
 
     return (
         <>
-            {/* <div className="speedbutton-container-time">
-                <span id="points"></span>
-                <span id="time"></span>
-            </div> */}
             {randomButtons}
         </>
     )

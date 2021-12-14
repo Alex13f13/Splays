@@ -17,6 +17,9 @@ export default function Asteroids(props) {
     const deleteAsteroid = () => {
         setPoints(points + 1)
 
+        console.log(points)
+        console.log(randomButtons)
+
         points === 3 ? randomButtons = [asteroidButton(getRandom()), asteroidButton(getRandom()), asteroidButton(getRandom()), asteroidButton(getRandom())] : document.getElementById("asteroid").remove()
 
     }
