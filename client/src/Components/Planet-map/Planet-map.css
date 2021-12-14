@@ -1167,5 +1167,13 @@
 
 
 .charlyesunpesado {
-    background-color: blueviolet;
+    background-color: turquoise;
+}
+
+
+
+@keyframes on-scroll-animation {
+    0% {transform: scale(1)}
+    40% {transform: scale(1.2)}
+    100% {transform: scale(1)}
 }
