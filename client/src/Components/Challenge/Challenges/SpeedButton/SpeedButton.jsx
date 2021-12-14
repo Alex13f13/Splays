@@ -10,6 +10,7 @@ export default function SpeedButton(props) {
     const [points, setPoints] = useState(0)
 
     let takeRandom = Math.round(Math.random() * 3);
+    
 
     const correctButton = () => {
         setPoints(points + 1)
@@ -45,6 +46,7 @@ export default function SpeedButton(props) {
         points >= 6 && history.replace(props.winRoute)
 
     }, [points, history, props])
+    
 
     let buttonCorrect = <div id="correctSpeedButton">
         <button className="speed-button-btn" onClick={correctButton} />

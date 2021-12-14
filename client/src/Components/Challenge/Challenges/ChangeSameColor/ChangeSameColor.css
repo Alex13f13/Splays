@@ -1,0 +1,130 @@
+.change-same-color-0 {
+    width: 60px;
+    height: 60px;
+    background: rgb(107,0,255);
+    border-radius: 15px;
+    border: 0px;
+    margin: 0px 1vh 20vh 1vh;
+    outline: rgb(17, 17, 17) solid 26px;
+    outline-offset: -30px;
+    box-shadow: rgb(54, 0, 247) 0px 0px 60px 0px;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.change-same-color-0:active{
+    outline: rgba(164, 167, 175, 0) solid 26px;
+    outline-offset: -30px;
+    border-radius: 15px;
+    transition: 0.2s;
+}
+
+
+.change-same-color-1 {
+    width: 60px;
+    height: 60px;
+    background: rgb(255, 241, 40);
+    border-radius: 15px;
+    border: 0px;
+    margin: 0px 1vh 20vh 1vh;
+    outline: rgb(17, 17, 17) solid 26px;
+    outline-offset: -30px;
+    box-shadow: rgba(255, 241, 40, 0.521) 0px 0px 60px 0px;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.change-same-color-1:active{
+    outline: rgba(164, 167, 175, 0) solid 26px;
+    outline-offset: -30px;
+    border-radius: 15px;
+    transition: 0.2s;
+}
+
+
+.change-same-color-2 {
+    width: 60px;
+    height: 60px;
+    background: rgb(0, 171, 223);
+    border-radius: 15px;
+    border: 0px;
+    margin: 0px 1vh 20vh 1vh;
+    outline: rgb(17, 17, 17) solid 26px;
+    outline-offset: -30px;
+    box-shadow: rgba(0, 171, 223, 0.521) 0px 0px 60px 0px;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.change-same-color-2:active{
+    outline: rgba(164, 167, 175, 0) solid 26px;
+    outline-offset: -30px;
+    border-radius: 15px;
+    transition: 0.2s;
+}
+
+
+.change-same-color-3 {
+    width: 60px;
+    height: 60px;
+    background: rgb(0, 223, 119);
+    border-radius: 15px;
+    border: 0px;
+    margin: 0px 1vh 20vh 1vh;
+    outline: rgb(17, 17, 17) solid 26px;
+    outline-offset: -30px;
+    box-shadow: rgba(0, 223, 119, 0.521) 0px 0px 60px 0px;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.change-same-color-3:active{
+    outline: rgba(164, 167, 175, 0) solid 26px;
+    outline-offset: -30px;
+    border-radius: 15px;
+    transition: 0.2s;
+}
+
+
+.change-same-color-4 {
+    width: 60px;
+    height: 60px;
+    background: rgb(225, 0, 255);
+    border-radius: 15px;
+    border: 0px;
+    margin: 0px 1vh 20vh 1vh;
+    outline: rgb(17, 17, 17) solid 26px;
+    outline-offset: -30px;
+    box-shadow: rgba(225, 0, 255, 0.521) 0px 0px 60px 0px;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.change-same-color-4:active{
+    outline: rgba(164, 167, 175, 0) solid 26px;
+    outline-offset: -30px;
+    border-radius: 15px;
+    transition: 0.2s;
+}
+
+
+.change-same-color-5 {
+    width: 60px;
+    height: 60px;
+    background: rgb(255, 0, 119);
+    border-radius: 15px;
+    border: 0px;
+    margin: 0px 1vh 20vh 1vh;
+    outline: rgb(17, 17, 17) solid 26px;
+    outline-offset: -30px;
+    box-shadow: rgba(255, 0, 119, 0.521) 0px 0px 60px 0px;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.change-same-color-5:active{
+    outline: rgba(164, 167, 175, 0) solid 26px;
+    outline-offset: -30px;
+    border-radius: 15px;
+    transition: 0.2s;
+}

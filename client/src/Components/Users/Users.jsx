@@ -34,17 +34,17 @@ export default function Users(props) {
                 <Link className='no-decoration' to={`/`}>
                     <div className='emblems-link-container'>
                         <img className='emblems-purple-arrow' src="https://res.cloudinary.com/dwxuz6cft/image/upload/v1639044961/splays_app/splays_icons/purple_arrow_xm6ccv.png" alt="purple arrow" />
-                        <p className='emblems-link'>Return to profile</p>
+                        <p className='emblems-link'>Return to home</p>
                     </div>
                 </Link>
 
                 <div className='users-main-container'>
                     <div className='users-list'>
 
-                        {users.map(elm => {
+                        {users.map((elm, idx) => {
                             return (
 
-                                <div key={elm._id} className='users-scrollable-card'>
+                                <div key={elm._id} style={{ animation: `huhu 1s ${idx * 0.2}s forwards` }} className='users-scrollable-card'>
                                     <UserCard userID={elm._id} />
                                 </div>
                             )

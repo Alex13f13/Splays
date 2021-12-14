@@ -7,6 +7,7 @@ import TheNight from './Challenges/TheNight/TheNight'
 import SaimonSays from './Challenges/SimonSays/SimonSays'
 import SpeedButton from "./Challenges/SpeedButton/SpeedButton"
 import Asteroids from "./Challenges/Asteroids/Asteroids.jsx"
+import ChangeSameColor from './Challenges/ChangeSameColor/ChangeSameColor'
 import './Challenge.css'
 
 export default function Challenge() {
@@ -66,7 +67,6 @@ export default function Challenge() {
                     <div className="exit-btn-container">
                         <Link className="challenge-exit-btn" to={'/planet-map'}>Exit</Link>
                     </div>
-                    <h1>Saimon Says</h1>
 
                     <div className="btn-center-screen-container">
                         <SaimonSays winRoute={`/planet-map/${params.id}/challenge/win`}></SaimonSays>
@@ -77,11 +77,10 @@ export default function Challenge() {
         case 'speedButton':
             console.log('speedButton');
             return (
-                <div>
+                <div className="challenge-background">
                     <div className="exit-btn-container">
                         <Link className="challenge-exit-btn" to={'/planet-map'}>Exit</Link>
                     </div>
-                    <h1>Speed Button</h1>
 
                     <div className="btn-center-screen-container">
                         <SpeedButton winRoute={`/planet-map/${params.id}/challenge/win`}></SpeedButton>
@@ -127,15 +126,17 @@ export default function Challenge() {
                 </div>
             )
 
-        case '6':
+        case 'changeSameColor':
             console.log('6');
             return (
-                <div>
+                <div className="challenge-background">
                     <div className="exit-btn-container">
                         <Link className="challenge-exit-btn" to={'/planet-map'}>Exit</Link>
                     </div>
 
-                    <Link to={`/planet-map/${params.id}/challenge/win`}>WIN</Link>
+                    <div className="btn-center-screen-container">
+                        <ChangeSameColor winRoute={`/planet-map/${params.id}/challenge/win`}></ChangeSameColor>
+                    </div>
                 </div>
             )
 
