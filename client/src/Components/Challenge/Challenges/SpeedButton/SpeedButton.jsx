@@ -9,12 +9,17 @@ export default function SpeedButton(props) {
 
     const [points, setPoints] = useState(0)
 
+    // let nedPoints = 16;
+    // let time = 60;
+
     let takeRandom = Math.round(Math.random() * 3);
 
     const correctButton = () => {
         setPoints(points + 1)
 
         takeRandom = Math.round(Math.random() * 3)
+
+        //document.getElementById("points").innerHTML = "Points: <b>" + points + "/" + nedPoints + "  </b>";
 
         document.getElementById("correctSpeedButton").style.marginTop = getRandom() + "px";
 
@@ -40,9 +45,29 @@ export default function SpeedButton(props) {
         console.log(points)
     }
 
+    // const restarTime = () => {
+    //     time--;
+    //     document.getElementById("time").innerHTML = "Time: " + time;
+    //     if (time === 0) {
+    //         time = 0;
+    //         setPoints(0)
+    //     }
+    //     setTimeout(() => { restarTime() }, 1000);
+    // }
+
+    // setTimeout(() => { restarTime() }, 1000);
+
+    // useEffect(() => {
+    //     return () => {
+    //         clearInterval(restarTime)
+    //     }
+    // }, [])
+
+
+
     useEffect(() => {
 
-        points >= 6 && history.replace(props.winRoute)
+        points >= 16 && history.replace(props.winRoute)
 
     }, [points, history, props])
 
@@ -61,6 +86,10 @@ export default function SpeedButton(props) {
 
     return (
         <>
+            {/* <div className="speedbutton-container-time">
+                <span id="points"></span>
+                <span id="time"></span>
+            </div> */}
             {randomButtons}
         </>
     )

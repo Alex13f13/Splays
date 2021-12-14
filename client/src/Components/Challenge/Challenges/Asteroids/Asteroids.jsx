@@ -17,7 +17,8 @@ export default function Asteroids(props) {
     const deleteAsteroid = () => {
         setPoints(points + 1)
 
-        randomButtons.length === 0 ? randomButtons = resetRandomButtons : randomButtons.pop()
+        points === 3 ? randomButtons = [asteroidButton(getRandom()), asteroidButton(getRandom()), asteroidButton(getRandom()), asteroidButton(getRandom())] : document.getElementById("asteroid").remove()
+
     }
 
     useEffect(() => {
@@ -27,20 +28,17 @@ export default function Asteroids(props) {
     }, [points, history, props])
 
     let asteroidButton = (getRandom) => {
-        return <div style={{ marginTop: getRandom + "px" }} className="asteroidButton" >
+        return <div style={{ marginTop: getRandom + "px" }} id="asteroid" className="asteroidButton" >
             <button className="asteroids-btn" onClick={deleteAsteroid} />
         </div >
     }
 
     let randomButtons = [asteroidButton(getRandom()), asteroidButton(getRandom()), asteroidButton(getRandom()), asteroidButton(getRandom())]
-    let resetRandomButtons = [asteroidButton(getRandom()), asteroidButton(getRandom()), asteroidButton(getRandom()), asteroidButton(getRandom())]
+    //let resetRandomButtons = [asteroidButton(getRandom()), asteroidButton(getRandom()), asteroidButton(getRandom()), asteroidButton(getRandom())]
 
     return (
         <>
-            {asteroidButton(getRandom())}
-            {asteroidButton(getRandom())}
-            {asteroidButton(getRandom())}
-            {asteroidButton(getRandom())}
+            {randomButtons}
         </>
     )
 }
