@@ -1,18 +1,8 @@
 const router = require("express").Router();
 const User = require("../models/User.model");
+const Ship = require("../models/Ship.model");
 const isLoggedIn = require("../middleware/isLoggedIn");
 const uploader = require('../config/cloudinary.config')
-
-router.put("/:id/create-ship", (req, res) => { //Es para nosotros
-    const { id } = req.params
-    const { shipName, shipImgen, shipDescription } = req.body
-
-    const ship = { name: shipName, image: shipImgen, description: shipDescription }
-
-    User.findByIdAndUpdate(id, { $push: { ships: ship } }, { new: true })
-        .then(updatedUser => res.json(updatedUser))
-        .catch(err => res.json({ err, errMessage: "Problema creando la nave" }))
-})
 
 router.get("/allusers", isLoggedIn, (req, res) => {
 
@@ -24,7 +14,7 @@ router.get("/allusers", isLoggedIn, (req, res) => {
 router.get("/:id/user", isLoggedIn, (req, res) => {
     const { id } = req.params
 
-    User.findById(id)
+    User.findById(id).populate("ships")
         .then(theUser => res.json(theUser))
         .catch(err => res.json({ err, errMessage: "Problema buscando el Ususario" }))
 })

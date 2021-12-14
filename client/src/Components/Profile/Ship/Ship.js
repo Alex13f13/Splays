@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router'
 import ProfileService from '../../../services/profile.service'
 import Nav from '../../Nav/Nav'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import "./Ship.css"
 
 const profileService = new ProfileService()
@@ -11,6 +11,9 @@ export default function Ship(props) {
   const { id } = useParams()
 
   const [user, setUser] = useState(undefined)
+  const [ship, setShip] = useState(undefined)
+
+  let history = useHistory()
 
 
   useEffect(() => {
@@ -24,10 +27,20 @@ export default function Ship(props) {
       .catch(err => console.log(err))
   }, [id])
 
-  const newShip = (ship) => {
-    profileService.editShip(id, ship)
-      .then(response => console.log(response))
-      .catch(err => console.log(err))
+  const newShip = () => {
+
+    if (ship) {
+      profileService.editShip(id, ship)
+        .then(response => console.log(response))
+        .catch(err => console.log(err))
+    }
+
+    history.replace(`/profile/${id}`)
+
+  }
+
+  const shipChange = (shipImg) => {
+    setShip(shipImg)
   }
 
 
@@ -41,21 +54,19 @@ export default function Ship(props) {
             <p className='ships-link'>Return to profile</p>
           </div>
         </Link>
-        <h2>{user.ship}</h2>
-        <img src={user.ship} alt={user.name} />
         <div>
           {user.ships.map(elm => {
             return (
-
-              <div onClick={() => newShip(elm.image)} key={elm.name} className={`ship-${elm.name}`}>
+              <div onClick={() => shipChange(elm.image)} key={elm.name} className={`ship-${elm.name}`}>
                 <h2>{elm.name}</h2>
                 <img src={elm.image} alt={elm.name} />
               </div>
             )
-          })
-          }
+          })}
+
+          <p onClick={newShip} className='profile-exit-btn'>Choose this ship</p>
         </div>
-      </div>
+      </div >
       :
       <p>Aquí irá un spinner </p>
   )

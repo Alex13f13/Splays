@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const saltRounds = 10;
 
 const User = require("../models/User.model");
+const Ship = require("../models/Ship.model");
 
 const isLoggedOut = require("../middleware/isLoggedOut");
 const isLoggedIn = require("../middleware/isLoggedIn");
@@ -34,6 +35,14 @@ router.post("/signup", isLoggedOut, (req, res) => {
       return res.status(400).json({ errorMessage: "Username already taken." });
     }
 
+    let ships;
+
+    Ship.find()
+      .then(shopsData => {
+        ships = shopsData.map((elm => elm._id))
+      })
+      .catch(err => res.json({ err, errMessage: "Problema buscando Ships en el Signup" }))
+
     return bcrypt
       .genSalt(saltRounds)
       .then((salt) => bcrypt.hash(password, salt))
@@ -43,6 +52,7 @@ router.post("/signup", isLoggedOut, (req, res) => {
           username,
           password: hashedPassword,
           email,
+          ships
         });
       })
       .then((user) => {
@@ -111,6 +121,15 @@ router.get("/logout", isLoggedIn, (req, res) => {
 router.get("/isloggedin", (req, res) => {
   console.log(req.session.currentUser, "el user en loggedIn")
   req.session.currentUser ? res.json(req.session.currentUser) : res.status(401).json({ code: 401, message: 'Unauthorized' })
+})
+
+router.post("/create-ship", (req, res) => { //Para nosotros
+  const { name, image } = req.body
+
+  Ship.create({ name, image })
+    .then(shipData => res.json(shipData))
+    .catch(err => res.json({ err, errMessage: "Problema creando Ship" }))
+
 })
 
 module.exports = router;
