@@ -20,3 +20,171 @@
     margin-left: 10px;
     margin-bottom: 1.5px;
 }
+
+
+.ships-main-container {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    flex-direction: column;
+}
+
+
+.ships-list {
+    overflow-y: hidden;
+    width: 100vw;
+    height: 430px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.separation-div {
+    width: 20px;
+    height: 100%;
+    background-color: blueviolet;
+    margin-right: 10px;
+}
+
+
+.ships-cosmic-bucket {
+    height: 280px;
+    margin-right: 40px;
+}
+
+.ships-voltic-ufo {
+    height: 280px;
+    position: relative;
+    bottom: 10px;
+}
+
+.ships-galaxy-taxi {
+    height: 280px;
+    position: relative;
+    bottom: 30px;
+    left: 20px;
+}
+
+
+
+.ships-image-container {
+    width: 256px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+    border-radius: 10px;
+}
+
+
+.ships-card {
+    width: 256px;
+    height: 420px;
+    border-radius: 20px;
+    background-color: #1D1F25;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px 6px;
+}
+
+.ships-card-clicked {
+    width: 256px;
+    height: 420px;
+    border-radius: 20px;
+    background-color: #1D1F25;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px 6px;
+    outline: solid 1px #989491;
+}
+
+
+
+.cards-space {
+    margin-left: 10px;
+    background-color: blueviolet;
+}
+
+
+.ships-name {
+    color: #ADACAB;
+    font-size: 18px;
+    font-weight: 500;
+    
+}
+
+.ships-name-cosmic-bucket-container {
+    width: 65px;
+    position: relative;
+    left: 145px;
+    bottom: 70px;
+}
+
+.ships-name-voltic-ufo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    bottom: 40px;
+}
+
+.ships-name-galaxy-taxi-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    bottom: 40px;
+}
+
+
+.cosmic-bucket-stats-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    bottom: 30px;
+}
+
+
+.voltic-ufo-stats-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    bottom: 10px;
+}
+
+
+.galaxy-taxi-stats-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    bottom: 10px;
+}
+
+
+.ships-choose-btn {
+    width: 290px;
+    padding: 15px 0px;
+    border: #2D2C36 1px solid;
+    border-radius: 15px;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 500px;
+    margin-top: 5px;  
+    position: absolute;
+    bottom: 50px;   
+    bottom: 6vh;   
+}
+

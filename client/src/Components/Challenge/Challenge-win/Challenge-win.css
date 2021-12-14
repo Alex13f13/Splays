@@ -1,0 +1,197 @@
+.win-background {
+    height: 100vh;
+    width: 100vw;
+    opacity: 30%;
+    position: absolute;
+    z-index: -9999;
+    top: 0vh;
+    overflow: hidden;
+}
+
+.img-space {
+    height: 100vh;
+}
+
+.win-planet {
+    height: 41vh;
+    position: absolute;
+}
+
+.win-planet-light {
+    height: 41vh;
+    filter: blur(50px);
+}
+
+.win-planet-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 22vh;
+}
+
+
+.win-planet-icon {
+    height: 60px;
+    /* margin-left: 17px; */
+    margin-right: 21px;
+}
+
+
+.win-glass-container {
+    background: rgba( 216, 216, 216, 0.10 );
+    box-shadow: 0 8px 32px 1 rgba( 14, 14, 16, 0.5 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 21px;
+    width: 90vw;
+    height: 84px;
+    top: 16.5vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    animation: emblem-container 1s forwards;
+    position: absolute;
+    z-index: 100;
+}
+
+
+@media (min-width: 350px) {
+    .win-glass-container {
+        width: 345px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-height: 600px) {
+    .win-glass-container {
+        top: 22vh;
+    }
+}
+
+
+.win-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.win-congrats-text {
+    color: #D6D2CF;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.win-text-container {
+    width: 50vw;
+}
+
+@media (min-width: 350px) {
+    .win-text-container {
+        width: 200px;
+    }
+}
+
+
+.emblem-win-btn {
+    background: rgb(85,3,203);
+    background: linear-gradient(125deg, #3023AE 0%,  #C86DD7 100%);
+    width: 314px;
+    height: 60px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    font-style: normal;
+    font-variant: normal;
+    letter-spacing: 0.3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    border: 0px;
+    position: absolute;
+    bottom: 5vh;
+    text-decoration: none;
+
+}
+
+@media (max-width: 320px) {
+    .emblem-win-btn {
+        width: 90vw;
+    } 
+}
+
+
+.ship-for-animation {
+    height: 38vh;
+    position: absolute;
+    z-index: 1;
+    top: 50vh;
+    left: -40vw;
+    
+}
+
+.arc {
+    animation: arc 3s infinite;
+}
+
+
+@keyframes ship-entry {
+    0% {
+        top: 75vh;
+        left: -40vh;
+        transform: scale(1);
+    }
+
+    100% {
+        top: 20vh;
+        left: 12vh;
+        transform: scale(0.2);
+    }
+}
+
+
+@keyframes drawArc2 {
+    0%{ 
+        transform: rotate(-180deg) 
+        translateX(350px) 
+        rotate(180deg);  
+    }
+    100% { 
+        transform: rotate(90deg) 
+        translateX(350px) 
+        rotate(90deg) ;}
+}
+
+
+@keyframes drawArc {
+    0% { 
+        transform: rotate(360deg) 
+        translateX(400px) 
+        rotate(40deg) 
+        scale(0.2)  ;}
+    100%{ 
+        transform: rotate(180deg) 
+        translateX(350px) 
+        rotate(40deg)
+        scale(0.5);  
+    }
+    
+        
+}
+
+
+@keyframes arc {
+    0%{
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100%{
+      transform: translate(-50%, -50%) rotate(-180deg);
+    }
+}

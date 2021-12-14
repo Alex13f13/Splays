@@ -43,7 +43,7 @@ export default function Users(props) {
 
                         {users.map((elm, idx) => {
                             return (
-
+                                
                                 <div key={elm._id} style={{ animation: `huhu 1s ${idx * 0.2}s forwards` }} className='users-scrollable-card'>
                                     <UserCard userID={elm._id} />
                                 </div>
