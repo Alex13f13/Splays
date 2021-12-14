@@ -17,16 +17,13 @@ export default function Asteroids(props) {
     const deleteAsteroid = () => {
         setPoints(points + 1)
 
-        console.log(points)
-        console.log(randomButtons)
-
         points === 3 ? randomButtons = [asteroidButton(getRandom()), asteroidButton(getRandom()), asteroidButton(getRandom()), asteroidButton(getRandom())] : document.getElementById("asteroid").remove()
 
     }
 
     useEffect(() => {
 
-        points >= 8 && history.replace(props.winRoute)
+        points >= 5 && history.replace(props.winRoute)
 
     }, [points, history, props])
 

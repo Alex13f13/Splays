@@ -7,6 +7,7 @@ const shipSchema = new Schema(
             required: true,
         },
         image: String,
+        stats: String,
     },
     {
         timestamps: true,

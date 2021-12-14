@@ -24,9 +24,9 @@ const NavLinks = (props) => {
     return (
         <>
             <div className="background-glass">
-                <div className="burger-menu-main-elm-container">
+                <div onClick={props.toggleIsPressed} className="burger-menu-main-elm-container">
                     <div className="close-nav-icon-container">
-                        <img  onClick={props.toggleIsPressed} className="close-nav-icon" src="https://res.cloudinary.com/dwxuz6cft/image/upload/v1639036610/splays_app/splays_icons/close_to3qig.png" alt="close icon" />
+                        <img className="close-nav-icon" src="https://res.cloudinary.com/dwxuz6cft/image/upload/v1639036610/splays_app/splays_icons/close_to3qig.png" alt="close icon" />
                     </div>
 
                     <div className="burger-menu-open-txt-container">

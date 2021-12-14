@@ -1,6 +1,5 @@
 const router = require("express").Router();
 const User = require("../models/User.model");
-const Ship = require("../models/Ship.model");
 const isLoggedIn = require("../middleware/isLoggedIn");
 const uploader = require('../config/cloudinary.config')
 

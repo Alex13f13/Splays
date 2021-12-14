@@ -23,7 +23,7 @@ router.post("/signup", isLoggedOut, (req, res) => {
       .json({ errorMessage: "Please provide your username." });
   }
 
-  if (password.length < 8) {
+  if (password.length < 6) {
     return res.status(400).json({
       errorMessage: "Your password needs to be at least 8 characters long.",
     });
@@ -124,9 +124,9 @@ router.get("/isloggedin", (req, res) => {
 })
 
 router.post("/create-ship", (req, res) => { //Para nosotros
-  const { name, image } = req.body
+  const { name, image, stats } = req.body
 
-  Ship.create({ name, image })
+  Ship.create({ name, image, stats })
     .then(shipData => res.json(shipData))
     .catch(err => res.json({ err, errMessage: "Problema creando Ship" }))
 

@@ -84,7 +84,7 @@
 
 
 .animation-01 {
-    animation: two 3s 2s forwards;
+    animation: two 3s 1s forwards;
 }
 
 @keyframes two {
@@ -97,7 +97,7 @@
 
 
 .animation-03 {
-    animation: three 4s 2s forwards;
+    animation: three 4s 1s forwards;
 }
 
 @keyframes three {
@@ -112,13 +112,13 @@
 
 
 .animation-06 {
-    animation: four 5s 2s forwards;
+    animation: four 5s 1s forwards;
 }
 
 @keyframes four {
     0% {background-color: #8b09ee00}
     10% {background-color: #8b09ee}
-    20% {background-color: #8b09ee00}
+    10% {background-color: #8b09ee00}
     30% {background-color: #06a4ff}
     40% {background-color: #8b09ee00}
     50% {background-color: #FC1F6D}
