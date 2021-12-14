@@ -34,6 +34,8 @@ const NavLinks = (props) => {
                         <div className="nav-open-line"></div>
                         <Link className="burger-menu-open-text" to={`/profile/${loggedUser._id}`}>Profile</Link>
                         <div className="nav-open-line"></div>
+                        <Link className="burger-menu-open-text" to={`/`}>Home</Link>
+                        <div className="nav-open-line"></div>
                         <span className="burger-menu-open-logout" onClick={logout}>Log out</span>
                     </div>
                 </div>

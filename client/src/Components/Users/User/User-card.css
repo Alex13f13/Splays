@@ -37,7 +37,7 @@
 .user-card-username {
     font-weight: 500;
     font-size: 14px;
-    color: #ACAAAD;
+    color: #b7b7c4;
 }
 
 .user-card-username-container {
@@ -46,9 +46,10 @@
 
 
 .user-card-origin-planet {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 200;
-    color: #4A4A4A;
+    margin-top: 2px;
+    color: #6a6e79;
 }
 
 

@@ -1,46 +1,37 @@
-
 .speed-button-btn {
     width: 60px;
     height: 60px;
-    background: rgb(107,0,255);
-    background: linear-gradient(30deg, rgba(107,0,255,1) 0%, rgba(147,40,255,1) 50%, rgb(0, 255, 76) 100%);
+    background: #656675;
     border-radius: 15px;
     border: 0px;
-    margin-bottom: 20vh;
-    outline: rgb(17, 17, 17) solid 26px;
-    outline-offset: -30px;
-    box-shadow: rgba(54, 0, 247, 0.521) 0px 0px 60px 0px;
     transition: 0.8s;
-    margin-right: 20px
+    margin: 0px 10px 20vh 10px;
+    animation: speed-btn 0.8s forwards;
 }
+
 
 .speed-button-btn:active{
     outline: rgba(164, 167, 175, 0.158) solid 26px;
     outline-offset: -30px;
     border-radius: 15px;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 .speed-button-wrong-btn {
     width: 60px;
     height: 60px;
-    background: rgb(107,0,255);
-    background: linear-gradient(30deg, rgba(107,0,255,1) 0%, rgb(79, 40, 255) 50%, rgba(0,165,255,1) 100%);
+    background: #1D1E26;
     border-radius: 15px;
     border: 0px;
-    margin-bottom: 20vh;
-    outline: rgb(17, 17, 17) solid 26px;
-    outline-offset: -30px;
-    box-shadow: rgba(54, 0, 247, 0.521) 0px 0px 60px 0px;
     transition: 0.8s;
-    margin-right: 20px
+    margin: 0px 10px 20vh 10px
 }
 
 .speed-button-wrong-btn:active{
     outline: rgba(164, 167, 175, 0.158) solid 26px;
     outline-offset: -30px;
     border-radius: 15px;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 .speedbutton-container-time {

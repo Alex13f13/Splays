@@ -18,7 +18,6 @@ const Nav = (props) => {
             <div className="main-nav-container">
                 <div className="nav-elm-container">
                     <div>
-                        {/* <p className="nav-page-title">{props.pageTitle}</p> */}
                         <Link className='no-decoration' to={`/`}><p className="nav-page-title">{props.pageTitle}</p></Link>
                     </div>
 
