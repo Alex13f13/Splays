@@ -1,0 +1,78 @@
+.home-planet {
+    height: 337px;
+    position: absolute;
+}
+
+.home-planet-light {
+    height: 337px;
+    filter: blur(50px);
+    opacity: 50%;
+}
+
+
+.home-ship {
+    height: 310px;
+    position: absolute;
+    z-index: 2;
+    left: -20.5vw;
+    top: 16vh;
+    animation: home-ship 3s infinite alternate;
+}
+
+@keyframes home-ship {
+    from {top: 16vh}
+    to {top: 22vh}
+}
+
+
+.home-planet-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 5vh;
+}
+
+
+.home-images-continer {
+    position: relative;
+}
+
+
+.home-trip-btn {
+    background: rgb(85,3,203);
+    background: linear-gradient(125deg, #3023AE 0%,  #C86DD7 100%);
+    width: 314px;
+    height: 60px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    font-style: normal;
+    font-variant: normal;
+    letter-spacing: 0.3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    border: 0px;
+    position: absolute;
+    bottom: 13vh;
+    text-decoration: none;
+
+}
+
+
+.home-travellers-btn {
+    width: 314px;
+    padding: 15px 0px;
+    border: #2D2C36 1px solid;
+    border-radius: 15px;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 500px;
+    margin-top: 5px;  
+    position: absolute;
+    bottom: 4.3vh;   
+    text-decoration: none;
+}

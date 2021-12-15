@@ -47,6 +47,6 @@ export default function User(props) {
 
             </>
             :
-            <p>Aquí irá un spinner </p>
+            <p></p>
     )
 }

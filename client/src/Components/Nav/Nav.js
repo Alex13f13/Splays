@@ -22,7 +22,7 @@ const Nav = (props) => {
                     </div>
 
                     <div>
-                        <img className="burger-menu-icon" onClick={toggleIsPressed} src={"https://res.cloudinary.com/dwxuz6cft/image/upload/v1639031234/splays_app/splays_icons/burger_menu_tcqs8p.png"} alt="" />
+                        <img className="burger-menu-icon" onClick={toggleIsPressed} src={isPressed ? "https://res.cloudinary.com/dwxuz6cft/image/upload/v1639533723/splays_app/splays_icons/close-burger-menu_vb2s6i.png" : "https://res.cloudinary.com/dwxuz6cft/image/upload/v1639031234/splays_app/splays_icons/burger_menu_tcqs8p.png"} alt="" />
                     </div>
                 </div>
                 <div className="nav-line-container">

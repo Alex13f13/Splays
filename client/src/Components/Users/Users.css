@@ -20,11 +20,137 @@
     overflow-x: scroll; 
     overflow-y: hidden;
     position: relative;
-    background-color: #1D1E26;
+    background-color: #3a3d4e71;
+    backdrop-filter: blur( 15px );
+    -webkit-backdrop-filter: blur( 15px );
     margin-bottom: 24px;
     border-radius: 25px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     transform: scale(0);
+}
+
+
+
+
+#splays-spinner {
+    fill: #7b00f2;
+    stroke: none;
+    height: 100px;
+    animation: spinner-first-circle 3s infinite linear;
+}
+
+#first-circle {
+    animation: spinner-first-crcle 3s infinite linear;
+    transform-origin: bottom;
+}
+
+@keyframes spinner-first-circle {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+#second-circle {
+    animation: spinner-second-cirle 4s infinite linear;
+}
+
+@keyframes spinner-second-circle {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(-360deg);}
+}
+
+
+.spinner-container {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.users-general-container {
+    position: absolute;
+    z-index: 9900;
+    background: rgba(10, 10, 10, 0.932);
+    backdrop-filter: blur( 30px );
+    -webkit-backdrop-filter: blur( 30px );
+    width: 100vw;
+    height: 100vh;
+    animation: users-background 1.5s forwards, users-blur 3s forwards;
+}
+
+
+@keyframes users-background {
+    from {background: rgba(10, 10, 10, 0);}
+    to {background: rgba(10, 10, 10, 0.90)}
+}
+
+@keyframes users-blur {
+    from {
+        backdrop-filter: blur( 0px );
+        -webkit-backdrop-filter: blur( 0px );
+    }
+    to{
+        backdrop-filter: blur( 30px );
+        -webkit-backdrop-filter: blur( 30px );
+    }
+}
+
+
+.users-back-home {
+    animation: users-back-home 1.5s 0.8s forwards;
+    margin-left: -60vw;
+}
+
+@keyframes users-back-home {
+    from {
+        margin-left: -60vw;
+        opacity: 0%;
+    }
+    to {
+        margin-left: 0px;
+        opacity: 100%;
+    }
+}
+
+
+.users-general-container-exit {
+    position: absolute;
+    z-index: 9900;
+    background: rgba(10, 10, 10, 0.932);
+    backdrop-filter: blur( 30px );
+    -webkit-backdrop-filter: blur( 30px );
+    width: 100vw;
+    height: 100vh;
+    animation: users-background-exit 1.5s forwards, users-blur-exit 1.5s forwards;
+}
+
+
+@keyframes users-background-exit {
+    from {background: rgba(10, 10, 10, 0.90)}
+    to {background: rgba(10, 10, 10, 0);}
+}
+
+@keyframes users-blur-exit {
+    from{
+        backdrop-filter: blur( 30px );
+        -webkit-backdrop-filter: blur( 30px );
+    }
+    to {
+        backdrop-filter: blur( 0px );
+        -webkit-backdrop-filter: blur( 0px );
+    }
+}
+
+
+.opacity-out {
+    animation: opacity-out 0.8s forwards;
+}
+
+@keyframes opacity-out {
+    from {opacity: 100%;}
+    to {opacity: 0%;}
 }
