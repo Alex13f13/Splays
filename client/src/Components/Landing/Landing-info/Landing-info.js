@@ -7,16 +7,16 @@ export default function LandingInfo() {
         <>
             <div className="landing-info-background">
                 <div className="landing-info-container-main-container">
-                    <div className="landing-info-container"></div>
-                    <div className="landing-info-container"></div>
-                    <div className="landing-info-container"></div>
-                    <div className="landing-info-container"></div>
+                    <div className="landing-info-container landing-info-image-01"></div>
+                    <div className="landing-info-container landing-info-image-02"></div>
+                    <div className="landing-info-container landing-info-image-03"></div>
+                    <div className="landing-info-container landing-info-image-04"></div>
                 </div>
 
                 <div className="landing-info-text-container">
-                    <p className="landing-info-title">This is a title</p>
+                    <p className="landing-info-title">Think outside the planet</p>
                     <div className="landing-info-paragraph-container">
-                        <p className="landing-info-paragraph">This is a text about something really cool that at this moment I have no idea what the hell is gonna be.</p>
+                        <p className="landing-info-paragraph">There are no instructions for the challenges, trust your instincts to guide you throught the space. </p>
                     </div>
                 </div>
             </div>

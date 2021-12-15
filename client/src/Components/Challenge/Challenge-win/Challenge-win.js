@@ -42,6 +42,7 @@ export default function ChallengeWin(props) {
     return (
         planet && user ?
             <>
+            
                 <Nav storeUser={props.storeUser} loggedUser={props.loggedUser} pageTitle={"KUDOS"} />
                 
                 <div className='div-for-animation'>

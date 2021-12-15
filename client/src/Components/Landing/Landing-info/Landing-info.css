@@ -50,3 +50,28 @@
     margin-top: 30px;
     margin-bottom: 60px;
 }
+
+
+.landing-info-image-01 {
+    background-image: url("https://res.cloudinary.com/dwxuz6cft/image/upload/v1639566305/splays_app/landing_info/landing_info1_yf1zok.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.landing-info-image-02 {
+    background-image: url("https://res.cloudinary.com/dwxuz6cft/image/upload/v1639566305/splays_app/landing_info/landing_info2_cupvcz.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.landing-info-image-03 {
+    background-image: url("https://res.cloudinary.com/dwxuz6cft/image/upload/v1639566305/splays_app/landing_info/landing_info3_wkyoyw.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.landing-info-image-04 {
+    background-image: url("https://res.cloudinary.com/dwxuz6cft/image/upload/v1639566305/splays_app/landing_info/landing_info4_d6xsbj.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
