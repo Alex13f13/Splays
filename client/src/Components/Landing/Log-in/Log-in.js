@@ -33,12 +33,14 @@ export default function LogIn(props) {
                 .catch(err => setErrorManager(err.response.data.errorMessage))
         }
         else if (!loginUsername) {
-            setErrorUsername(/*Enlace imagen*/)
+            setErrorUsername("https://res.cloudinary.com/dwxuz6cft/image/upload/v1639569263/splays_app/splays_icons/required_field_cqhz2h.svg")
             console.log("error Username")
+            setErrorPassword(undefined)
         }
         else if (!loginpwd) {
-            setErrorPassword(/*Enlace imagen*/)
+            setErrorPassword("https://res.cloudinary.com/dwxuz6cft/image/upload/v1639569263/splays_app/splays_icons/required_field_cqhz2h.svg")
             console.log("error Password")
+            setErrorUsername(undefined)
         }
     }
 
@@ -78,13 +80,13 @@ export default function LogIn(props) {
                         <input className="form-field" onChange={handleInputChange} value={props.formData.loginpwd} name="loginpwd" type="password" />
                     </div>
 
-                    <p>{errorManager}</p>
+                    <p className="sign-up-err-login">{errorManager}</p>
 
                     <input className="login-form-btn" type="submit" value='Confirm' />
                 </form>
 
-                {/* <img className="" src={errorUsername} alt="error Username" />
-                <img className="" src={errorPassword} alt="error Password" /> */}
+                <img className={errorUsername  ? "required-input-username" : "hide"} src={errorUsername} alt="error Username" />
+                <img className={errorPassword  ? "required-input-email" : "hide"} src={errorPassword} alt="error Email" />
 
             </div>
         </>

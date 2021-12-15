@@ -75,3 +75,18 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+
+.landing-logo-container {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.landing-logo {
+    /* position: absolute; */
+    height: 25px;
+    top: 30vh;
+    margin-top: 20vh;
+}

@@ -66,20 +66,32 @@ export default function SignUp(props) {
 
         }
         else if (!signupUsername) {
-            setErrorUsername(/*Enlace imagen*/)
+            setErrorUsername('https://res.cloudinary.com/dwxuz6cft/image/upload/v1639569263/splays_app/splays_icons/required_field_cqhz2h.svg')
             console.log("error Username")
+            setErrorEmail(undefined)
+            setErrorPassword(undefined)
+            setErrorConfirmPassword(undefined)
         }
         else if (!signupEmail) {
-            setErrorEmail(/*Enlace imagen*/)
+            setErrorEmail('https://res.cloudinary.com/dwxuz6cft/image/upload/v1639569263/splays_app/splays_icons/required_field_cqhz2h.svg')
             console.log("error Email")
+            setErrorPassword(undefined)
+            setErrorConfirmPassword(undefined)
+            setErrorUsername(undefined)
         }
         else if (!signupPwd) {
-            setErrorPassword(/*Enlace imagen*/)
+            setErrorPassword('https://res.cloudinary.com/dwxuz6cft/image/upload/v1639569263/splays_app/splays_icons/required_field_cqhz2h.svg')
             console.log("error Password")
+            setErrorEmail(undefined)
+            setErrorConfirmPassword(undefined)
+            setErrorUsername(undefined)
         }
         else if (!signupConfirmPwd) {
-            setErrorConfirmPassword(/*Enlace imagen*/)
+            setErrorConfirmPassword('https://res.cloudinary.com/dwxuz6cft/image/upload/v1639569263/splays_app/splays_icons/required_field_cqhz2h.svg')
             console.log("error ConfirmPassword")
+            setErrorEmail(undefined)
+            setErrorPassword(undefined)
+            setErrorUsername(undefined)
         }
 
     }
@@ -133,15 +145,15 @@ export default function SignUp(props) {
                         </div>
                     </div>
 
-                    <p>{errorManager}</p>
+                    <p className="sign-up-err">{errorManager}</p>
 
                     <input className="signup-form-btn" type="submit" value="Confirm" />
                 </form>
 
-                {/* <img className="" src={errorUsername} alt="error Username" />
-                <img className="" src={errorEmail} alt="error Email" />
-                <img className="" src={errorPassword} alt="error Password" />
-                <img className="" src={errorConfirmPassword} alt="error ConfirmPassword" /> */}
+                <img className={errorUsername  ? "required-input-username" : "hide"} src={errorUsername} alt="error Username" />
+                <img className={errorEmail  ? "required-input-email" : "hide"} src={errorEmail} alt="error Email" />
+                <img className={errorPassword  ? "required-input-password" : "hide"} src={errorPassword} alt="error Password" />
+                <img className={errorConfirmPassword  ? "required-input-confirm-password" : "hide"} src={errorConfirmPassword} alt="error ConfirmPassword" />
 
             </div>
 
