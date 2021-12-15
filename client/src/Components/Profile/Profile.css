@@ -163,29 +163,22 @@ input[type=file]::-webkit-file-upload-button {
     left: -100px;
 }
 
-.custom-file-btn::before {
-    width: 215px;
-    padding: 6px 20px;
+.custom-file-btn {
+    width: 170px;
+    height: 35px;
     border: #2D2C36 1px solid;
     background-color: rgba(126, 252, 0, 0);
-    border-radius: 15px;
+    border-radius: 50px;
     text-align: center;
     color: #ACAAAD;
     font-size: 18px;
     font-weight: 400;
-    text-decoration: none;
-    content: 'Choose file';
-    margin-top: 100px;
-    margin-bottom: 10px;
-    position: relative;
-    left: 200px;
-    top: -40px;
-    filter: invert();
-    left: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .form-input-file-container {
-    filter: invert();
     height: 100px;
     display: flex;
     flex-direction: column;
@@ -319,4 +312,8 @@ input[type=file]::-webkit-file-upload-button {
     height: 100vh;
     background: rgb(10,10,10);
     background: linear-gradient(310deg, rgba(10,10,10,1) 0%, rgba(15,15,15,1) 50%);
+}
+
+.invisible {
+    display: none;
 }

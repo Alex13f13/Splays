@@ -6,83 +6,75 @@ import './IntruderColor.css'
 export default function IntruderColor(props) {
 
     let history = useHistory()
+    let takeRandom = Math.round(Math.random() * 20);
+    let correctPositionRandom = Math.round(Math.random() * 15);
 
     const [result, setResult] = useState(0)
 
     useEffect(() => {
 
-        result >= 6 && history.replace(props.winRoute)
+        result >= 16 && history.replace(props.winRoute)
 
     }, [result, history, props])
 
+
+
     const correctButton = () => {
         setResult(result + 1)
+        correctPositionRandom = Math.round(Math.random() * 15);
         console.log(result)
     }
-    const wrongButton = () => { setResult(0) }
 
-    let takeRandom = Math.round(Math.random() * 5);
+
+    const wrongButton = () => { 
+        if(result > 0) {setResult(result - 1)}
+    }
+
+    
 
     //#region rounds
 
-    let round1 = <div>
-        <button className="intrude-color-correct-btn" onClick={correctButton} />
-        <button className="intrude-color-btn" onClick={wrongButton} />
-        <button className="intrude-color-btn" onClick={wrongButton} />
-        <button className="intrude-color-btn" onClick={wrongButton} />
-    </div>
+    let intruderBtn = <button className={`intruder-${takeRandom}`} onClick={wrongButton} />
+    let correctBtn = <button className={`correct-${takeRandom}`} onClick={correctButton} />
+        
+    
+    let roundArr = [
+        intruderBtn,
+        intruderBtn,
+        intruderBtn,
+        intruderBtn,
+        intruderBtn,
+        intruderBtn,
+        intruderBtn,
+        intruderBtn,
+        intruderBtn,
+        intruderBtn,
+        intruderBtn,
+        intruderBtn,
+        intruderBtn,
+        intruderBtn,
+        intruderBtn,
+        intruderBtn,
+        intruderBtn,
+        intruderBtn,
+        intruderBtn,
+        intruderBtn,
+        intruderBtn,
+        intruderBtn,
+        intruderBtn,
+        intruderBtn,
+    ]
 
-    let round2 = <div>
-        <button className="intrude-color-btn" onClick={wrongButton} />
-        <button className="intrude-color-correct-btn" onClick={correctButton} />
-        <button className="intrude-color-btn" onClick={wrongButton} />
-        <button className="intrude-color-btn" onClick={wrongButton} />
-    </div>
-
-    let round3 = <div>
-        <button className="intrude-color-btn" onClick={wrongButton} />
-        <button className="intrude-color-btn" onClick={wrongButton} />
-        <button className="intrude-color-correct-btn" onClick={correctButton} />
-        <button className="intrude-color-btn" onClick={wrongButton} />
-    </div>
-
-    let round4 = <div>
-        <button className="intrude-color-btn" onClick={wrongButton} />
-        <button className="intrude-color-btn" onClick={wrongButton} />
-        <button className="intrude-color-btn" onClick={wrongButton} />
-        <button className="intrude-color-correct-btn" onClick={correctButton} />
-    </div>
-
-    let round5 = <div>
-        <button className="intrude-color-btn" onClick={wrongButton} />
-        <button className="intrude-color-btn" onClick={wrongButton} />
-        <button className="intrude-color-btn" onClick={wrongButton} />
-        <button className="intrude-color-correct-btn" onClick={correctButton} />
-        <button className="intrude-color-btn" onClick={wrongButton} />
-        <button className="intrude-color-btn" onClick={wrongButton} />
-        <button className="intrude-color-btn" onClick={wrongButton} />
-        <button className="intrude-color-btn" onClick={wrongButton} />
-    </div>
-
-    let round6 = <div>
-        <button className="intrude-color-btn" onClick={wrongButton} />
-        <button className="intrude-color-btn" onClick={wrongButton} />
-        <button className="intrude-color-btn" onClick={wrongButton} />
-        <button className="intrude-color-btn" onClick={wrongButton} />
-        <button className="intrude-color-btn" onClick={wrongButton} />
-        <button className="intrude-color-btn" onClick={wrongButton} />
-        <button className="intrude-color-correct-btn" onClick={correctButton} />
-        <button className="intrude-color-btn" onClick={wrongButton} />
-    </div>
-
-
-    //#endregion
-
-    const round = [round1, round2, round3, round4, round5, round6]
+    roundArr.splice(correctPositionRandom, 1, correctBtn)
 
     return (
         <>
-            {round[takeRandom]}
+            <div className="intruder-container">
+                <p className="intruder-points">{result} / 16</p>
+                <div className="intruder-container">
+                    {roundArr}
+                </div>
+            </div>
         </>
     )
 }

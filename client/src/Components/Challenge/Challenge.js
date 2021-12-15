@@ -10,6 +10,7 @@ import Asteroids from "./Challenges/Asteroids/Asteroids.jsx"
 import IntruderColor from "./Challenges/IntruderColor/IntruderColor"
 import ChangeSameColor from './Challenges/ChangeSameColor/ChangeSameColor'
 import Align from "./Challenges/Align/Align";
+import CantTouchThis from './Challenges/CantTouchThis/CantTouchThis'
 import './Challenge.css'
 
 export default function Challenge() {
@@ -142,8 +143,22 @@ export default function Challenge() {
 
                     <div className="btn-center-screen-container">
                         <Align winRoute={`/planet-map/${params.id}/challenge/win`}></Align>
+                    </div >
+                </div >
+            )
+
+        case 'cantTouchThis':
+            console.log('pressFiveSec');
+            return (
+                <div className="challenge-background">
+                    <div className="exit-btn-container">
+                        <Link className="challenge-exit-btn" to={'/planet-map'}>Exit</Link>
                     </div>
-                </div>
+
+                    <div className="btn-center-screen-container">
+                        <CantTouchThis winRoute={`/planet-map/${params.id}/challenge/win`}></CantTouchThis>
+                    </div >
+                </div >
             )
 
         default:
