@@ -17,8 +17,6 @@ export default function SignUp(props) {
     const [errorPassword, setErrorPassword] = useState(undefined)
     const [errorConfirmPassword, setErrorConfirmPassword] = useState(undefined)
 
-    const [hasCorrectPassword, setHasCorrectPassword] = useState(undefined)
-
 
     const handleSubmitSignup = (e) => {
         e.preventDefault();
@@ -30,13 +28,7 @@ export default function SignUp(props) {
 
         if (signupUsername && signupPwd && signupConfirmPwd && signupEmail) { //Gestión de errores del formulario
 
-            let corretPassword;
-
-            signupPwd === signupConfirmPwd ? corretPassword = true : corretPassword = false
-
-            setHasCorrectPassword(corretPassword)
-
-            if (corretPassword) { //Gestión de error confirmar contraseña
+            if (props.hasCorrectPassword) { //Gestión de error confirmar contraseña
 
                 authService.signup(signupUsername, signupPwd, signupEmail)
                     .then(response => {
@@ -129,7 +121,7 @@ export default function SignUp(props) {
                         <p className="form-field-name">Confirm Password</p>
                         <div className="confirm-password-container">
                             <input className="form-field" onChange={handleInputChange} value={props.formData.signupConfirmPwd} name="signupConfirmPwd" type="password" placeholder="Confirm Password" />
-                            {hasCorrectPassword && <img className="password-check-icon" src="https://res.cloudinary.com/dwxuz6cft/image/upload/v1639005660/splays_app/splays_icons/password_check_vpy7rh.png" alt="password check" />}
+                            {props.hasCorrectPassword && <img className="password-check-icon" src="https://res.cloudinary.com/dwxuz6cft/image/upload/v1639005660/splays_app/splays_icons/password_check_vpy7rh.png" alt="password check" />}
                         </div>
                     </div>
 
