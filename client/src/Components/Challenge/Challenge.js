@@ -9,6 +9,7 @@ import SpeedButton from "./Challenges/SpeedButton/SpeedButton"
 import Asteroids from "./Challenges/Asteroids/Asteroids.jsx"
 import IntruderColor from "./Challenges/IntruderColor/IntruderColor"
 import ChangeSameColor from './Challenges/ChangeSameColor/ChangeSameColor'
+import Align from "./Challenges/Align/Align";
 import './Challenge.css'
 
 export default function Challenge() {
@@ -127,6 +128,20 @@ export default function Challenge() {
 
                     <div className="btn-center-screen-container">
                         <ChangeSameColor winRoute={`/planet-map/${params.id}/challenge/win`}></ChangeSameColor>
+                    </div>
+                </div>
+            )
+
+        case 'align':
+            console.log('align');
+            return (
+                <div className="challenge-background">
+                    <div className="exit-btn-container">
+                        <Link className="challenge-exit-btn" to={'/planet-map'}>Exit</Link>
+                    </div>
+
+                    <div className="btn-center-screen-container">
+                        <Align winRoute={`/planet-map/${params.id}/challenge/win`}></Align>
                     </div>
                 </div>
             )

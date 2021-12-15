@@ -1,0 +1,36 @@
+.aling-game-main-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.align-game-container-buttons {
+    width: 225px;
+    display: flex;
+    flex-direction: column;
+}
+
+.align-game-button {
+    width: 60px;
+    height: 60px;
+    background: rgb(41, 165, 97);
+    border-radius: 15px;
+    border: 0px;
+    margin-bottom: 15px;
+    outline: rgb(17, 17, 17) solid 26px;
+    outline-offset: -30px;
+    box-shadow:     rgba(12, 180, 110, 0.479) 0px 0px 60px 0px;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+
+.align-button:active{
+    outline: rgba(164, 167, 175, 0) solid 26px;
+    outline-offset: -30px;
+    border-radius: 15px;
+    transition: 0.2s;
+}
