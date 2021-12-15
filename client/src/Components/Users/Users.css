@@ -12,7 +12,9 @@
     flex-direction: column;
     align-items: center;
 }
-
+.users-scrollable-card::-webkit-scrollbar {
+    display: none;
+}
 
 .users-scrollable-card {
     height: 84px;

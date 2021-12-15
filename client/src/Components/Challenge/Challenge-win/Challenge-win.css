@@ -8,8 +8,16 @@
     overflow: hidden;
 }
 
+.win-background::-webkit-scrollbar {
+    display: none;
+}
+
 .img-space {
     height: 100vh;
+}
+
+.img-space::-webkit-scrollbar {
+    display: none;
 }
 
 .win-planet {
@@ -159,6 +167,10 @@
     height: 38vh;
     animation: ship-entry-x 3s infinite, ship-entry-rotation 3s infinite;
     
+}
+
+.ship-for-animation::-webkit-scrollbar {
+    display: none;
 }
 
 
