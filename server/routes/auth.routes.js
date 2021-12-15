@@ -20,19 +20,19 @@ router.post("/signup", isLoggedOut, (req, res) => {
   if (!username) {
     return res
       .status(400)
-      .json({ errorMessage: "Please provide your username." });
+      .json({ errorMessage: "Please enter a valid username" });
   }
 
   if (password.length < 6) {
     return res.status(400).json({
-      errorMessage: "Your password needs to be at least 6 characters long.",
+      errorMessage: "Password must be min. 6 characters long",
     });
   }
 
   User.findOne({ username }).then((found) => {
 
     if (found) {
-      return res.status(400).json({ errorMessage: "Username already taken." });
+      return res.status(400).json({ errorMessage: "Username is already taken" });
     }
 
     let ships;
@@ -41,7 +41,7 @@ router.post("/signup", isLoggedOut, (req, res) => {
       .then(shopsData => {
         ships = shopsData.map((elm => elm._id))
       })
-      .catch(err => res.json({ err, errMessage: "Problema buscando Ships en el Signup" }))
+      .catch(err => res.json({ err, errMessage: "No ships were generated" }))
 
     return bcrypt
       .genSalt(saltRounds)
@@ -66,7 +66,7 @@ router.post("/signup", isLoggedOut, (req, res) => {
         if (error.code === 11000) {
           return res.status(400).json({
             errorMessage:
-              "Username need to be unique. The username you chose is already in use.",
+              "Username is already taken",
           });
         }
         return res.status(500).json({ errorMessage: error.message });
@@ -80,12 +80,12 @@ router.post("/login", isLoggedOut, (req, res, next) => {
   if (!username) {
     return res
       .status(400)
-      .json({ errorMessage: "Please provide your username." });
+      .json({ errorMessage: "Username does not exist" });
   }
 
   if (password.length < 6) {
     return res.status(400).json({
-      errorMessage: "Your password needs to be at least 6 characters long.",
+      errorMessage: "Wrong password",
     });
   }
 
@@ -93,13 +93,13 @@ router.post("/login", isLoggedOut, (req, res, next) => {
     .then((user) => {
 
       if (!user) {
-        return res.status(400).json({ errorMessage: "Wrong credentials." });
+        return res.status(400).json({ errorMessage: "Wrong username" });
       }
 
       const isSamePassword = bcrypt.compareSync(password, user.password)
 
       if (!isSamePassword) {
-        return res.status(400).json({ errorMessage: "Wrong credentials." });
+        return res.status(400).json({ errorMessage: "Wrong password" });
       }
 
       req.session.currentUser = user;

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { useHistory } from "react-router";
 import AuthService from "../../../services/auth.service";
 import './Log-in.css'
@@ -7,21 +7,39 @@ const authService = new AuthService()
 
 
 export default function LogIn(props) {
-    
+
     let history = useHistory()
+
+    const [errorManager, setErrorManager] = useState(undefined)
+
+    const [errorUsername, setErrorUsername] = useState(undefined)
+    const [errorPassword, setErrorPassword] = useState(undefined)
 
     const handleSubmitLogin = (e) => {
         e.preventDefault();
 
         let { loginUsername, loginpwd } = props.formData
 
-        authService.login(loginUsername, loginpwd)
-            .then(response => {
-                props.storeUser(response.data)
-                history.replace("/")
+        setErrorManager(undefined)
 
-            })
-            .catch(err => console.log(err))
+        if (loginUsername && loginpwd) { //Gestión de errores del formulario
+
+            authService.login(loginUsername, loginpwd)
+                .then(response => {
+                    props.storeUser(response.data)
+                    history.replace("/")
+
+                })
+                .catch(err => setErrorManager(err.response.data.errorMessage))
+        }
+        else if (!loginUsername) {
+            setErrorUsername(/*Enlace imagen*/)
+            console.log("error Username")
+        }
+        else if (!loginpwd) {
+            setErrorPassword(/*Enlace imagen*/)
+            console.log("error Password")
+        }
     }
 
 
@@ -52,15 +70,22 @@ export default function LogIn(props) {
                 <form onSubmit={handleSubmitLogin}>
                     <div className="form-field-container">
                         <p className="form-field-name">Username</p>
-                        <input className="form-field" onChange={handleInputChange} value={props.formData.loginUsername} name="loginUsername" type="text" />
+                        <input className="form-field" maxLength="16" onChange={handleInputChange} value={props.formData.loginUsername} name="loginUsername" type="text" />
                     </div>
 
                     <div className="form-field-container">
                         <p className="form-field-name">Password</p>
                         <input className="form-field" onChange={handleInputChange} value={props.formData.loginpwd} name="loginpwd" type="password" />
                     </div>
+
+                    <p>{errorManager}</p>
+
                     <input className="login-form-btn" type="submit" value='Confirm' />
                 </form>
+
+                {/* <img className="" src={errorUsername} alt="error Username" />
+                <img className="" src={errorPassword} alt="error Password" /> */}
+
             </div>
         </>
     )

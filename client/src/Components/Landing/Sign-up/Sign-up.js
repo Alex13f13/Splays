@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { useHistory } from "react-router-dom"
 import AuthService from "../../../services/auth.service";
 import './Sign-up.css'
@@ -9,34 +9,79 @@ const authService = new AuthService()
 export default function SignUp(props) {
 
     let history = useHistory()
-    
+
+    const [errorManager, setErrorManager] = useState(undefined)
+
+    const [errorUsername, setErrorUsername] = useState(undefined)
+    const [errorEmail, setErrorEmail] = useState(undefined)
+    const [errorPassword, setErrorPassword] = useState(undefined)
+    const [errorConfirmPassword, setErrorConfirmPassword] = useState(undefined)
+
+    const [hasCorrectPassword, setHasCorrectPassword] = useState(undefined)
+
 
     const handleSubmitSignup = (e) => {
         e.preventDefault();
 
         let { signupUsername, signupPwd, signupConfirmPwd, signupEmail } = props.formData;
 
-        if (signupPwd === signupConfirmPwd) {
-            authService.signup(signupUsername, signupPwd, signupEmail)
-                .then(response => {
-                    console.log(response)
-                    props.storeUser(response.data)
+        setErrorManager(undefined)
 
-                    authService.login(signupUsername, signupPwd)
-                        .then(response => {
-                            props.storeUser(response.data)
-                            history.replace("/")
 
-                        })
-                        .catch(err => console.log(err))
+        if (signupUsername && signupPwd && signupConfirmPwd && signupEmail) { //Gestión de errores del formulario
 
-                })
-                .catch(err => console.log(err.response.data.errorMessage))
+            let corretPassword;
+
+            signupPwd === signupConfirmPwd ? corretPassword = true : corretPassword = false
+
+            setHasCorrectPassword(corretPassword)
+
+            if (corretPassword) { //Gestión de error confirmar contraseña
+
+                authService.signup(signupUsername, signupPwd, signupEmail)
+                    .then(response => {
+                        console.log(response)
+                        props.storeUser(response.data)
+
+                        authService.login(signupUsername, signupPwd)
+                            .then(response => {
+                                props.storeUser(response.data)
+                                history.replace("/")
+
+                            })
+                            .catch(err => setErrorManager(err))
+
+                    })
+                    .catch(err => { //Gestión de errores de petición al servidor
+                        console.log(err.response.data.errorMessage)
+                        setErrorManager(err.response.data.errorMessage)
+                    })
+
+            }
+            else {
+                //error
+                console.log("The password does not match")
+                setErrorManager("The password does not match")
+            }
+
         }
-        else {
-            //error
-            console.log("Error de Sign up")
+        else if (!signupUsername) {
+            setErrorUsername(/*Enlace imagen*/)
+            console.log("error Username")
         }
+        else if (!signupEmail) {
+            setErrorEmail(/*Enlace imagen*/)
+            console.log("error Email")
+        }
+        else if (!signupPwd) {
+            setErrorPassword(/*Enlace imagen*/)
+            console.log("error Password")
+        }
+        else if (!signupConfirmPwd) {
+            setErrorConfirmPassword(/*Enlace imagen*/)
+            console.log("error ConfirmPassword")
+        }
+
     }
 
 
@@ -45,9 +90,9 @@ export default function SignUp(props) {
 
         props.setFormData({ ...props.formData, [name]: value })
     }
-    
 
-    return(
+
+    return (
         <>
             <div className="main-login-title-container">
 
@@ -67,7 +112,7 @@ export default function SignUp(props) {
                 <form onSubmit={handleSubmitSignup}>
                     <div className="form-field-container">
                         <p className="form-field-name">Username</p>
-                        <input className="form-field" onChange={handleInputChange} value={props.formData.signupUsername} name="signupUsername" type="text" placeholder="Only lowercase" />
+                        <input className="form-field" maxLength="16" onChange={handleInputChange} value={props.formData.signupUsername} name="signupUsername" type="text" placeholder="Awesome name" />
                     </div>
 
                     <div className="form-field-container">
@@ -77,19 +122,27 @@ export default function SignUp(props) {
 
                     <div className="form-field-container">
                         <p className="form-field-name">Password</p>
-                        <input className="form-field" onChange={handleInputChange} value={props.formData.signupPwd} name="signupPwd" type="password" placeholder="Min. 8 characters" />
+                        <input className="form-field" onChange={handleInputChange} value={props.formData.signupPwd} name="signupPwd" type="password" placeholder="Min. 6 characters" />
                     </div>
 
                     <div className="form-field-container">
                         <p className="form-field-name">Confirm Password</p>
                         <div className="confirm-password-container">
                             <input className="form-field" onChange={handleInputChange} value={props.formData.signupConfirmPwd} name="signupConfirmPwd" type="password" placeholder="Confirm Password" />
-                            <img className="password-check-icon" src="https://res.cloudinary.com/dwxuz6cft/image/upload/v1639005660/splays_app/splays_icons/password_check_vpy7rh.png" alt="password check" />
+                            {hasCorrectPassword && <img className="password-check-icon" src="https://res.cloudinary.com/dwxuz6cft/image/upload/v1639005660/splays_app/splays_icons/password_check_vpy7rh.png" alt="password check" />}
                         </div>
                     </div>
 
-                    <input className="signup-form-btn" type="submit" value="Confirm"/>
+                    <p>{errorManager}</p>
+
+                    <input className="signup-form-btn" type="submit" value="Confirm" />
                 </form>
+
+                {/* <img className="" src={errorUsername} alt="error Username" />
+                <img className="" src={errorEmail} alt="error Email" />
+                <img className="" src={errorPassword} alt="error Password" />
+                <img className="" src={errorConfirmPassword} alt="error ConfirmPassword" /> */}
+
             </div>
 
         </>
