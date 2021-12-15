@@ -51,7 +51,7 @@ export default function Landing(props) {
                 {mainBtns &&
                     <>
                         <div className="landing-logo-container">
-                            <img src={""} alt={""} />
+                            <img className='landing-logo' src={"https://res.cloudinary.com/dwxuz6cft/image/upload/v1639570862/splays_app/splays_logo/SPLAYS-LOGO-03_nvsrvb.png"} alt={""} />
                         </div>
                         <div className="landing-login-btn">
                             <p onClick={showLogin}>Log in</p>

@@ -34,4 +34,59 @@
     bottom: 0.7em;
     margin-top: 40px;
     box-shadow: 0px 0px 37px 0px rgba( 72, 10, 254, 0.6 );
+    cursor: pointer;
+}
+
+
+.sign-up-err {
+    color: #C81D32;
+    font-size: 14px;
+    font-weight: 300;
+    margin-left: 6px;
+}
+
+.sign-up-err-login {
+    color: #C81D32;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 6px;
+    margin-top: 10px;
+}
+
+
+.required-input-username {
+    height: 63px;
+    position: absolute;
+    top: 80px;
+    right: 19px;
+    z-index: 9990;
+}
+
+.required-input-email {
+    height: 63px;
+    position: absolute;
+    top: 200px;
+    right: 19px;
+    z-index: 9990;
+}
+
+.required-input-password {
+    height: 63px;
+    position: absolute;
+    top: 323px;
+    right: 19px;
+    z-index: 9990;
+}
+
+.required-input-confirm-password {
+    height: 63px;
+    position: absolute;
+    top: 445px;
+    right: 19px;
+    z-index: 9990;
+}
+
+
+.hide {
+    display: none;
 }
