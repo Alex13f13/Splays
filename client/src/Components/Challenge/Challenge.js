@@ -7,6 +7,7 @@ import TheNight from './Challenges/TheNight/TheNight'
 import SaimonSays from './Challenges/SimonSays/SimonSays'
 import SpeedButton from "./Challenges/SpeedButton/SpeedButton"
 import Asteroids from "./Challenges/Asteroids/Asteroids.jsx"
+import IntruderColor from "./Challenges/IntruderColor/IntruderColor"
 import ChangeSameColor from './Challenges/ChangeSameColor/ChangeSameColor'
 import './Challenge.css'
 
@@ -102,32 +103,22 @@ export default function Challenge() {
                 </div>
             )
 
-        case '4':
-            console.log('4');
+        case 'intruderColor':
+            console.log('intruderColor');
             return (
                 <div>
                     <div className="exit-btn-container">
                         <Link className="challenge-exit-btn" to={'/planet-map'}>Exit</Link>
                     </div>
 
-                    <Link to={`/planet-map/${params.id}/challenge/win`}>WIN</Link>
-                </div>
-            )
-
-        case '5':
-            console.log('5');
-            return (
-                <div>
-                    <div className="exit-btn-container">
-                        <Link className="challenge-exit-btn" to={'/planet-map'}>Exit</Link>
+                    <div className="btn-center-screen-container">
+                        <IntruderColor winRoute={`/planet-map/${params.id}/challenge/win`}></IntruderColor>
                     </div>
-
-                    <Link to={`/planet-map/${params.id}/challenge/win`}>WIN</Link>
                 </div>
             )
 
         case 'changeSameColor':
-            console.log('6');
+            console.log('changeSameColor');
             return (
                 <div className="challenge-background">
                     <div className="exit-btn-container">
@@ -140,40 +131,16 @@ export default function Challenge() {
                 </div>
             )
 
-        case '7':
-            console.log('7');
-            return (
-                <div>
-                    <div className="exit-btn-container">
-                        <Link className="challenge-exit-btn" to={'/planet-map'}>Exit</Link>
-                    </div>
-
-                    <Link to={`/planet-map/${params.id}/challenge/win`}>WIN</Link>
-                </div>
-            )
-
-        case '8':
-            console.log('8');
-            return (
-                <div>
-                    <div className="exit-btn-container">
-                        <Link className="challenge-exit-btn" to={'/planet-map'}>Exit</Link>
-                    </div>
-
-                    <Link to={`/planet-map/${params.id}/challenge/win`}>WIN</Link>
-                </div>
-            )
         default:
-            console.log('speedButton');
+            console.log('saimonSays');
             return (
                 <div>
                     <div className="exit-btn-container">
                         <Link className="challenge-exit-btn" to={'/planet-map'}>Exit</Link>
                     </div>
-                    <h1>Speed Button</h1>
 
                     <div className="btn-center-screen-container">
-                        <SpeedButton winRoute={`/planet-map/${params.id}/challenge/win`}></SpeedButton>
+                        <SaimonSays winRoute={`/planet-map/${params.id}/challenge/win`}></SaimonSays>
                     </div>
                 </div>
             )

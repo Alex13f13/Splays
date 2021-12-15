@@ -7,22 +7,6 @@ const User = require("../models/User.model");
 const isLoggedOut = require("../middleware/isLoggedOut");
 const isLoggedIn = require("../middleware/isLoggedIn");
 
-router.post("/create", (req, res) => { //Esto es para nosotros
-    const { name, image, description, challengeName, challengeImage, challengeEmblem } = req.body;
-
-    const challenge = {
-        name: challengeName,
-        image: challengeImage,
-        emblem: challengeEmblem,
-    }
-
-    Planet.create({ name, image, description, challenge })
-        .then((updateUserPlanet => res.json(updateUserPlanet)))
-        .catch((error) => {
-            return res.status(500).json({ errorMessage: error.message });
-        });
-
-});
 
 router.get("/allplanets", isLoggedIn, (req, res) => {
 
@@ -59,5 +43,21 @@ router.put("/:planetId/:userId", (req, res) => {
         .catch(err => res.json({ err, errMessage: "Problema buscando un Usuario" }))
 })
 
+router.post("/create", (req, res) => { //For developers
+    const { name, image, description, challengeName, challengeImage, challengeEmblem } = req.body;
+
+    const challenge = {
+        name: challengeName,
+        image: challengeImage,
+        emblem: challengeEmblem,
+    }
+
+    Planet.create({ name, image, description, challenge })
+        .then((updateUserPlanet => res.json(updateUserPlanet)))
+        .catch((error) => {
+            return res.status(500).json({ errorMessage: error.message });
+        });
+
+});
 
 module.exports = router;

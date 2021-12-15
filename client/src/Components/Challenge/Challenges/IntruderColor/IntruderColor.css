@@ -1,0 +1,21 @@
+.intrude-color-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #1D1E26;
+    border: 0px;
+    margin-bottom: 30vh;
+    transition: 0.8s;
+    margin: 0px 1vh 30vh 1vh;
+}
+
+.intrude-color-correct-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #0e27e6;
+    border: 0px;
+    margin-bottom: 30vh;
+    transition: 0.8s;
+    margin: 0px 1vh 30vh 1vh;
+}

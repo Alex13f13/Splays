@@ -25,7 +25,7 @@ router.post("/signup", isLoggedOut, (req, res) => {
 
   if (password.length < 6) {
     return res.status(400).json({
-      errorMessage: "Your password needs to be at least 8 characters long.",
+      errorMessage: "Your password needs to be at least 6 characters long.",
     });
   }
 
@@ -83,9 +83,9 @@ router.post("/login", isLoggedOut, (req, res, next) => {
       .json({ errorMessage: "Please provide your username." });
   }
 
-  if (password.length < 8) {
+  if (password.length < 6) {
     return res.status(400).json({
-      errorMessage: "Your password needs to be at least 8 characters long.",
+      errorMessage: "Your password needs to be at least 6 characters long.",
     });
   }
 
@@ -123,7 +123,7 @@ router.get("/isloggedin", (req, res) => {
   req.session.currentUser ? res.json(req.session.currentUser) : res.status(401).json({ code: 401, message: 'Unauthorized' })
 })
 
-router.post("/create-ship", (req, res) => { //Para nosotros
+router.post("/create-ship", (req, res) => { //For developers
   const { name, image, stats } = req.body
 
   Ship.create({ name, image, stats })
