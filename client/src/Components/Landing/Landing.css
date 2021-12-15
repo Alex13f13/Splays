@@ -59,13 +59,21 @@
 
 .scroll-down-icon {
     width: 2.5em;
-    margin-top: 1.8em;
+    position: relative;
+    /* margin-top: 1.8em; */
+    animation: scroll-down-icon 0.8s infinite alternate;
 }
 
 
-.prueba {
-    height: 600px;
-    background-color: blueviolet;
+@keyframes scroll-down-icon {
+    0% {
+        opacity: 10%;
+        bottom: 1vh;
+    }
+    100% {
+        opacity: 60%;
+        bottom: 0vh;
+    }
 }
 
 

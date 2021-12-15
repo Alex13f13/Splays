@@ -9,6 +9,7 @@ import SpeedButton from "./Challenges/SpeedButton/SpeedButton"
 import Asteroids from "./Challenges/Asteroids/Asteroids.jsx"
 import IntruderColor from "./Challenges/IntruderColor/IntruderColor"
 import ChangeSameColor from './Challenges/ChangeSameColor/ChangeSameColor'
+import CantTouchThis from './Challenges/CantTouchThis/CantTouchThis'
 import './Challenge.css'
 
 export default function Challenge() {
@@ -127,6 +128,20 @@ export default function Challenge() {
 
                     <div className="btn-center-screen-container">
                         <ChangeSameColor winRoute={`/planet-map/${params.id}/challenge/win`}></ChangeSameColor>
+                    </div>
+                </div>
+            )
+
+        case 'cantTouchThis':
+            console.log('pressFiveSec');
+            return (
+                <div className="challenge-background">
+                    <div className="exit-btn-container">
+                        <Link className="challenge-exit-btn" to={'/planet-map'}>Exit</Link>
+                    </div>
+
+                    <div className="btn-center-screen-container">
+                        <CantTouchThis winRoute={`/planet-map/${params.id}/challenge/win`}></CantTouchThis>
                     </div>
                 </div>
             )

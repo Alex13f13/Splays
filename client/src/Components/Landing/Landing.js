@@ -57,7 +57,7 @@ export default function Landing(props) {
                             <p onClick={showLogin}>Log in</p>
                         </div>
                         <p onClick={showSignup} className="landing-underbtn">Don't have an account? <span className="landing-underbtn-span">Sign up now!</span></p>
-                        <img className="scroll-down-icon" src="https://res.cloudinary.com/dwxuz6cft/image/upload/v1638999526/splays_app/splays_icons/scroll_down_dlgro1.png" alt="scroll down icon" />
+                        <img className="scroll-down-icon" src="https://res.cloudinary.com/dwxuz6cft/image/upload/v1639577360/splays_app/splays_icons/scroll_down_animation_xujkl8.svg" alt="scroll down icon" />
                     </>
                 }
 

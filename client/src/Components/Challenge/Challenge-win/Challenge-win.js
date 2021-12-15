@@ -41,7 +41,7 @@ export default function ChallengeWin(props) {
 
     return (
         planet && user ?
-            <>
+            <div className="win-container">
             
                 <Nav storeUser={props.storeUser} loggedUser={props.loggedUser} pageTitle={"KUDOS"} />
                 
@@ -72,7 +72,7 @@ export default function ChallengeWin(props) {
                     <Link className='emblem-win-btn' to={`/`}>Get my emblem!</Link>
                     
                 </div>
-            </>
+            </div>
             :
             <div className='spinner-container'>
                 <svg id="splays-spinner" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 282.74 264.05">

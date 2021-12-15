@@ -112,7 +112,8 @@ export default function Profile(props) {
                                 </div>
                             </div>
                             <div className='form-input-file-container'>
-                                <input onChange={handleUploadChange} name="image" type="file" className='custom-file-btn' />
+                                <input onChange={handleUploadChange} id="file" name="image" type="file" className='invisible'  />
+                                <label for="file" className='custom-file-btn'>Choose File</label>
                             </div>
 
                             <div>

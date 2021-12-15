@@ -4,9 +4,8 @@
     border-radius: 15px;
     background: #1D1E26;
     border: 0px;
-    margin-bottom: 30vh;
     transition: 0.8s;
-    margin: 0px 1vh 30vh 1vh;
+    margin: 0px 0.5vh 1vh 0.5vh;
 }
 
 .intrude-color-correct-btn {
@@ -15,7 +14,512 @@
     border-radius: 15px;
     background: #0e27e6;
     border: 0px;
-    margin-bottom: 30vh;
     transition: 0.8s;
-    margin: 0px 1vh 30vh 1vh;
+    margin: 0px 0.5vh 1vh 0.5vh;
 }
+
+.intruder-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 280px;
+}
+
+
+.intruder-points {
+    color: lavender;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.intruder-0 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #8400ff;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh;
+}
+
+.correct-0 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #7200dd;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh; 
+}
+
+
+
+.intruder-1 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #1D1E26;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh;
+}
+
+.correct-1 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #2e2f3a;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh; 
+}
+
+
+
+
+.intruder-2 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #00ff88;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh;
+}
+
+.correct-2 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #00f080;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh; 
+}
+
+
+
+
+.intruder-3 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #a80fa8;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh;
+}
+
+.correct-3 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #740474;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh; 
+}
+
+
+
+
+.intruder-4 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #ffef61;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh;
+}
+
+.correct-4 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #f7ee9c;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh; 
+}
+
+
+
+
+.intruder-5 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #2a3bc0;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh;
+}
+
+.correct-5 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #0013a1;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh; 
+}
+
+
+
+
+.intruder-6 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #fd0000;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh;
+}
+
+.correct-6 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #a30101;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh; 
+}
+
+
+
+
+.intruder-7 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #baf123;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh;
+}
+
+.correct-7 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #0de905;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh; 
+}
+
+
+
+
+.intruder-8 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #b700ff;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh;
+}
+
+.correct-8 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #8400ff;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh; 
+}
+
+
+
+
+.intruder-9 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #001eff;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh;
+}
+
+.correct-9 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #e60e0e;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh; 
+}
+
+
+.intruder-10 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #ffe600;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh;
+}
+
+.correct-10 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #f7de00;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh; 
+}
+
+
+.intruder-11 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #0099ff;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh;
+}
+
+.correct-11 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #099dff;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh; 
+}
+
+
+.intruder-12 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #ff004c;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh;
+}
+
+.correct-12 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #f3034b;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh; 
+}
+
+
+.intruder-13 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #3a4964;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh;
+}
+
+.correct-13 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #f38b03;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh; 
+}
+
+
+.intruder-14 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #ff9100;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh;
+}
+
+.correct-14 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #00ff2a;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh; 
+}
+
+
+.intruder-15 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #ff9100;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh;
+}
+
+.correct-15 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #f18b04;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh; 
+}
+
+
+.intruder-16 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #ea00ff;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh;
+}
+
+.correct-16 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #bf18ce;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh; 
+}
+
+
+.intruder-17 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #ffffff;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh;
+}
+
+.correct-17 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #ebebeb;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh; 
+}
+
+
+.intruder-18 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #ffffff;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh;
+}
+
+.correct-18 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #00ff4c;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh; 
+}
+
+
+.intruder-19 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #00ffd5;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh;
+}
+
+.correct-19 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #0ef0ca;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh; 
+}
+
+
+.intruder-20 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #0ef0a5;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh;
+}
+
+.correct-20 {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    background: #08c1e2;
+    border: 0px;
+    transition: 0.8s;
+    margin: 0px 0.5vh 1vh 0.5vh; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

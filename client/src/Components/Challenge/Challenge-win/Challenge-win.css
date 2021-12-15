@@ -8,6 +8,12 @@
     overflow: hidden;
 }
 
+.win-container {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
 .win-background::-webkit-scrollbar {
     display: none;
 }
