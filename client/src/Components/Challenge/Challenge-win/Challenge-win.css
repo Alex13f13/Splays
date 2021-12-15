@@ -56,6 +56,16 @@
     z-index: 100;
 }
 
+@keyframes emblem-container {
+    from {
+        top: 8vh;
+        opacity: 0%;
+    }
+    to {
+        top: 16.5vh;
+        opacity: 100%;
+    }
+}
 
 @media (min-width: 350px) {
     .win-glass-container {
@@ -65,11 +75,23 @@
         align-items: center;
         justify-content: center;
     }
+    
 }
 
 @media (max-height: 600px) {
     .win-glass-container {
         top: 22vh;
+    }
+
+    @keyframes emblem-container {
+        from {
+            top: 8vh;
+            opacity: 0%;
+        }
+        to {
+            top: 22vh;
+            opacity: 100%;
+        }
     }
 }
 
@@ -79,6 +101,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.win-main-container::-webkit-scrollbar {
+    display: none;
 }
 
 
@@ -129,69 +155,59 @@
 
 
 .ship-for-animation {
-    height: 38vh;
     position: absolute;
-    z-index: 1;
-    top: 50vh;
-    left: -40vw;
+    height: 38vh;
+    animation: ship-entry-x 3s infinite, ship-entry-rotation 3s infinite;
     
 }
 
-.arc {
-    animation: arc 3s infinite;
+
+.div-for-animation {
+    position: relative;
+    z-index: 1;
+    top: 50vh;
+    left: -40vw;
+    animation: ship-entry-y 3s infinite, ship-entry-opacity 3s infinite;
 }
 
+.div-for-animation::-webkit-scrollbar {
+    display: none;
+}
 
-@keyframes ship-entry {
+@keyframes ship-entry-y {
     0% {
-        top: 75vh;
-        left: -40vh;
+        top: 50vh;
         transform: scale(1);
     }
 
     100% {
-        top: 20vh;
-        left: 12vh;
-        transform: scale(0.2);
+        top: 30vh;
+        transform: scale(0.15);
     }
 }
 
-
-@keyframes drawArc2 {
-    0%{ 
-        transform: rotate(-180deg) 
-        translateX(350px) 
-        rotate(180deg);  
+@keyframes ship-entry-x {
+    0% {
+        left: -90vw;
     }
-    100% { 
-        transform: rotate(90deg) 
-        translateX(350px) 
-        rotate(90deg) ;}
+
+    100% {
+        left: 430vw;
+    }
+}
+
+@keyframes ship-entry-rotation {
+    0% {transform: rotate(0deg);}
+    30% {transform: rotate(10deg);}
+    100% {transform: rotate(-120deg);}
 }
 
 
-@keyframes drawArc {
-    0% { 
-        transform: rotate(360deg) 
-        translateX(400px) 
-        rotate(40deg) 
-        scale(0.2)  ;}
-    100%{ 
-        transform: rotate(180deg) 
-        translateX(350px) 
-        rotate(40deg)
-        scale(0.5);  
-    }
-    
-        
+@keyframes ship-entry-opacity {
+    0% {z-index: 1;}
+    60% {z-index: 1;}
+    100% {z-index: -888;}
 }
 
 
-@keyframes arc {
-    0%{
-      transform: translate(-50%, -50%) rotate(0deg);
-    }
-    100%{
-      transform: translate(-50%, -50%) rotate(-180deg);
-    }
-}
+
