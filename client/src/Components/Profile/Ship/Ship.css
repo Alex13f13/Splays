@@ -43,7 +43,6 @@
 .separation-div {
     width: 20px;
     height: 100%;
-    background-color: blueviolet;
     margin-right: 10px;
 }
 
@@ -186,5 +185,21 @@
     position: absolute;
     bottom: 50px;   
     bottom: 6vh;   
+}
+
+
+
+
+
+@media (min-width: 1000px) {
+
+    .ships-main-container {
+        justify-content: center;
+    }
+
+    
+    .ships-list {
+        justify-content: center;
+    }
 }
 

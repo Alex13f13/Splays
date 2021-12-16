@@ -113,11 +113,13 @@
 
 .form-field:active {
     outline: solid #4B00FF 2px;
+    border-radius: 15px;
     border: 0px;
 }
 
 .form-field:focus {
     outline: solid #4B00FF 2px;
+    border-radius: 15px;
     border: 0px;
 }
 

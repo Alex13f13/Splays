@@ -16,10 +16,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 135px;
-    width: 135px;
+    height: 127px;
+    width: 127px;
     border-radius: 50%;
     background-color: #0C0C16;
+    border:5px solid #0C0C16; 
     overflow: hidden;
 
 }
@@ -41,7 +42,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    outline: 5px solid #030303;
+    /* outline: 5px solid #41ff07; */
     outline-offset: -8px;
     overflow: hidden;
     z-index: 900;
@@ -53,9 +54,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-top: 77px;
+    padding-top: 10vh;
     padding-bottom: 33px;
-    height: 100%;
+    height: 90%;
 }
 
 .profile-main-container-edit {
@@ -82,7 +83,8 @@
     background: rgb(10,10,10);
     background: linear-gradient(310deg, rgba(10,10,10,1) 0%, rgba(15,15,15,1) 50%);
     height: 100%;
-    width: 100vw;
+    /* width: 100vw; */
+    /* overflow: hidden; */
 }
 
 
@@ -131,6 +133,7 @@
     margin-top: 10px;
     text-decoration: none;
     margin-bottom: 5px;
+    cursor: pointer;
 }
 
 
@@ -143,7 +146,8 @@
     color: #FFFFFF;
     font-size: 20px;
     font-weight: 500px;
-    margin-top: 5px;     
+    margin-top: 5px;   
+    cursor: pointer;  
 }
 
 
@@ -259,6 +263,7 @@ input[type=file]::-webkit-file-upload-button {
     border: 0px;
     margin-top: 64px;
     box-shadow: 0px 0px 37px 0px rgba( 72, 10, 254, 0.6 );
+    cursor: pointer;
 }
 
 .save-changes-deactivated-btn {
@@ -278,6 +283,7 @@ input[type=file]::-webkit-file-upload-button {
     border-radius: 15px;
     border: 0px;
     margin-top: 64px;
+    cursor: pointer;
 }
 
 
@@ -293,7 +299,8 @@ input[type=file]::-webkit-file-upload-button {
     margin-top: 14px;
     display: flex;
     justify-content: center;
-    align-items: center;     
+    align-items: center;    
+    cursor: pointer; 
 }
 
 
@@ -303,8 +310,8 @@ input[type=file]::-webkit-file-upload-button {
     font-weight: 300;
     text-decoration: none;
     margin-top: 40px;
-    border-bottom: solid #C81D32 1px;
     margin-bottom: 64px;
+    cursor: pointer;
 }
 
 
@@ -316,4 +323,82 @@ input[type=file]::-webkit-file-upload-button {
 
 .invisible {
     display: none;
+}
+
+
+
+
+
+@media (min-width: 1000px) {
+    .profile-background {
+        height: 150vh;
+    }
+
+    .profile-background-edit {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .profile-main-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 0px;
+        padding-bottom: 33px;
+        height: 100%;
+    }
+
+    .profile-line-divisor {
+        width: 40vw;
+        margin: 25px 0px;
+    }
+
+}
+
+
+@media (min-width: 400px) {
+    .profile-main-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 0vh;
+        padding-bottom: 33px;
+        height: 100%;
+    }
+    
+    .profile-main-container-edit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 10vh; 
+    }
+    
+    
+    .profile-background {
+        padding: 0%;
+        margin: 0%;
+        background: rgb(10,10,10);
+        background: linear-gradient(310deg, rgba(10,10,10,1) 0%, rgba(15,15,15,1) 50%);
+        height: 100vh;
+        /* width: 100vw */;
+    }
+    
+    .profile-background-edit {
+        padding: 0%;
+        margin: 0%;
+        background: rgb(10,10,10);
+        background: linear-gradient(310deg, rgba(10,10,10,1) 0%, rgba(15,15,15,1) 50%);
+        height: 100vh;
+        /* width: 100vw; */
+        overflow: hidden;
+    }
+
+
+    .profile-exit-btn {
+        margin-top: 2vh;
+        margin-bottom: 8vh;
+    }
 }

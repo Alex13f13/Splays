@@ -30,11 +30,11 @@ const NavLinks = (props) => {
                     </div>
 
                     <div className="burger-menu-open-txt-container">
+                        <Link className="burger-menu-open-text" to={`/`}>Home</Link>
+                        <div className="nav-open-line"></div>
                         <Link className="burger-menu-open-text" to={`/planet-map`}>Planet map</Link>
                         <div className="nav-open-line"></div>
                         <Link className="burger-menu-open-text" to={`/profile/${loggedUser._id}`}>Profile</Link>
-                        <div className="nav-open-line"></div>
-                        <Link className="burger-menu-open-text" to={`/`}>Home</Link>
                         <div className="nav-open-line"></div>
                         <span className="burger-menu-open-logout" onClick={logout}>Log out</span>
                     </div>
