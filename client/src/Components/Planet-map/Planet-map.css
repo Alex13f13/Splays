@@ -47,9 +47,9 @@
 
 .light-Chromion {
     position: absolute;
-    filter: blur(40px);
+    filter: blur(40px), opacity(90%);
+    -webkit-filter: opacity(90%);
     mix-blend-mode: screen;
-    opacity: 90%;
     z-index: 8;
 }
 
@@ -94,9 +94,9 @@
 
 .light-Glassmorph {
     position: absolute;
-    filter: blur(40px);
+    filter: blur(40px), opacity(60%);
     mix-blend-mode: screen;
-    opacity: 60%;
+    -webkit-filter: opacity(60%);
     mix-blend-mode: overlay;
     z-index: 8;
 }
@@ -143,8 +143,8 @@
 
 .light-Lavadelic {
     position: absolute;
-    filter: blur(40px);
-    opacity: 80%;
+    filter: blur(40px), opacity(80%);
+    -webkit-filter: opacity(80%);
     mix-blend-mode: overlay;
     z-index: 0;
 }
@@ -189,9 +189,9 @@
 
 .light-Purlix {
     position: absolute;
-    filter: blur(30px);
+    filter: blur(30px), opacity(70%);
     mix-blend-mode: screen;
-    opacity: 70%;
+    -webkit-filter: opacity(70%);
     z-index: 8;
 }
 
@@ -236,9 +236,9 @@
 
 .light-Tropilum {
     position: absolute;
-    filter: blur(30px);
+    filter: blur(30px), opacity(70%);
     mix-blend-mode: screen;
-    opacity: 70%;
+    -webkit-filter: opacity(70%);
     z-index: 8;
 }
 
@@ -283,9 +283,9 @@
 
 .light-Candylux {
     position: absolute;
-    filter: blur(30px);
+    filter: blur(30px), opacity(70%);
     mix-blend-mode: screen;
-    opacity: 70%;
+    -webkit-filter: opacity(70%);
     z-index: 8;
 }
 
@@ -330,9 +330,9 @@
 
 .light-Helanor {
     position: absolute;
-    filter: blur(40px);
+    filter: blur(40px), opacity(100%);
     mix-blend-mode: hard-light;
-    opacity: 100%;
+    -webkit-filter: opacity(100%);
     z-index: 8;
 }
 
@@ -377,9 +377,9 @@
 
 .light-K-78 {
     position: absolute;
-    filter: blur(0px);
+    filter: blur(0px), opacity(100%);
     mix-blend-mode: normal;
-    opacity: 100%;
+    -webkit-filter: opacity(100%);
     z-index: 8;
 }
 
@@ -425,9 +425,9 @@
 
 .light-Lulab {
     position: absolute;
-    filter: blur(40px);
+    filter: blur(40px), opacity(70%);
     mix-blend-mode: overlay;
-    opacity: 70%;
+    -webkit-filter: opacity(70%);
     z-index: 8;
 }
 
@@ -472,9 +472,9 @@
 
 .light-Earth {
     position: absolute;
-    filter: blur(40px);
+    filter: blur(40px), opacity(90%);
     mix-blend-mode: screen;
-    opacity: 90%;
+    -webkit-filter: opacity(90%);
     z-index: 8;
     box-shadow: aqua 0px 0px 20px 1px;
 }
@@ -519,9 +519,9 @@
 
 .light-Crystalir {
     position: absolute;
-    filter: blur(40px);
+    filter: blur(40px), opacity(60%);
     mix-blend-mode: screen;
-    opacity: 60%;
+    -webkit-filter: opacity(60%);
     z-index: 8;
 }
 
@@ -565,9 +565,9 @@
 
 .light-Herlix {
     position: absolute;
-    filter: blur(40px);
+    filter: blur(40px), opacity(60%);
     mix-blend-mode: screen;
-    opacity: 60%;
+    -webkit-filter: opacity(60%);
     z-index: 8;
 }
 
@@ -611,9 +611,9 @@
 
 .light-Oark {
     position: absolute;
-    filter: blur(30px);
+    filter: blur(30px), opacity(100%);
     mix-blend-mode: overlay;
-    opacity: 100%;
+    -webkit-filter: opacity(100%);
     z-index: 8;
     box-shadow: white 0px 0px 30px 0px;
 }
@@ -660,9 +660,9 @@
 
 .light-Dragidion {
     position: absolute;
-    filter: blur(40px);
+    filter: blur(40px), opacity(100%);
     mix-blend-mode: hard-light;
-    opacity: 100%;
+    -webkit-filter: opacity(100%);
     z-index: 8;
 }
 
@@ -708,9 +708,9 @@
 
 .light-Xilofer {
     position: absolute;
-    filter: blur(50px);
+    filter: blur(50px), opacity(100%);
     mix-blend-mode: hard-light;
-    opacity: 100%;
+    -webkit-filter: opacity(100%);
     z-index: 8;
 }
 
@@ -754,9 +754,9 @@
 
 .light-Vaxor {
     position: absolute;
-    filter: blur(30px);
+    filter: blur(30px), opacity(60%);
     mix-blend-mode: overlay;
-    opacity: 60%;
+    -webkit-filter: opacity(60%);
     z-index: 8;
 }
 
@@ -801,9 +801,9 @@
 
 .light-K-67 {
     position: absolute;
-    filter: blur(40px);
+    filter: blur(40px), opacity(60%);
     mix-blend-mode: screen;
-    opacity: 60%;
+    -webkit-filter: opacity(60%);
     z-index: 8;
 }
 
@@ -842,9 +842,9 @@
 .light {
     position: relative;
     top: -65px;
-    filter: blur(40px);
+    filter: blur(40px), opacity(80%);
     mix-blend-mode: screen;
-    opacity: 80%;
+    -webkit-filter: opacity(80%);
 }
 
 
@@ -877,7 +877,8 @@
     position: relative;
     top: -2100px;
     z-index: 0;
-    opacity: 0.2;
+    filter: opacity(20%);
+    -webkit-filter: opacity(20%);
     mix-blend-mode: hard-light;
     
 }

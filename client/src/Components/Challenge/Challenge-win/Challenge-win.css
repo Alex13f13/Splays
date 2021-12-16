@@ -1,7 +1,8 @@
 .win-background {
     height: 100vh;
     width: 100vw;
-    opacity: 30%;
+    filter: opacity(30%);
+    -webkit-filter: opacity(30%);
     position: absolute;
     z-index: -9999;
     top: 0vh;
@@ -103,11 +104,13 @@
     @keyframes emblem-container {
         from {
             top: 8vh;
-            opacity: 0%;
+            filter: opacity(0%);
+            -webkit-filter: opacity(0%);
         }
         to {
             top: 22vh;
-            opacity: 100%;
+            filter: opacity(100%);
+            -webkit-filter: opacity(100%);
         }
     }
 }
@@ -239,7 +242,8 @@
                 
         height: 100vh;
         width: 100vw;
-        opacity: 60%;
+        filter: opacity(60%);
+        -webkit-filter: opacity(60%);
     }
 
 

@@ -5,8 +5,8 @@
 
 .home-planet-light {
     height: 337px;
-    filter: blur(50px);
-    opacity: 50%;
+    filter: blur(50px), opacity(50%);
+    -webkit-filter: opacity(50%);
 }
 
 
@@ -102,7 +102,8 @@
         height: auto;
         width: 100vw;
         margin-top: -50%;
-        opacity: 50%;
+        filter: opacity(60%);
+        -webkit-filter: opacity(60%);
     }
 
     .home-ship {

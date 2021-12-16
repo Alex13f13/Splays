@@ -67,11 +67,13 @@
 
 @keyframes scroll-down-icon {
     0% {
-        opacity: 10%;
+        filter: opacity(10%);
+        -webkit-filter: opacity(10%);
         bottom: 1vh;
     }
     100% {
-        opacity: 60%;
+        filter: opacity(60%);
+        -webkit-filter: opacity(60%);
         bottom: 0vh;
     }
 }

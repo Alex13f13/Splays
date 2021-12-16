@@ -156,8 +156,14 @@
 }
 
 @keyframes opacity-out {
-    from {opacity: 100%;}
-    to {opacity: 0%;}
+    from {
+        -webkit-filter: opacity(100%);
+        filter: opacity(100%);
+    }
+    to {
+        -webkit-filter: opacity(0%);
+        filter: opacity(0%);
+    }
 }
 
 
@@ -174,11 +180,13 @@
     @keyframes users-back-home {
         from {
             margin-left: -60vw;
-            opacity: 0%;
+            -webkit-filter: opacity(0%);
+            filter: opacity(0%);
         }
         to {
             margin-left: 27vw;
-            opacity: 100%;
+            -webkit-filter: opacity(100%);
+            filter: opacity(100%);
         }
     }
 
