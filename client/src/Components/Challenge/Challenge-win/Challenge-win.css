@@ -34,6 +34,7 @@
 .win-planet-light {
     height: 41vh;
     filter: blur(50px);
+    z-index: -900;
 }
 
 .win-planet-container {
@@ -65,7 +66,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    animation: emblem-container 1s forwards;
+    /* animation: emblem-container 1s forwards; */
     position: absolute;
     z-index: 100;
 }
@@ -287,6 +288,33 @@
     .img-space {
         height: 100vh;
         width: 100vw;
+    }
+}
+
+
+
+
+@media (max-height: 812px)  {
+    .emblem-win-btn {
+        background: rgb(85,3,203);
+        background: linear-gradient(125deg, #3023AE 0%,  #C86DD7 100%);
+        width: 314px;
+        height: 60px;
+        color: #fff;
+        font-weight: 500;
+        font-size: 20px;
+        font-style: normal;
+        font-variant: normal;
+        letter-spacing: 0.3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        border: 0px;
+        position: relative;
+        top: 32vh;
+        text-decoration: none;
+    
     }
 }
 

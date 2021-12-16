@@ -35,8 +35,7 @@ export default function Users(props) {
 
     return (
         users ?
-            <div className={exit ? 'no-scroll users-general-container-exit' : 'no-scroll users-general-container'}>
-                {/* <Nav storeUser={props.storeUser} loggedUser={props.loggedUser} pageTitle={"TRAVELERS"} /> */}
+            <div className={exit ? 'no-scroll users-general-container-exit' : 'users-general-container'}>
 
                 <div className={exit ? "no-decoration opacity-out" :'no-decoration users-back-home'} onClick={handleClick}>
                     <div className='emblems-link-container'>

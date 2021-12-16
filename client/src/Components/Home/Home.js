@@ -58,7 +58,6 @@ export default function Home(props) {
                     </div>
                     <Link className="home-trip-btn" to="/planet-map">New space trip</Link>
 
-                    {/* <Link className="home-travellers-btn" to="/allUsers">Other travellers</Link> */}
                     <p className="home-travellers-btn" onClick={handleClick} >Other travellers</p>
                 </div>
 

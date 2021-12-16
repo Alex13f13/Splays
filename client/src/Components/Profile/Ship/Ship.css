@@ -203,3 +203,31 @@
     }
 }
 
+
+
+
+
+@media (max-height: 812px) {
+    .ships-choose-btn {
+        width: 290px;
+        padding: 15px 0px;
+        border: #2D2C36 1px solid;
+        border-radius: 15px;
+        text-align: center;
+        color: #FFFFFF;
+        font-size: 20px;
+        font-weight: 500px;
+        margin-top: 5px;  
+        position: relative;
+        top: 40px;   
+    }
+
+    .ships-main-container {
+        display: flex;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+    }
+}
+

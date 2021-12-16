@@ -104,17 +104,18 @@
 
 .users-back-home {
     animation: users-back-home 1.5s 0.8s forwards;
-    margin-left: -60vw;
+    /* margin-left: -60vw; */
+    opacity: 0%;
     cursor: pointer;
 }
 
 @keyframes users-back-home {
     from {
-        margin-left: -60vw;
+        /* margin-left: -60vw; */
         opacity: 0%;
     }
     to {
-        margin-left: 0px;
+        /* margin-left: 0px; */
         opacity: 100%;
     }
 }

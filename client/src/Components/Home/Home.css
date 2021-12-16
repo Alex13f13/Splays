@@ -175,3 +175,48 @@
 
     
 } 
+
+
+
+
+@media (max-height: 812px) {
+    .home-trip-btn {
+        background: rgb(85,3,203);
+        background: linear-gradient(125deg, #3023AE 0%,  #C86DD7 100%);
+        width: 314px;
+        height: 60px;
+        color: #fff;
+        font-weight: 500;
+        font-size: 20px;
+        font-style: normal;
+        font-variant: normal;
+        letter-spacing: 0.3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        border: 0px;
+        position: relative;
+        top: 210px;
+        text-decoration: none;
+        cursor: pointer;
+    
+    }
+    
+    
+    .home-travellers-btn {
+        width: 314px;
+        padding: 15px 0px;
+        border: #2D2C36 1px solid;
+        border-radius: 15px;
+        text-align: center;
+        color: #FFFFFF;
+        font-size: 20px;
+        font-weight: 500px;
+        margin-top: 5px;  
+        position: relative;
+        top: 215px;   
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
