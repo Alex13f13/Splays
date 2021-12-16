@@ -197,7 +197,7 @@
         border-radius: 15px;
         border: 0px;
         position: relative;
-        top: 210px;
+        top: 25vh;
         text-decoration: none;
         cursor: pointer;
     
@@ -215,7 +215,7 @@
         font-weight: 500px;
         margin-top: 5px;  
         position: relative;
-        top: 215px;   
+        top: 25.5vh;   
         text-decoration: none;
         cursor: pointer;
     }

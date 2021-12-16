@@ -66,7 +66,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    /* animation: emblem-container 1s forwards; */
+    animation: emblem-container 1s forwards;
     position: absolute;
     z-index: 100;
 }

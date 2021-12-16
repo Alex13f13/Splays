@@ -60,7 +60,6 @@
 .scroll-down-icon {
     width: 2.5em;
     position: relative;
-    /* margin-top: 1.8em; */
     animation: scroll-down-icon 0.8s infinite alternate;
     z-index: 900;
 }
