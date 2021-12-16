@@ -41,6 +41,7 @@
 }
 
 
+
 .landing-info-paragraph {
     color: #4A4A4A;
     font-size: 16px;
@@ -89,4 +90,37 @@
     height: 25px;
     top: 30vh;
     margin-top: 20vh;
+}
+
+
+
+
+@media (min-width: 530px) and (max-width: 750px) {
+    .landing-info-container-main-container {
+        margin-left: 15%;
+        width: 70%;
+    }
+}
+
+
+
+
+@media (min-width: 750px) {
+    .landing-info-paragraph-container {
+        width: 50vw;
+    }
+}
+
+
+
+
+
+@media (min-width: 1080px) {
+    .landing-info-paragraph-container {
+        width: 30vw;
+    }
+
+    .landing-info-container {
+        margin: 5px 1vw;
+    }
 }

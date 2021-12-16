@@ -42,10 +42,10 @@ export default function Home(props) {
 
                 {travellers && <Users travellers={handleClick} />}
 
-                <div className='win-main-container'>
+                <div className='home-main-container'>
 
                     <div className='win-background'>
-                        <img className='img-space' src='https://res.cloudinary.com/dwxuz6cft/image/upload/v1639497068/splays_app/background_images/win_background_ewycbu.jpg' alt='stars background' />
+                        <img className='home-img-space' src='https://res.cloudinary.com/dwxuz6cft/image/upload/v1639497068/splays_app/background_images/win_background_ewycbu.jpg' alt='stars background' />
                     </div>
 
                     <div className="home-images-continer">

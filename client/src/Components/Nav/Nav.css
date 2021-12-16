@@ -2,6 +2,7 @@
     height: 23px;
     margin-top: 55px;
     margin-right: 20px;
+    cursor: pointer;
 }
 
 
@@ -48,4 +49,22 @@
     align-items: center;
     justify-content: center;
     position: sticky;
+}
+
+
+
+
+
+@media (min-width: 1080px) {
+    .nav-line {
+        width: 98vw;
+    }
+
+    .burger-menu-icon {
+        margin-right: 2vw;
+    }
+
+    .nav-page-title {
+        margin-left: 2vw;
+    }
 }

@@ -58,6 +58,7 @@
     position: absolute;
     bottom: 13vh;
     text-decoration: none;
+    cursor: pointer;
 
 }
 
@@ -75,4 +76,102 @@
     position: absolute;
     bottom: 4.3vh;   
     text-decoration: none;
+    cursor: pointer;
 }
+
+
+.home-img-space {
+    height: 100vh;
+}
+
+
+.home-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+
+
+@media (min-width: 1000px) {
+    .home-img-space {
+        transform: rotate(90deg);
+        height: auto;
+        width: 100vw;
+        margin-top: -50%;
+        opacity: 50%;
+    }
+
+    .home-ship {
+        height: 40vh;
+        position: absolute;
+        z-index: 2;
+        left: -22vw;
+        top: 45vh;
+        animation: home-ship 3s infinite alternate;
+    }
+
+    @keyframes home-ship {
+        from {top: 31vh}
+        to {top: 37vh}
+    }
+
+    .home-planet {
+        height: 60vh;
+        position: absolute;
+    }
+    
+    .home-planet-light {
+        height: 60vh;
+        filter: blur(50px);
+        opacity: 50%;
+    }
+
+    .home-planet-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 10vh;
+        left: -11vw;
+    }
+
+    .home-trip-btn {
+        top: 45vh;
+        left: 65vw;
+    }
+
+    .home-travellers-btn {
+        bottom: 40vh;
+        left: 65vw;
+    }
+    
+}
+
+
+
+
+
+@media (min-width: 550px) and (max-width:1000px) {
+    .home-img-space {
+        height: 100vh;
+        width: 100vw;
+    }
+
+
+    .home-planet-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 15vh;
+        left: 0vw;
+        transform: scale(1.5);
+    }
+
+
+    
+} 

@@ -4,6 +4,17 @@
 }
 
 
+.planet-planet-map-container {
+    transition: 2s;
+}
+
+
+.planet-planet-map-container:hover {
+    transform: scale(1.2);
+    transition: 0.4s;
+}
+
+
 
 .planet-Chromion {
     display: flex;
@@ -21,11 +32,6 @@
     height: 7vh;
     animation: chromion-create 1.5s;
     transition: 1s;
-}
-
-.planet-Chromion img:hover {
-    height: 10vh;
-    transition: 0.8s;
 }
 
 .planet-Chromion p {
@@ -73,11 +79,6 @@
     height: 11vh;
     animation: glassmorph-create 2.5s;
     transition: 1s;
-}
-
-.planet-Glassmorph img:hover {
-    height: 13vh;
-    transition: 0.4s;
 }
 
 .planet-Glassmorph p {
@@ -129,11 +130,6 @@
     z-index: 10;
 }
 
-.planet-Lavadelic img:hover {
-    height: 17vh;
-    transition: 0.6s;
-}
-
 .planet-Lavadelic p {
     color: #9B9B9B;
     font-weight: 100;
@@ -178,11 +174,6 @@
     height: 7vh;
     animation: purlix-create 2s;
     transition: 1s;
-}
-
-.planet-Purlix img:hover {
-    height: 10vh;
-    transition: 0.8s;
 }
 
 .planet-Purlix p {
@@ -232,11 +223,6 @@
     transition: 1s;
 }
 
-.planet-Tropilum img:hover {
-    height: 10vh;
-    transition: 0.8s;
-}
-
 .planet-Tropilum p {
     color: #9B9B9B;
     font-weight: 100;
@@ -282,11 +268,6 @@
     height: 5.5vh;
     animation: candylux-create 3s;
     transition: 0.8s;
-}
-
-.planet-Candylux img:hover {
-    height: 7vh;
-    transition: 0.4s;
 }
 
 .planet-Candylux p {
@@ -336,11 +317,6 @@
     transition: 1s;
 }
 
-.planet-Helanor img:hover {
-    height: 10vh;
-    transition: 0.8s;
-}
-
 .planet-Helanor p {
     color: #9B9B9B;
     font-weight: 100;
@@ -386,11 +362,6 @@
     height: 5vh;
     animation: k-78-create 2.5s;
     transition: 1s;
-}
-
-.planet-K-78 img:hover {
-    height: 7vh;
-    transition: 0.5s;
 }
 
 .planet-K-78 p {
@@ -441,11 +412,6 @@
     transition: 1s;
 }
 
-.planet-Lulab img:hover {
-    height: 8vh;
-    transition: 0.4s;
-}
-
 .planet-Lulab p {
     color: #9B9B9B;
     font-weight: 100;
@@ -491,11 +457,6 @@
     height: 7vh;
     animation: earth-create 2s;
     transition: 1s;
-}
-
-.planet-Earth img:hover {
-    height: 9vh;
-    transition: 0.4s;
 }
 
 .planet-Earth p {
@@ -545,11 +506,6 @@
     transition: 1s;
 }
 
-.planet-Crystalir img:hover {
-    height: 11vh;
-    transition: 0.6s;
-}
-
 .planet-Crystalir p {
     color: #9B9B9B;
     font-weight: 100;
@@ -596,11 +552,6 @@
     transition: 1s;
 }
 
-.planet-Herlix img:hover {
-    height: 7vh;
-    transition: 0.4s;
-}
-
 .planet-Herlix p {
     color: #9B9B9B;
     font-weight: 100;
@@ -645,11 +596,6 @@
     height: 6vh;
     animation: oark-create 3s;
     transition: 1s;
-}
-
-.planet-Oark img:hover {
-    height: 8vh;
-    transition: 0.6s;
 }
 
 .planet-Oark p {
@@ -701,11 +647,6 @@
     transition: 1s;
 }
 
-.planet-Dragidion img:hover {
-    height: 8vh;
-    transition: 0.5s;
-}
-
 .planet-Dragidion p {
     color: #9B9B9B;
     font-weight: 100;
@@ -754,11 +695,6 @@
     transition: 1s;
 }
 
-.planet-Xilofer img:hover {
-    height: 10vh;
-    transition: 0.8s;
-}
-
 .planet-Xilofer p {
     color: #9B9B9B;
     font-weight: 100;
@@ -803,11 +739,6 @@
     height: 6.5vh;
     animation: vaxor-create 2s;
     transition: 1s;
-}
-
-.planet-Vaxor img:hover {
-    height: 8vh;
-    transition: 0.4s;
 }
 
 .planet-Vaxor p {
@@ -855,11 +786,6 @@
     height: 6vh;
     animation: k-67 40s infinite linear, k-67-create 2.5s;
     transition: 1s;
-}
-
-.planet-K-67 img:hover {
-    height: 8vh;
-    transition: 0.4s;
 }
 
 .planet-K-67 p {
@@ -1089,16 +1015,16 @@
     height: 41vh;
     left: 51vh;
     top: 12.5vh;
-    stroke-dasharray: 230vh;
+    stroke-dasharray: 1900;
     stroke-dashoffset: 0vh;
     animation: constelation-01 3s infinite;
 }
 
 @keyframes constelation-01 {
-    0% {stroke-dashoffset: 230vh;}
-    35% {stroke-dashoffset: 0vh;}
-    50% {stroke-dashoffset: 0vh;}
-    100% {stroke-dashoffset: -230vh;}
+    0% {stroke-dashoffset: 3800;}
+    35% {stroke-dashoffset: 1900;}
+    50% {stroke-dashoffset: 1900;}
+    100% {stroke-dashoffset: 0;}
 }
 
 
@@ -1112,16 +1038,16 @@
     width: 23vh;
     left: 6vh;
     top: 12vh;
-    stroke-dasharray: 230vh;
-    stroke-dashoffset: 0vh;
+    stroke-dasharray: 1750;
+    stroke-dashoffset: 0;
     animation: constelation-02 3s infinite;
 }
 
 @keyframes constelation-02 {
-    0% {stroke-dashoffset: 230vh;}
-    35% {stroke-dashoffset: 0vh;}
-    50% {stroke-dashoffset: 0vh;}
-    100% {stroke-dashoffset: -230vh;}
+    0% {stroke-dashoffset: 3400;}
+    35% {stroke-dashoffset: 1750;}
+    50% {stroke-dashoffset: 1750;}
+    100% {stroke-dashoffset: 0;}
 }
 
 
@@ -1138,31 +1064,31 @@
 }
 
 #main-line-constelation-03 {
-    stroke-dasharray: 150vh;
-    stroke-dashoffset: 0vh;
+    stroke-dasharray: 1250;
+    stroke-dashoffset: 0;
     animation: main-line-constelation-03 3s infinite ;
 }
 
 @keyframes main-line-constelation-03 {
-    0% {stroke-dashoffset: 150vh;}
-    25% {stroke-dashoffset: 0vh;}
-    60% {stroke-dashoffset: 0vh;}
-    80% {stroke-dashoffset: -150vh;}
-    100% {stroke-dashoffset: -150vh;}
+    0% {stroke-dashoffset: 2500;}
+    25% {stroke-dashoffset: 1250;}
+    60% {stroke-dashoffset: 1250;}
+    80% {stroke-dashoffset: 0;}
+    100% {stroke-dashoffset: 0;}
 }
 
 #secondary-line-constelation-03 {
-    stroke-dasharray: 160vh;
-    stroke-dashoffset: 0vh;
+    stroke-dasharray: 1335;
+    stroke-dashoffset: 0;
     animation: secondary-line-constelation-03 3s infinite ;
 }
 
 @keyframes secondary-line-constelation-03 {
-    0% {stroke-dashoffset: 160vh;}
-    15% {stroke-dashoffset: 160vh;}
-    45% {stroke-dashoffset: 0vh;}
-    70% {stroke-dashoffset: 0vh;}
-    100% {stroke-dashoffset: -160vh;}
+    0% {stroke-dashoffset: 2670;}
+    15% {stroke-dashoffset: 2670;}
+    45% {stroke-dashoffset: 1335;}
+    70% {stroke-dashoffset: 1335;}
+    100% {stroke-dashoffset: 0;}
 }
 
 

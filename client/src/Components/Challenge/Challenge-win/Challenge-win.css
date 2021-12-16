@@ -229,3 +229,66 @@
 
 
 
+
+
+@media (min-width: 1000px) {
+    .img-space {
+                
+        height: 100vh;
+        width: 100vw;
+        opacity: 60%;
+    }
+
+
+    .ship-for-animation {
+        position: absolute;
+        height: 38vh;
+        animation: ship-entry-x 4s infinite, ship-entry-rotation 4s infinite;   
+    }
+    
+    
+    .div-for-animation {
+        position: relative;
+        z-index: 1;
+        top: 50vh;
+        left: -40vw;
+        animation: ship-entry-y 4s infinite, ship-entry-opacity 4s infinite;
+    }
+
+
+    @keyframes ship-entry-y {
+        0% {
+            top: 50vh;
+            transform: scale(1.5);
+        }
+    
+        100% {
+            top: 30vh;
+            transform: scale(0.15);
+        }
+    }
+    
+    @keyframes ship-entry-x {
+        0% {
+            left: -90vw;
+        }
+    
+        100% {
+            left: 350vw;
+        }
+    }
+}
+
+
+
+
+
+@media (min-width: 550px) {
+    .img-space {
+        height: 100vh;
+        width: 100vw;
+    }
+}
+
+
+
