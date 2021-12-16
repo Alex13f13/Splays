@@ -94,7 +94,7 @@
 
 .light-Glassmorph {
     position: absolute;
-    filter: blur(40px), opacity(60%);
+    filter: blur(40px);
     mix-blend-mode: screen;
     -webkit-filter: opacity(60%);
     mix-blend-mode: overlay;
