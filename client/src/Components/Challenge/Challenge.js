@@ -88,7 +88,7 @@ export default function Challenge() {
 
         case 'asteroids':
             return (
-                <div>
+                <div className="challenge-background">
                     <div className="exit-btn-container">
                         <Link className="challenge-exit-btn" to={'/planet-map'}>Exit</Link>
                     </div>
@@ -296,6 +296,7 @@ export default function Challenge() {
                             </div >
                         </div >
                     )
+
         
                 default:
                     return (
