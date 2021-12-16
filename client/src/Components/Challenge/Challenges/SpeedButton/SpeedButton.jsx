@@ -22,7 +22,6 @@ export default function SpeedButton(props) {
 
         document.querySelector(".wrongSpeedButton").style.marginTop = getRandom() + "px";
 
-        console.log(points)
     }
 
     const getRandom = () => {
@@ -39,7 +38,6 @@ export default function SpeedButton(props) {
 
         document.querySelector(".wrongSpeedButton").style.marginTop = "0px";
 
-        console.log(points)
     }
 
     const restarTime = () => {

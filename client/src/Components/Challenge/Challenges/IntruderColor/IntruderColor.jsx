@@ -22,22 +22,21 @@ export default function IntruderColor(props) {
     const correctButton = () => {
         setResult(result + 1)
         correctPositionRandom = Math.round(Math.random() * 15);
-        console.log(result)
     }
 
 
-    const wrongButton = () => { 
-        if(result > 0) {setResult(result - 1)}
+    const wrongButton = () => {
+        if (result > 0) { setResult(result - 1) }
     }
 
-    
+
 
     //#region rounds
 
     let intruderBtn = <button className={`intruder-${takeRandom}`} onClick={wrongButton} />
     let correctBtn = <button className={`correct-${takeRandom}`} onClick={correctButton} />
-        
-    
+
+
     let roundArr = [
         intruderBtn,
         intruderBtn,

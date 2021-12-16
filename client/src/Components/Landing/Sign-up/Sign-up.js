@@ -32,7 +32,6 @@ export default function SignUp(props) {
 
                 authService.signup(signupUsername, signupPwd, signupEmail)
                     .then(response => {
-                        console.log(response)
                         props.storeUser(response.data)
 
                         authService.login(signupUsername, signupPwd)
@@ -52,35 +51,30 @@ export default function SignUp(props) {
             }
             else {
                 //error
-                console.log("The password does not match")
                 setErrorManager("The password does not match")
             }
 
         }
         else if (!signupUsername) {
             setErrorUsername('https://res.cloudinary.com/dwxuz6cft/image/upload/v1639569263/splays_app/splays_icons/required_field_cqhz2h.svg')
-            console.log("error Username")
             setErrorEmail(undefined)
             setErrorPassword(undefined)
             setErrorConfirmPassword(undefined)
         }
         else if (!signupEmail) {
             setErrorEmail('https://res.cloudinary.com/dwxuz6cft/image/upload/v1639569263/splays_app/splays_icons/required_field_cqhz2h.svg')
-            console.log("error Email")
             setErrorPassword(undefined)
             setErrorConfirmPassword(undefined)
             setErrorUsername(undefined)
         }
         else if (!signupPwd) {
             setErrorPassword('https://res.cloudinary.com/dwxuz6cft/image/upload/v1639569263/splays_app/splays_icons/required_field_cqhz2h.svg')
-            console.log("error Password")
             setErrorEmail(undefined)
             setErrorConfirmPassword(undefined)
             setErrorUsername(undefined)
         }
         else if (!signupConfirmPwd) {
             setErrorConfirmPassword('https://res.cloudinary.com/dwxuz6cft/image/upload/v1639569263/splays_app/splays_icons/required_field_cqhz2h.svg')
-            console.log("error ConfirmPassword")
             setErrorEmail(undefined)
             setErrorPassword(undefined)
             setErrorUsername(undefined)
@@ -142,10 +136,10 @@ export default function SignUp(props) {
                     <input className="signup-form-btn" type="submit" value="Confirm" />
                 </form>
 
-                <img className={errorUsername  ? "required-input-username" : "hide"} src={errorUsername} alt="error Username" />
-                <img className={errorEmail  ? "required-input-email" : "hide"} src={errorEmail} alt="error Email" />
-                <img className={errorPassword  ? "required-input-password" : "hide"} src={errorPassword} alt="error Password" />
-                <img className={errorConfirmPassword  ? "required-input-confirm-password" : "hide"} src={errorConfirmPassword} alt="error ConfirmPassword" />
+                <img className={errorUsername ? "required-input-username" : "hide"} src={errorUsername} alt="error Username" />
+                <img className={errorEmail ? "required-input-email" : "hide"} src={errorEmail} alt="error Email" />
+                <img className={errorPassword ? "required-input-password" : "hide"} src={errorPassword} alt="error Password" />
+                <img className={errorConfirmPassword ? "required-input-confirm-password" : "hide"} src={errorConfirmPassword} alt="error ConfirmPassword" />
 
             </div>
 

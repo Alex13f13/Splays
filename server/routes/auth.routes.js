@@ -15,7 +15,6 @@ const isLoggedIn = require("../middleware/isLoggedIn");
 router.post("/signup", isLoggedOut, (req, res) => {
   const { username, password, email } = req.body;
 
-  console.log(username, password, email)
 
   if (!username) {
     return res
@@ -103,7 +102,6 @@ router.post("/login", isLoggedOut, (req, res, next) => {
       }
 
       req.session.currentUser = user;
-      console.log(req.session.currentUser)
       return res.json(user);
     })
     .catch((err) => next(err))
@@ -119,7 +117,6 @@ router.get("/logout", isLoggedIn, (req, res) => {
 });
 
 router.get("/isloggedin", (req, res) => {
-  console.log(req.session.currentUser, "el user en loggedIn")
   req.session.currentUser ? res.json(req.session.currentUser) : res.status(401).json({ code: 401, message: 'Unauthorized' })
 })
 

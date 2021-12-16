@@ -36,8 +36,6 @@ router.put("/:planetId/:userId", (req, res) => {
                 User.findByIdAndUpdate(userId, { $push: { planet: planetId } }, { new: true })
                     .then(updateUserPlanet => res.json(updateUserPlanet))
                     .catch(err => res.json({ err, errMessage: "Problema dando el emblema al usuario" }))
-            } else {
-                console.log("Ya tiene esta medalla")
             }
         })
         .catch(err => res.json({ err, errMessage: "Problema buscando un Usuario" }))

@@ -16,11 +16,9 @@ import './Challenge.css'
 export default function Challenge() {
 
     const params = useParams()
-    console.log(params)
 
     switch (params.challengename) {
         case 'pressFiveTimes':
-            console.log('pressFiveTimes');
             return (
                 <div className="challenge-background">
                     <div className="exit-btn-container">
@@ -35,7 +33,6 @@ export default function Challenge() {
 
 
         case 'pressFiveSec':
-            console.log('pressFiveSec');
             return (
                 <div className="challenge-background">
                     <div className="exit-btn-container">
@@ -49,7 +46,6 @@ export default function Challenge() {
             )
 
         case 'theNight':
-            console.log('theNight');
             return (
                 <div>
                     <div className="exit-btn-container">
@@ -64,7 +60,6 @@ export default function Challenge() {
             )
 
         case 'saimonSays':
-            console.log('saimonSays');
             return (
                 <div>
                     <div className="exit-btn-container">
@@ -78,7 +73,6 @@ export default function Challenge() {
             )
 
         case 'speedButton':
-            console.log('speedButton');
             return (
                 <div className="challenge-background">
                     <div className="exit-btn-container">
@@ -92,7 +86,6 @@ export default function Challenge() {
             )
 
         case 'asteroids':
-            console.log('asteroids');
             return (
                 <div>
                     <div className="exit-btn-container">
@@ -106,7 +99,6 @@ export default function Challenge() {
             )
 
         case 'intruderColor':
-            console.log('intruderColor');
             return (
                 <div>
                     <div className="exit-btn-container">
@@ -120,7 +112,6 @@ export default function Challenge() {
             )
 
         case 'changeSameColor':
-            console.log('changeSameColor');
             return (
                 <div className="challenge-background">
                     <div className="exit-btn-container">
@@ -134,7 +125,6 @@ export default function Challenge() {
             )
 
         case 'align':
-            console.log('align');
             return (
                 <div className="challenge-background">
                     <div className="exit-btn-container">
@@ -148,7 +138,6 @@ export default function Challenge() {
             )
 
         case 'cantTouchThis':
-            console.log('pressFiveSec');
             return (
                 <div className="challenge-background">
                     <div className="exit-btn-container">
@@ -162,7 +151,6 @@ export default function Challenge() {
             )
 
         default:
-            console.log('saimonSays');
             return (
                 <div>
                     <div className="exit-btn-container">

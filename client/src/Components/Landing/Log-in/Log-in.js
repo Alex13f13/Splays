@@ -34,12 +34,10 @@ export default function LogIn(props) {
         }
         else if (!loginUsername) {
             setErrorUsername("https://res.cloudinary.com/dwxuz6cft/image/upload/v1639569263/splays_app/splays_icons/required_field_cqhz2h.svg")
-            console.log("error Username")
             setErrorPassword(undefined)
         }
         else if (!loginpwd) {
             setErrorPassword("https://res.cloudinary.com/dwxuz6cft/image/upload/v1639569263/splays_app/splays_icons/required_field_cqhz2h.svg")
-            console.log("error Password")
             setErrorUsername(undefined)
         }
     }
@@ -85,8 +83,8 @@ export default function LogIn(props) {
                     <input className="login-form-btn" type="submit" value='Confirm' />
                 </form>
 
-                <img className={errorUsername  ? "required-input-username" : "hide"} src={errorUsername} alt="error Username" />
-                <img className={errorPassword  ? "required-input-email" : "hide"} src={errorPassword} alt="error Email" />
+                <img className={errorUsername ? "required-input-username" : "hide"} src={errorUsername} alt="error Username" />
+                <img className={errorPassword ? "required-input-email" : "hide"} src={errorPassword} alt="error Email" />
 
             </div>
         </>

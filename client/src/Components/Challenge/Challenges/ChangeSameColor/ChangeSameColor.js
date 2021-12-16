@@ -13,38 +13,32 @@ export default function PressFiveTimes(props) {
 
 
     const handlePressPurple = () => {
-        
+
         switch (purpleCounter) {
 
             case 0:
-                setPurpleCounter(purpleCounter +1)
-                console.log(purpleCounter)
-            break;
+                setPurpleCounter(purpleCounter + 1)
+                break;
 
             case 1:
-                setPurpleCounter(purpleCounter +1)
-                console.log(purpleCounter)
-            break;
+                setPurpleCounter(purpleCounter + 1)
+                break;
 
             case 2:
-                setPurpleCounter(purpleCounter +1)
-                console.log(purpleCounter)
-            break;
+                setPurpleCounter(purpleCounter + 1)
+                break;
 
             case 3:
-                setPurpleCounter(purpleCounter +1)
-                console.log(purpleCounter)
-            break;
+                setPurpleCounter(purpleCounter + 1)
+                break;
 
             case 4:
-                setPurpleCounter(purpleCounter +1)
-                console.log(purpleCounter)
-            break;
+                setPurpleCounter(purpleCounter + 1)
+                break;
 
             case 5:
                 setPurpleCounter(0)
-                console.log(purpleCounter)
-            break;
+                break;
 
             default:
                 return null
@@ -52,38 +46,32 @@ export default function PressFiveTimes(props) {
     }
 
     const handlePressBlue = () => {
-        
+
         switch (blueCounter) {
 
             case 0:
-                setBlueCounter(blueCounter +1)
-                console.log('blue', blueCounter)
-            break;
+                setBlueCounter(blueCounter + 1)
+                break;
 
             case 1:
-                setBlueCounter(blueCounter +1)
-                console.log('blue', blueCounter)
-            break;
+                setBlueCounter(blueCounter + 1)
+                break;
 
             case 2:
-                setBlueCounter(blueCounter +1)
-                console.log('blue', blueCounter)
-            break;
+                setBlueCounter(blueCounter + 1)
+                break;
 
             case 3:
-                setBlueCounter(blueCounter +1)
-                console.log('blue', blueCounter)
-            break;
+                setBlueCounter(blueCounter + 1)
+                break;
 
             case 4:
-                setBlueCounter(blueCounter +1)
-                console.log('blue', blueCounter)
-            break;
+                setBlueCounter(blueCounter + 1)
+                break;
 
             case 5:
                 setBlueCounter(0)
-                console.log('blue', blueCounter)
-            break;
+                break;
 
             default:
                 return null
@@ -91,38 +79,32 @@ export default function PressFiveTimes(props) {
     }
 
     const handlePressGreen = () => {
-        
+
         switch (greenCounter) {
 
             case 0:
-                setGreenCounter(greenCounter +1)
-                console.log('green', greenCounter)
-            break;
+                setGreenCounter(greenCounter + 1)
+                break;
 
             case 1:
-                setGreenCounter(greenCounter +1)
-                console.log('green', greenCounter)
-            break;
+                setGreenCounter(greenCounter + 1)
+                break;
 
             case 2:
-                setGreenCounter(greenCounter +1)
-                console.log('green', greenCounter)
-            break;
+                setGreenCounter(greenCounter + 1)
+                break;
 
             case 3:
-                setGreenCounter(greenCounter +1)
-                console.log('green', greenCounter)
-            break;
+                setGreenCounter(greenCounter + 1)
+                break;
 
             case 4:
-                setGreenCounter(greenCounter +1)
-                console.log('green', greenCounter)
-            break;
+                setGreenCounter(greenCounter + 1)
+                break;
 
             case 5:
                 setGreenCounter(0)
-                console.log('green', greenCounter)
-            break;
+                break;
 
             default:
                 return null
@@ -130,38 +112,32 @@ export default function PressFiveTimes(props) {
     }
 
     const handlePressCoral = () => {
-        
+
         switch (coralCounter) {
 
             case 0:
-                setCoralCounter(coralCounter +1)
-                console.log('coral', coralCounter)
-            break;
+                setCoralCounter(coralCounter + 1)
+                break;
 
             case 1:
-                setCoralCounter(coralCounter +1)
-                console.log('coral', coralCounter)
-            break;
+                setCoralCounter(coralCounter + 1)
+                break;
 
             case 2:
-                setCoralCounter(coralCounter +1)
-                console.log('coral', coralCounter)
-            break;
+                setCoralCounter(coralCounter + 1)
+                break;
 
             case 3:
-                setCoralCounter(coralCounter +1)
-                console.log('coral', coralCounter)
-            break;
+                setCoralCounter(coralCounter + 1)
+                break;
 
             case 4:
-                setCoralCounter(coralCounter +1)
-                console.log('coral', coralCounter)
-            break;
+                setCoralCounter(coralCounter + 1)
+                break;
 
             case 5:
                 setCoralCounter(0)
-                console.log('coral', coralCounter)
-            break;
+                break;
 
             default:
                 return null
@@ -171,7 +147,7 @@ export default function PressFiveTimes(props) {
 
     useEffect(() => {
 
-        if((purpleCounter === 4) && (blueCounter === 4) && (greenCounter === 4) && (coralCounter === 4)) {
+        if ((purpleCounter === 4) && (blueCounter === 4) && (greenCounter === 4) && (coralCounter === 4)) {
             history.replace(props.winRoute)
         }
 

@@ -17,7 +17,6 @@ export default function SaimonSays(props) {
 
     const correctButton = () => {
         setResult(result + 1)
-        console.log(result)
     }
     const wrongButton = () => { setResult(0) }
 
@@ -101,7 +100,7 @@ export default function SaimonSays(props) {
     const round = [round1, round2, round3, round4, round5, round6, round7, round8, round9, round10]
 
     return (
-        <>  
+        <>
             {round[result]}
             <div className={`inner-background animation-0${result}`}></div>
         </>
