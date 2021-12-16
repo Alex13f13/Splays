@@ -74,11 +74,13 @@
 @keyframes emblem-container {
     from {
         top: 8vh;
-        opacity: 0%;
+        filter: opacity(0%);
+        -webkit-filter: opacity(0%);
     }
     to {
         top: 16.5vh;
-        opacity: 100%;
+        filter: opacity(100%);
+        -webkit-filter: opacity(100%);
     }
 }
 

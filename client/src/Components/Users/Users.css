@@ -111,11 +111,13 @@
 @keyframes users-back-home {
     from {
         margin-left: -60vw;
-        opacity: 0%;
+        filter: opacity(0%);
+        -webkit-filter: opacity(0%);
     }
     to {
         margin-left: 0px;
-        opacity: 100%;
+        filter: opacity(100%);
+        -webkit-filter: opacity(100%);
     }
 }
 
