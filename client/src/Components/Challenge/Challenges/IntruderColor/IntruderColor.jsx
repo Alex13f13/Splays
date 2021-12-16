@@ -6,7 +6,7 @@ import './IntruderColor.css'
 export default function IntruderColor(props) {
 
     let history = useHistory()
-    let takeRandom = Math.round(Math.random() * 20);
+    let takeRandom = Math.round(Math.random() * 25);
     let correctPositionRandom = Math.round(Math.random() * 15);
 
     const [result, setResult] = useState(0)

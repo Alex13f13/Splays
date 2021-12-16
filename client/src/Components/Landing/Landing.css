@@ -35,7 +35,11 @@
 }
 
 .landing-login-btn:active {
-    background: linear-gradient(45deg, rgb(65, 0, 156) 0%, rgb(50, 3, 151) 50%, rrgb(8, 133, 133)94%); 
+    background: linear-gradient(45deg, rgb(65, 0, 156) 0%, rgb(50, 3, 151) 50%, rgb(8, 133, 133)94%); 
+}
+
+.landing-login-btn:hover {
+    background: linear-gradient(45deg, rgb(108, 4, 255) 0%, rgb(95, 21, 255) 50%, rgb(47, 255, 255) 94%); 
 }
 
 
@@ -49,6 +53,11 @@
     font-size: 1em;
     margin-top: 1.8em;
     cursor: pointer;
+}
+
+.landing-underbtn:hover {
+    border-bottom: solid 1px #9a959c7e;
+    margin-bottom: 6px;
 }
 
 .landing-underbtn-span {

@@ -168,6 +168,14 @@
 
 }
 
+.emblem-win-btn:hover {
+    background: linear-gradient(125deg, #4834f3 0%,  #f3a3ff 100%)
+}
+
+.emblem-win-btn:active {
+    background: linear-gradient(125deg, #22187a 0%,  #8b4396 100%);
+}
+
 @media (max-width: 320px) {
     .emblem-win-btn {
         width: 90vw;
@@ -323,6 +331,8 @@
         text-decoration: none;
     
     }
+
+    
 }
 
 

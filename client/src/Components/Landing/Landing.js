@@ -53,8 +53,8 @@ export default function Landing(props) {
                         <div className="landing-logo-container">
                             <img className='landing-logo' src={"https://res.cloudinary.com/dwxuz6cft/image/upload/v1639570862/splays_app/splays_logo/SPLAYS-LOGO-03_nvsrvb.png"} alt={""} />
                         </div>
-                        <div className="landing-login-btn">
-                            <p onClick={showLogin}>Log in</p>
+                        <div onClick={showLogin} className="landing-login-btn">
+                            <p>Log in</p>
                         </div>
                         <p onClick={showSignup} className="landing-underbtn">Don't have an account? <span className="landing-underbtn-span">Sign up now!</span></p>
                         <img className="scroll-down-icon" src="https://res.cloudinary.com/dwxuz6cft/image/upload/v1639577360/splays_app/splays_icons/scroll_down_animation_xujkl8.svg" alt="scroll down icon" />

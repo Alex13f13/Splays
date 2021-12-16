@@ -87,6 +87,11 @@
     align-items: center;
     flex-direction: column;
     margin: 0px 6px;
+    cursor: pointer;
+}
+
+.ships-card:hover {
+    border: solid 1px #5e5b5a;
 }
 
 .ships-card-clicked {
@@ -100,6 +105,7 @@
     margin: 0px 6px;
     border: solid 1px #989491;
     /* box-shadow: 0px 0px 1px #989491; */
+    cursor: pointer;
 }
 
 
@@ -185,7 +191,22 @@
     margin-top: 5px;  
     position: absolute;
     bottom: 50px;   
-    bottom: 6vh;   
+    bottom: 6vh;  
+    cursor: pointer; 
+}
+
+.ships-choose-btn:hover {
+    background: rgba(216, 216, 216, 0.062);
+    box-shadow: 0 8px 32px 1 rgba( 14, 14, 16, 0.5 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+}
+
+.ships-choose-btn:active {
+    background: rgba(216, 216, 216, 0.13);
+    box-shadow: 0 8px 32px 1 rgba( 14, 14, 16, 0.5 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
 }
 
 

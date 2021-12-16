@@ -151,6 +151,20 @@
     cursor: pointer;  
 }
 
+.profile-exit-btn:hover {
+    background: rgba(216, 216, 216, 0.062);
+    box-shadow: 0 8px 32px 1 rgba( 14, 14, 16, 0.5 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+}
+
+.profile-exit-btn:active {
+    background: rgba(216, 216, 216, 0.13);
+    box-shadow: 0 8px 32px 1 rgba( 14, 14, 16, 0.5 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+}
+
 
 .no-decoration {
     text-decoration: none;
@@ -181,6 +195,21 @@ input[type=file]::-webkit-file-upload-button {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+}
+
+.custom-file-btn:hover {
+    background: rgba(216, 216, 216, 0.062);
+    box-shadow: 0 8px 32px 1 rgba( 14, 14, 16, 0.5 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+}
+
+.custom-file-btn:active {
+    background: rgba(216, 216, 216, 0.13);
+    box-shadow: 0 8px 32px 1 rgba( 14, 14, 16, 0.5 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
 }
 
 .form-input-file-container {
@@ -267,6 +296,15 @@ input[type=file]::-webkit-file-upload-button {
     cursor: pointer;
 }
 
+.save-changes-btn:hover {
+    background: linear-gradient(45deg, rgb(170, 22, 255) 0%, rgb(99, 27, 255) 50%, rgb(56, 255, 255) 94%);
+}
+
+.save-changes-btn:active {
+    background: linear-gradient(45deg, rgb(105, 2, 165) 0%, rgb(60, 2, 185) 50%, rgb(11, 156, 156) 94%);
+}
+
+
 .save-changes-deactivated-btn {
     background: rgb(85,3,203);
     background: linear-gradient(45deg, rgb(59, 7, 88) 0%, rgb(34, 8, 90) 50%, rgb(12, 88, 88) 94%);
@@ -302,6 +340,20 @@ input[type=file]::-webkit-file-upload-button {
     justify-content: center;
     align-items: center;    
     cursor: pointer; 
+}
+
+.profile-cancel-btn:hover {
+    background: rgba(216, 216, 216, 0.062);
+    box-shadow: 0 8px 32px 1 rgba( 14, 14, 16, 0.5 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+}
+
+.profile-cancel-btn:active {
+    background: rgba(216, 216, 216, 0.13);
+    box-shadow: 0 8px 32px 1 rgba( 14, 14, 16, 0.5 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
 }
 
 

@@ -62,6 +62,15 @@
 
 }
 
+.home-trip-btn:hover {
+    background: linear-gradient(125deg, #4834f3 0%,  #f3a3ff 100%)
+}
+
+.home-trip-btn:active {
+    background: linear-gradient(125deg, #22187a 0%,  #8b4396 100%);
+}
+
+
 
 .home-travellers-btn {
     width: 314px;
@@ -77,6 +86,20 @@
     bottom: 4.3vh;   
     text-decoration: none;
     cursor: pointer;
+}
+
+.home-travellers-btn:hover {
+    background: rgba( 216, 216, 216, 0.10 );
+    box-shadow: 0 8px 32px 1 rgba( 14, 14, 16, 0.5 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+}
+
+.home-travellers-btn:active {
+    background: rgba(216, 216, 216, 0.322);
+    box-shadow: 0 8px 32px 1 rgba( 14, 14, 16, 0.5 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
 }
 
 

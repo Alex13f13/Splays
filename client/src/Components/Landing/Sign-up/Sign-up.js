@@ -99,8 +99,8 @@ export default function SignUp(props) {
                     <div className="login-chosen-underline"></div>
                 </div>
 
-                <div className="login-chosen-container">
-                    <h2 onClick={props.togglePlanetDetails} className="login-notchosen-title">Log in</h2>
+                <div  onClick={props.togglePlanetDetails} className="login-chosen-container">
+                    <h2 className="login-notchosen-title">Log in</h2>
                     <div className="login-notchosen-underline"></div>
                 </div>
 

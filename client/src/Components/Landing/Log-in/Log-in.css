@@ -87,6 +87,10 @@
     cursor: pointer;
 }
 
+.login-form-btn:hover {
+    background: linear-gradient(45deg, rgb(108, 4, 255) 0%, rgb(95, 21, 255) 50%, rgb(47, 255, 255) 94%); 
+}
+
 
 .form-field-container {
     padding-top: 32px;

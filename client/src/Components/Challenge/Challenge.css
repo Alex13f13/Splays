@@ -7,6 +7,7 @@
 }
 
 
+
 .btn-center-screen-container {
     height: 80vh;
     width: 100vw;
@@ -30,6 +31,20 @@
     font-weight: 500px; 
     text-decoration: none;  
     background-color: #2d2c3600;  
+}
+
+.challenge-exit-btn:hover {
+    background: rgba(216, 216, 216, 0.062);
+    box-shadow: 0 8px 32px 1 rgba( 14, 14, 16, 0.5 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+}
+
+.challenge-exit-btn:active {
+    background: rgba(216, 216, 216, 0.13);
+    box-shadow: 0 8px 32px 1 rgba( 14, 14, 16, 0.5 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
 }
 
 .challenge-exit-btn:active {
