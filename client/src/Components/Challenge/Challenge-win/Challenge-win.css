@@ -129,6 +129,11 @@
 }
 
 
+.win-K-67 {
+    animation: k-67 40s infinite linear;
+}
+
+
 .win-congrats-text {
     color: #D6D2CF;
     font-size: 20px;

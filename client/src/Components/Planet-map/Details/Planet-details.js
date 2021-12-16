@@ -47,7 +47,7 @@ export default function PlanetDetails(props) {
                     <Link className='planet-detail-go-planet-btn' to={`/planet-map/${planet._id}/${planet.challenge.name}/challenge`}>Go to this planet</Link>
 
                     <div className='planet-details-img-container'>
-                        <img className='planet-details-img' src={planet.image} alt={planet.image} />
+                        <img className={`planet-details-img ${planet.name}-details`} src={planet.image} alt={planet.image} />
                     </div>
                 </div>}
         </>

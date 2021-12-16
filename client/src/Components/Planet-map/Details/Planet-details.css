@@ -130,6 +130,11 @@
 }
 
 
+.K-67-details {
+    animation: k-67 40s infinite linear;
+}
+
+
 @media (min-width: 1000px) {
     .planet-details-close-bar {
         height: 8px;

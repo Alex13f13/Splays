@@ -109,10 +109,10 @@ export default function Profile(props) {
 
                             <div>
                                 <p className='profile-form-field-name'>Username</p>
-                                <input className='profile-form-field' onChange={handleInputChange} value={formData.username} name="username" type="text" placeholder={formData.username} />
+                                <input className='profile-form-field' maxLength="16" onChange={handleInputChange} value={formData.username} name="username" type="text" placeholder={formData.username} />
 
-                                <p className='profile-form-field-name'>Username</p>
-                                <input className='profile-form-field' onChange={handleInputChange} value={formData.originPlanet} name="originPlanet" type="text" placeholder={formData.originPlanet} />
+                                <p className='profile-form-field-name'>Origin planet</p>
+                                <input className='profile-form-field' maxLength="16" onChange={handleInputChange} value={formData.originPlanet} name="originPlanet" type="text" placeholder={formData.originPlanet} />
                             </div>
 
                             <div className='profile-edit-btns-container'>

@@ -62,7 +62,7 @@ export default function ChallengeWin(props) {
 
                     <div className='win-planet-container'>
                         <img className='win-planet-light' src={planet.image} alt={planet.image} />
-                        <img className='win-planet' src={planet.image} alt={planet.image} />
+                        <img className={`win-planet win-${planet.name}`} src={planet.image} alt={planet.image} />
                     </div>
 
 
