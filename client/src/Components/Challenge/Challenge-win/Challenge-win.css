@@ -35,6 +35,7 @@
 .win-planet-light {
     height: 41vh;
     filter: blur(50px);
+    -webkit-filter: blur(50px);
     z-index: -900;
 }
 

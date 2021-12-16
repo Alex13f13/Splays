@@ -47,8 +47,8 @@
 
 .light-Chromion {
     position: absolute;
-    filter: blur(40px), opacity(90%);
-
+    filter: blur(40px);
+    -webkit-filter: blur(40px);
     mix-blend-mode: screen;
     z-index: 8;
 }
@@ -96,7 +96,7 @@
     position: absolute;
     filter: blur(40px);
     mix-blend-mode: screen;
-    -webkit-filter: opacity(60%);
+    -webkit-filter: blur(40px);
     mix-blend-mode: overlay;
     z-index: 8;
 }
@@ -143,8 +143,8 @@
 
 .light-Lavadelic {
     position: absolute;
-    filter: blur(40px), opacity(80%);
-    -webkit-filter: opacity(80%), blur(40px);
+    filter: blur(40px);
+    -webkit-filter: blur(40px);
 
     mix-blend-mode: overlay;
     z-index: 0;
@@ -237,9 +237,9 @@
 
 .light-Tropilum {
     position: absolute;
-    filter: blur(30px), opacity(70%);
+    filter: blur(30px);
     mix-blend-mode: screen;
-    -webkit-filter: opacity(70%);
+    -webkit-filter: blur(30px);
     z-index: 8;
 }
 
@@ -284,9 +284,9 @@
 
 .light-Candylux {
     position: absolute;
-    filter: blur(30px), opacity(70%);
+    filter: blur(30px);
     mix-blend-mode: screen;
-    -webkit-filter: opacity(70%);
+    -webkit-filter: blur(30px);
     z-index: 8;
 }
 
@@ -331,9 +331,9 @@
 
 .light-Helanor {
     position: absolute;
-    filter: blur(40px), opacity(100%);
+    filter: blur(40px);
     mix-blend-mode: hard-light;
-    -webkit-filter: opacity(100%);
+    -webkit-filter: blur(40px);
     z-index: 8;
 }
 
@@ -378,9 +378,9 @@
 
 .light-K-78 {
     position: absolute;
-    filter: blur(0px), opacity(100%);
+    filter: blur(0px);
     mix-blend-mode: normal;
-    -webkit-filter: opacity(100%);
+    -webkit-filter: blur(0px);
     z-index: 8;
 }
 
@@ -426,9 +426,9 @@
 
 .light-Lulab {
     position: absolute;
-    filter: blur(40px), opacity(70%);
+    filter: blur(40px);
     mix-blend-mode: overlay;
-    -webkit-filter: opacity(70%);
+    -webkit-filter: blur(40px);
     z-index: 8;
 }
 
@@ -473,9 +473,9 @@
 
 .light-Earth {
     position: absolute;
-    filter: blur(40px), opacity(90%);
+    filter: blur(40px);
     mix-blend-mode: screen;
-    -webkit-filter: opacity(90%);
+    -webkit-filter: blur(40px);
     z-index: 8;
     box-shadow: aqua 0px 0px 20px 1px;
 }
@@ -520,9 +520,9 @@
 
 .light-Crystalir {
     position: absolute;
-    filter: blur(40px), opacity(60%);
+    filter: blur(40px);
     mix-blend-mode: screen;
-    -webkit-filter: opacity(60%);
+    -webkit-filter: blur(40px);
     z-index: 8;
 }
 
@@ -566,9 +566,9 @@
 
 .light-Herlix {
     position: absolute;
-    filter: blur(40px), opacity(60%);
+    filter: blur(40px);
     mix-blend-mode: screen;
-    -webkit-filter: opacity(60%);
+    -webkit-filter: blur(40px);
     z-index: 8;
 }
 
@@ -612,9 +612,9 @@
 
 .light-Oark {
     position: absolute;
-    filter: blur(30px), opacity(100%);
+    filter: blur(30px);
     mix-blend-mode: overlay;
-    -webkit-filter: opacity(100%);
+    -webkit-filter: blur(30px);
     z-index: 8;
     box-shadow: white 0px 0px 30px 0px;
 }
@@ -661,9 +661,9 @@
 
 .light-Dragidion {
     position: absolute;
-    filter: blur(40px), opacity(100%);
+    filter: blur(40px);
     mix-blend-mode: hard-light;
-    -webkit-filter: opacity(100%);
+    -webkit-filter: blur(40px);
     z-index: 8;
 }
 
@@ -709,9 +709,9 @@
 
 .light-Xilofer {
     position: absolute;
-    filter: blur(50px), opacity(100%);
+    filter: blur(50px);
     mix-blend-mode: hard-light;
-    -webkit-filter: opacity(100%);
+    -webkit-filter: blur(50px);
     z-index: 8;
 }
 
@@ -755,9 +755,9 @@
 
 .light-Vaxor {
     position: absolute;
-    filter: blur(30px), opacity(60%);
+    filter: blur(30px);
     mix-blend-mode: overlay;
-    -webkit-filter: opacity(60%);
+    -webkit-filter: blur(30px);
     z-index: 8;
 }
 
@@ -802,9 +802,9 @@
 
 .light-K-67 {
     position: absolute;
-    filter: blur(40px), opacity(60%);
+    filter: blur(40px);
     mix-blend-mode: screen;
-    -webkit-filter: opacity(60%);
+    -webkit-filter: blur(40px);
     z-index: 8;
 }
 
