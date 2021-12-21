@@ -4,7 +4,6 @@ const mongoose = require("mongoose");
 const Planet = require("../models/Planet.model");
 const User = require("../models/User.model");
 
-const isLoggedOut = require("../middleware/isLoggedOut");
 const isLoggedIn = require("../middleware/isLoggedIn");
 
 
@@ -41,7 +40,7 @@ router.put("/:planetId/:userId", (req, res) => {
         .catch(err => res.json({ err, errMessage: "Problema buscando un Usuario" }))
 })
 
-router.post("/create", (req, res) => { //For developers
+router.post("/create", (req, res) => { //For developers, create a planet from planet-map in data base
     const { name, image, description, challengeName, challengeImage, challengeEmblem } = req.body;
 
     const challenge = {

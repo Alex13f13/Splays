@@ -120,7 +120,7 @@ router.get("/isloggedin", (req, res) => {
   req.session.currentUser ? res.json(req.session.currentUser) : res.status(401).json({ code: 401, message: 'Unauthorized' })
 })
 
-router.post("/create-ship", (req, res) => { //For developers
+router.post("/create-ship", (req, res) => { //For developers, create ships for all users
   const { name, image, stats } = req.body
 
   Ship.create({ name, image, stats })
