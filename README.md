@@ -1,6 +1,7 @@
 # Splays
 
-![image](https://user-images.githubusercontent.com/46814661/146927209-466a017c-5478-4ed3-84f2-cac11c882dac.png)
+![01](https://user-images.githubusercontent.com/46814661/148819994-bcd3ecb3-2fc0-403a-91bd-912995ee3d1e.jpg)
+![02](https://user-images.githubusercontent.com/46814661/148819997-8f7077af-a9c4-40e2-bdf7-2e6abcdfe650.jpg)
 
 ## URL
 
